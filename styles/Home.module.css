@@ -1,0 +1,19 @@
+.hamburger {
+  @apply origin-center inset-0 w-[38px] h-[5px] rounded bg-white transition duration-500;
+}
+.cancel {
+  @apply origin-center inset-0 w-[38px] h-[3px]  bg-white transition duration-500;
+}
+.zindex2 {
+  z-index: 2;
+}
+.zindex3 {
+}
+.navborder {
+  border-left: 2px solid #ffffff;
+  z-index: 5;
+}
+.filter {
+  -webkit-filter: blur(10px); /* Safari 6.0 - 9.0 */
+  filter: blur(10px);
+}
