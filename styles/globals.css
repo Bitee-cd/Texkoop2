@@ -53,10 +53,17 @@ div {
 }
 html {
   height: 100%;
+  overflow-x: hidden;
+}
+html,
+body {
+  background: #130f40;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
 }
 
-html {
-  scroll-behavior: smooth;
+body {
+  position: relative;
 }
 
 .h1-text {

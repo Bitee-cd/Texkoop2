@@ -20,11 +20,11 @@ const LanguageMobile = () => {
 
   return (
     <div className="relative">
-      <div>
+      <div className="">
         {locale == "fr" && (
           <Link href={`${router.asPath}`} locale="en-US">
             <div className="flex gap-1 font-[400] items-center">
-              <div className="w-[30px] lg:w-[40px] h-[15px] lg:h-[20px]">
+              <div className="w-[32px] lg:w-[40px] h-[15px] lg:h-[20px]">
                 <img
                   alt="English"
                   className="cursor-pointer h-full w-full"
@@ -41,7 +41,7 @@ const LanguageMobile = () => {
         {locale == "en-US" && (
           <Link href={`${router.asPath}`} locale="fr">
             <div className="flex gap-1 font-[400] items-center">
-              <div className="w-[40px] h-[20px] ">
+              <div className="w-[32px] lg:w-[40px] h-[20px] ">
                 <img
                   src="https://flagcdn.com/h20/fr.png"
                   srcset="https://flagcdn.com/h40/fr.png 2x,

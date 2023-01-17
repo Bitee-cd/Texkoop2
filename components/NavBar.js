@@ -9,7 +9,7 @@ import SocialIcons from "./SocialIcons";
 const NavBar = () => {
   const [navOpen, setNavOpen] = useState(false);
   return (
-    <div className={`${styles.filter}relative `}>
+    <div className={`${styles.filter}relative min-w-screen overflow-x-hidden`}>
       <navbar className="flex justify-between w-full screen-center pt-10">
         <Logo />
         <div className="flex items-center pr-[5%] lg:hidden">
@@ -34,13 +34,14 @@ const NavBar = () => {
           <LanguageMobile />
           <button className="button">Contact us</button>
         </div>
-        {navOpen && (
-          <AnimatePresence>
+        <AnimatePresence>
+          {navOpen && (
             <motion.div
-              initial={{ x: 200 }}
-              exit={{ y: 200 }}
-              animate={{ x: 0, transition: "tween" }}
-              className={`${styles.zindex2} top-0 bg-red-600 absolute right-0 bg-transparent border-white  lg:hidden w-full`}
+              initial={{ x: 500, opacity: 0 }}
+              exit={{ x: 500 }}
+              transition={{ duration: 0.7 }}
+              animate={{ x: 0, opacity: 1 }}
+              className={`${styles.zindex2} top-0  absolute right-0  border-white  lg:hidden w-full`}
             >
               <div
                 className={`${styles.navborder} h-screen pt-10 pb-5 gap-5 px-3 w-[60%] ml-auto bg-pri_dark flex flex-col`}
@@ -65,8 +66,8 @@ const NavBar = () => {
                 </div>
               </div>
             </motion.div>
-          </AnimatePresence>
-        )}
+          )}
+        </AnimatePresence>
       </navbar>
     </div>
   );
