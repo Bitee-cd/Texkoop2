@@ -18,11 +18,11 @@ export default function Home() {
     <Layout title="Start" background="bg-pri_dark">
       <div className="text-white">
         {!animation ? (
-          <>
+          <div className="flex justify-center items-center h-screen">
             {start ? (
               <div
                 onClick={() => startTimer()}
-                className="uppercase font-[700] text-xl cursor-pointer  flex justify-center items-center h-screen"
+                className="uppercase font-[700] text-xl cursor-pointer "
               >
                 click to start
               </div>
@@ -30,7 +30,7 @@ export default function Home() {
               <motion.div
                 initial={{ y: -500 }}
                 animate={{ y: 0 }}
-                className="uppercase font-[700] text-xl cursor-pointer  flex justify-center items-center h-screen"
+                className="uppercase font-[700] text-xl   "
               >
                 <Logo />
                 <motion.div
@@ -42,7 +42,7 @@ export default function Home() {
                 </motion.div>
               </motion.div>
             )}
-          </>
+          </div>
         ) : (
           <HomePage />
         )}
