@@ -3,7 +3,7 @@ import Head from "next/head";
 import dynamic from "next/dynamic";
 import { useEffect } from "react";
 
-const Layout = ({ children, title, background }) => {
+const Layout = ({ children, title }) => {
   useEffect(() => {
     scrollToTop;
   }, []);
@@ -22,9 +22,7 @@ const Layout = ({ children, title, background }) => {
         <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
       </Head>
 
-      <main className={`${background} min-h-screen font-Helvetica`}>
-        {children}
-      </main>
+      <main className={` min-h-screen font-Helvetica`}>{children}</main>
     </>
   );
 };

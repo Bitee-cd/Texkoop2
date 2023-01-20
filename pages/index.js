@@ -15,8 +15,8 @@ export default function Home() {
     }, 3500);
   };
   return (
-    <Layout title="Start" background="bg-pri_dark">
-      <div className="text-white">
+    <Layout title="Home">
+      <div className="text-white bg-pri_dark">
         {!animation ? (
           <div className="flex justify-center items-center h-screen">
             {start ? (
