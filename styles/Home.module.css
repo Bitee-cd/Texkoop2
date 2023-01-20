@@ -79,11 +79,11 @@
 }
 .slideIn {
   animation: slide-in;
-  animation-duration: 400ms;
+  animation-duration: 1000ms;
 }
 @keyframes slide-in {
   0% {
-    transform: translateX(500px);
+    transform: translateX(700px);
   }
   100% {
     transform: translateX(0);

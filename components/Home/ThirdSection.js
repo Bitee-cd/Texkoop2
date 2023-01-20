@@ -12,7 +12,7 @@ const ThirdSection = () => {
       <div className={`${styles.circle2} ${styles.cornerLeft}`}></div>
       <div className={`${styles.zindex2} screen-center`}>
         <div
-          className={`${styles.boxCard2} rounded-[10px] bg-pri_dark lg:ml-[5%] mx-auto h-[90%] lg:w-[60%] my-10 lg:my-20 text-black p-5 lg:p-10 gap-y-5`}
+          className={`${styles.boxCard2} rounded-[10px] bg-pri_dark lg:ml-[5%] mx-auto h-[50%] lg:w-[60%] my-10 lg:my-20 text-black p-5 lg:p-10 gap-y-5`}
         >
           <div className="lg:w-[80%]  2xl:my-20">
             <p className="h2-text text-white font-[700]">Reviews</p>
