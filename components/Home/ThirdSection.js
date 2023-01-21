@@ -6,7 +6,7 @@ const ThirdSection = () => {
   const { testimonial } = home;
   return (
     <div
-      className={`bg-[#F4F8FF] min-h-screen relative overflow-hidden  flex items-center ${styles.shadowCard}`}
+      className={`bg-[#F4F8FF]  relative overflow-hidden  flex items-center ${styles.shadowCard}`}
     >
       <div className={`${styles.circle2} ${styles.bottomRight}`}></div>
       <div className={`${styles.circle2} ${styles.cornerLeft}`}></div>

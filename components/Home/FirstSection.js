@@ -11,9 +11,9 @@ const FirstSection = () => {
   });
 
   return (
-    <section className="relative  gap-10 bg-pri_dark min-h-screen lg:h-auto flex justify-center items-center">
-      <div className="my-20 container w-[90%] lg:w-[80%] mx-auto">
-        <div className="lg:hidden block h-[200px] md:h-[350px] w-full mb-20 bg-red-200">
+    <section className="relative  gap-10 bg-pri_dark  lg:h-auto flex justify-center items-center">
+      <div className="my-10 lg:my-20 container w-[90%] lg:w-[80%] mx-auto">
+        <div className="lg:hidden flex items-center  h-[250px] md:h-[350px] w-full lg:mb-20 ">
           <ImageSlider text={text} />
         </div>
         <p className="big-text ">
@@ -54,16 +54,16 @@ const FirstSection = () => {
             )}
           </span>
         </p>
-        <div className="md:flex justify-between gap-y-10 my-10">
-          <div className="lg:w-[60%]">
-            <p className="my-5 p-big-text leading-tight">
+        <div className="md:flex md:justify-between my-10">
+          <div className="lg:w-[50%]">
+            <p className="lg:my-5 p-big-text leading-tight">
               We provide on-demand and customizable delivery services, through
               our seamless digital platform, that is designed to support users'
               need for ease and transparency.
             </p>
             <button className="button mt-10">Get Started</button>
           </div>
-          <div className="hidden lg:w-[35%] h-[300px] lg:flex items-center">
+          <div className="hidden lg:w-[45%] h-[300px] lg:flex items-center">
             <ImageSlider text={text} />
           </div>
         </div>

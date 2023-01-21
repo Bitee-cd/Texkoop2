@@ -100,10 +100,10 @@ body {
 }
 
 .button {
-  @apply border border-white min-w-[150px] lg:w-[200px]  flex justify-center py-4 p-text hover:border-pri active:border-pri hover:text-pri active:text-pri transition-all duration-300;
+  @apply border border-white min-w-[150px] lg:w-[200px]  flex justify-center py-2 lg:py-4 p-text hover:border-sec active:border-sec hover:text-sec active:text-sec transition-all duration-300;
 }
 .button2 {
-  @apply border w-[200px]  flex justify-center py-4 p-text border-pri text-pri hover:border-sec active:border-sec hover:text-sec active:text-sec transition-all duration-300;
+  @apply border w-[200px]  flex justify-center py-2 lg:py-4  p-text border-pri text-pri hover:border-sec active:border-sec hover:text-sec active:text-sec transition-all duration-300;
 }
 .screen-center {
   @apply container w-[90%] mx-auto;
