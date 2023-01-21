@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Typewriter from "typewriter-effect";
 import ImageSlider from "./ImageSlider";
+import ImageSliderMobile from "./ImageSliderMobile";
 
 const FirstSection = () => {
   const [text, setText] = useState(1);
@@ -12,9 +13,9 @@ const FirstSection = () => {
 
   return (
     <section className="relative  gap-10 bg-pri_dark  lg:h-auto flex justify-center items-center">
-      <div className="my-10 lg:my-20 container w-[90%] lg:w-[80%] mx-auto">
-        <div className="lg:hidden flex items-center  h-[250px] md:h-[350px] w-full lg:mb-20 ">
-          <ImageSlider text={text} />
+      <div className="my-10 mt-20 lg:my-20 container w-[90%] lg:w-[80%] mx-auto">
+        <div className="lg:hidden flex justify-center  h-[250px] md:h-[350px] w-full lg:mb-20 ">
+          <ImageSliderMobile text={text} />
         </div>
         <p className="big-text ">
           We are Professionally Equipped to Render
