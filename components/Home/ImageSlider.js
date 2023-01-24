@@ -39,7 +39,7 @@ const ImageSlider = ({ text }) => {
             exit={{ x: 700 }}
             src="/images/texbike.png"
             alt="texkoop bikes"
-            className="w-[60%] h-full object-cover"
+            className="w-[80%] h-full object-cover"
           />
         )}
       </AnimatePresence>

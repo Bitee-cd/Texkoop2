@@ -29,7 +29,7 @@ const LanguageMobile = () => {
                   alt="English"
                   className="cursor-pointer h-full w-full"
                   src="https://flagcdn.com/h20/gb.png"
-                  srcset="https://flagcdn.com/h40/gb.png 2x,
+                  srcSet="https://flagcdn.com/h40/gb.png 2x,
                       https://flagcdn.com/h60/gb.png 3x"
                   height="20"
                 />
@@ -44,7 +44,7 @@ const LanguageMobile = () => {
               <div className="w-[32px] lg:w-[40px] h-[20px] ">
                 <img
                   src="https://flagcdn.com/h20/fr.png"
-                  srcset="https://flagcdn.com/h40/fr.png 2x,
+                  srcSet="https://flagcdn.com/h40/fr.png 2x,
                       https://flagcdn.com/h60/fr.png 3x"
                   height="20"
                   alt="France"

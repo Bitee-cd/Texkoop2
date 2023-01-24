@@ -4,12 +4,12 @@ import styles from "../../styles/Home.module.css";
 const SecondSection = () => {
   return (
     <div
-      className={`bg-[#ECF3FF] min-h-[50vh] relative overflow-hidden  flex items-center justify-center ${styles.shadowCard}`}
+      className={`bg-[#ECF3FF] min-h-screen 2xl:min-h-[50vh] relative overflow-hidden  flex items-center justify-center ${styles.shadowCard}`}
     >
       <div className={`${styles.circle} ${styles.cornerRight}`}></div>
       <div className={`${styles.circle} ${styles.topLeft}`}></div>
       <div
-        className={`${styles.zindex2} ${styles.boxCard} screen-center rounded-[10px] my-32 bg-white py-10 lg:py-20  w-[90%] md:w-[80%]  text-[#3B3C3C] p-5  md:p-10 lg:flex lg:items-center gap-y-5`}
+        className={`${styles.zindex2} ${styles.boxCard} screen-center rounded-[10px] my-20 bg-white py-10 lg:py-20 h-[90%] w-[90%] md:w-[80%]  text-[#3B3C3C] p-5  md:p-10 lg:flex lg:items-center gap-y-5`}
       >
         <div className="lg:w-[45%]">
           <p className="h2-text font-[700] leading-tight text-pri">

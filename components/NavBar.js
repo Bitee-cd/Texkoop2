@@ -9,9 +9,13 @@ import SocialIcons from "./SocialIcons";
 const NavBar = () => {
   const [navOpen, setNavOpen] = useState(false);
   return (
-    <div className={`${styles.filter}relative min-w-screen overflow-x-hidden`}>
-      <navbar className="flex justify-between w-full screen-center pt-10">
-        <Logo />
+    <div
+      className={`${styles.filter}relative min-w-screen overflow-x-hidden bg-pri_dark text-white `}
+    >
+      <navbar className="flex justify-between w-full screen-center py-5">
+        <Link href="/">
+          <Logo />
+        </Link>
         <div className="flex items-center pr-[5%] lg:hidden">
           <div className="flex gap-5 ">
             <LanguageMobile />
@@ -27,7 +31,7 @@ const NavBar = () => {
             </div>
           </div>
         </div>
-        <div className="lg:flex-row hidden lg:flex w-[60%] ml-auto justify-between items-center">
+        <div className="lg:flex-row p-tiny-text  hidden lg:flex w-[60%] ml-auto justify-between items-center">
           <Link href="/about">About </Link>
           <Link href="/services">Services</Link>
           <Link href="/blog">Blog</Link>
@@ -44,7 +48,7 @@ const NavBar = () => {
               className={`${styles.zindex2} top-0  absolute right-0  border-white  lg:hidden w-full`}
             >
               <div
-                className={`${styles.navborder} h-screen pt-10 pb-5 gap-5 px-3 w-[60%] ml-auto bg-pri_dark flex flex-col`}
+                className={`${styles.navborder} p-text h-screen pt-10 pb-5 gap-5 px-3 w-[60%] ml-auto bg-pri_dark flex flex-col`}
               >
                 <div
                   onClick={() => {

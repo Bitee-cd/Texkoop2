@@ -12,15 +12,15 @@ const FirstSection = () => {
   });
 
   return (
-    <section className="relative  gap-10 bg-pri_dark  lg:h-auto flex justify-center items-center">
+    <section className="relative min-h-screen gap-10 text-white bg-pri_dark  lg:h-auto flex justify-center items-center">
       <div className="my-10 mt-20 lg:my-20 container w-[90%] lg:w-[80%] mx-auto">
         <div className="lg:hidden flex justify-center  h-[250px] md:h-[350px] w-full lg:mb-20 ">
           <ImageSliderMobile text={text} />
         </div>
-        <p className="big-text ">
+        <div className="big-text ">
           We are Professionally Equipped to Render
           <br></br>
-          <span className="text-sec">
+          <div className="text-sec">
             {text === 1 ? (
               <Typewriter
                 options={{
@@ -53,11 +53,11 @@ const FirstSection = () => {
                 />
               </p>
             )}
-          </span>
-        </p>
+          </div>
+        </div>
         <div className="md:flex md:justify-between my-10">
           <div className="lg:w-[50%]">
-            <p className="lg:my-5 p-big-text leading-tight">
+            <p className="lg:my-5 p-big-text leading-tight font-[600]">
               We provide on-demand and customizable delivery services, through
               our seamless digital platform, that is designed to support users'
               need for ease and transparency.

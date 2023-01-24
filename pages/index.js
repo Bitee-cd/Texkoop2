@@ -16,7 +16,7 @@ export default function Home() {
   };
   return (
     <Layout title="Home">
-      <div className="text-white bg-pri_dark">
+      {/* <div className="text-white bg-pri_dark">
         {!animation ? (
           <div className="flex justify-center items-center h-screen">
             {start ? (
@@ -46,7 +46,8 @@ export default function Home() {
         ) : (
           <HomePage />
         )}
-      </div>
+      </div> */}
+      <HomePage />
     </Layout>
   );
 }

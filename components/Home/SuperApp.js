@@ -1,8 +1,8 @@
 import React from "react";
 import styles from "../../styles/Home.module.css";
-const SuperApp = () => {
+const SuperApp = (bgcolor) => {
   return (
-    <section className={`${styles.shadowCard} bg-[#F2F2F2] `}>
+    <section className={`${styles.shadowCard} ${bgcolor} `}>
       <div className="screen-center py-10 lg:py-20 md:flex">
         <div className="lg:w-[60%] flex justify-between">
           <div className="w-[60%]">

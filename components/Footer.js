@@ -5,7 +5,7 @@ import ScrollButton from "./ScrollButton";
 
 const Footer = () => {
   return (
-    <footer className="bg-pri_dark py-10 ">
+    <footer className="bg-pri_dark py-10 text-white ">
       <div className="screen-center ">
         <div className="grid grid-cols-2 lg:grid-cols-6 gap-x-10 lg:gap-0">
           <Link href="#">About</Link>

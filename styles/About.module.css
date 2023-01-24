@@ -1,0 +1,45 @@
+.shadowCard {
+  box-shadow: -4px 3px 4px 0px rgba(0, 0, 0, 0.25);
+}
+.shadowSteps {
+  box-shadow: -3px 3px 4px 0px rgba(0, 0, 0, 0.1);
+  transition: all 0.5s ease-in-out;
+}
+/* .shadowSteps:hover {
+  box-shadow: 3px -3px 4px 0px rgba(0, 0, 0, 0.25);
+} */
+.cardHeight {
+  height: clamp(9.375rem, 5vw + 5rem, 22.875rem);
+}
+.imageHeight {
+  height: clamp(11.188rem, 20vw + 9rem, 40.625rem);
+  width: clamp(11.188rem, 20vw + 9rem, 40.625rem);
+  flex: 0 0 auto;
+}
+.background {
+  background-image: url("/images/about/background.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+.zindex2 {
+  z-index: 2;
+}
+.grid {
+  display: grid;
+  grid-template-columns: 500px 1fr;
+}
+.overflow {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: scroll;
+  -ms-overflow-style: none;
+  width: 100vw;
+}
+.overflow::-webkit-scrollbar {
+  display: none;
+}

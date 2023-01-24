@@ -25,13 +25,13 @@
   @font-face {
     font-family: "Helvetica";
     src: url("/fonts/Helvetica/HelveticaNeueLTStd-MdEx.otf");
-    font-weight: 500;
+    font-weight: 600;
     font-style: normal;
   }
   @font-face {
     font-family: "Helvetica";
     src: url("/fonts/Helvetica/HelveticaNeueLTStd-Ex.otf");
-    font-weight: 600;
+    font-weight: 500;
     font-style: normal;
   }
 }
@@ -66,30 +66,42 @@ body {
   position: relative;
 }
 .big-text {
-  font-size: clamp(1.25rem, 4vw + 0.5rem, 5.938rem);
+  font-size: clamp(1.25rem, 4vw + 1rem, 5.938rem);
   font-weight: 900;
-  @apply leading-normal lg:leading-snug;
+  @apply leading-normal lg:leading-tight;
 }
 .h1-text {
-  font-size: clamp(1.25rem, 1vw + 1rem, 1.875rem);
+  font-size: clamp(1.25rem, 1vw + 1.5rem, 1.875rem);
 }
 .p-tiny-text {
   font-size: clamp(0.625rem, 0.5vw + 0.5rem, 1.25rem);
   /* text-align: justify; */
 }
+
 .p-text {
   font-size: clamp(1rem, 0.1vw + 0.9rem, 1.5rem);
   /* text-align: justify; */
 }
 .p-big-text {
-  font-size: clamp(1rem, 0.4vw + 0.9rem, 1.875rem);
+  font-size: clamp(1rem, 0.4vw + 0.8rem, 1.875rem);
 }
 .h2-text {
   font-size: clamp(1.25rem, 1.5vw + 1rem, 2.813rem);
+  font-weight: 700;
 }
 .h4-text {
   font-size: clamp(0.938rem, 0.1vw + 0.9rem, 1.25rem);
   text-align: justify;
+}
+
+@media only screen and (max-width: 600px) {
+  .big-text {
+    font-size: clamp(1.25rem, 4vw + 0.4rem, 5.938rem);
+  }
+
+  .h2-text {
+    font-size: clamp(1.25rem, 1.5vw + 1rem, 2.813rem);
+  }
 }
 
 .top {
@@ -100,10 +112,10 @@ body {
 }
 
 .button {
-  @apply border border-white min-w-[150px] lg:w-[200px]  flex justify-center py-2 lg:py-4 p-text hover:border-sec active:border-sec hover:text-sec active:text-sec transition-all duration-300;
+  @apply border border-white min-w-[150px] lg:w-[200px]  flex justify-center py-2  p-text hover:border-sec active:border-sec ease-in hover:text-sec active:text-sec transition-all duration-500;
 }
 .button2 {
-  @apply border w-[200px]  flex justify-center py-2 lg:py-4  p-text border-pri text-pri hover:border-sec active:border-sec hover:text-sec active:text-sec transition-all duration-300;
+  @apply border w-[200px]  flex justify-center py-2  p-text border-pri text-pri hover:border-sec active:border-sec ease-in hover:text-sec active:text-sec transition-all duration-500;
 }
 .screen-center {
   @apply container w-[90%] mx-auto;
