@@ -9,7 +9,7 @@ const Footer = () => {
       <div className="screen-center ">
         <div className="grid grid-cols-2 lg:flex lg:w-full justify-between">
           <Link href="/about">About</Link>
-          <Link href="#" className="">
+          <Link href="/rider" className="">
             Become A Rider
           </Link>
           <Link href="#" className="lg:text-center">

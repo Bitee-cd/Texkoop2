@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import Typewriter from "typewriter-effect";
 import ImageSlider from "./ImageSlider";
 import ImageSliderMobile from "./ImageSliderMobile";
+import Link from "next/link";
 
 const FirstSection = () => {
   const [text, setText] = useState(1);
@@ -62,7 +63,9 @@ const FirstSection = () => {
               our seamless digital platform, that is designed to support users'
               need for ease and transparency.
             </p>
-            <button className="button mt-10">Get Started</button>
+            <Link href="/get-started">
+              <button className="button mt-10">Get Started</button>
+            </Link>
           </div>
           <div className="hidden lg:w-[45%] h-[300px] lg:flex items-center">
             <ImageSlider text={text} />

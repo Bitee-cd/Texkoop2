@@ -1,5 +1,6 @@
 import React from "react";
 import styles from "../../styles/Home.module.css";
+import Link from "next/link";
 
 const SecondSection = () => {
   return (
@@ -20,7 +21,9 @@ const SecondSection = () => {
             rider-friendly environment? Join our community of riders today!
           </p>
           <div className="hidden lg:block">
-            <button className="button2 ">Ride With Us</button>
+            <Link href="rider">
+              <button className="button2 ">Ride With Us</button>
+            </Link>
           </div>
         </div>
         <div className="lg:w-[45%]">
