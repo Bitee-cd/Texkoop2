@@ -5,7 +5,7 @@ import { useEffect } from "react";
 import NavBar from "./NavBar";
 import Footer from "./Footer";
 
-const Layout = ({ children, title }) => {
+const Layout = ({ children, title, bgNav, textNav, bgHamburger }) => {
   useEffect(() => {
     scrollToTop;
   }, []);
@@ -23,7 +23,7 @@ const Layout = ({ children, title }) => {
         <link rel="icon" href="/favicon.ico" sizes="any" />
         <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
       </Head>
-      <NavBar />
+      <NavBar bgNav={bgNav} textNav={textNav} bgHamburger={bgHamburger} />
       <main className={` min-h-screen font-Helvetica`}>{children}</main>
       <Footer />
     </>

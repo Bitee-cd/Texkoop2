@@ -5,17 +5,20 @@ import Link from "next/link";
 import styles from "../styles/Home.module.css";
 import { AnimatePresence, motion } from "framer-motion";
 import SocialIcons from "./SocialIcons";
+import LogoDark from "./LogoDark";
+import { useAppContext } from "./AppContext";
 
-const NavBar = () => {
+const NavBar = ({ bgNav, textNav, bgHamburger }) => {
   const [navOpen, setNavOpen] = useState(false);
+
+  const { logoDark } = useAppContext();
+
   return (
     <div
-      className={`${styles.filter}relative min-w-screen overflow-x-hidden bg-pri_dark text-white `}
+      className={`${styles.filter}relative min-w-screen overflow-x-hidden ${bgNav} ${textNav} `}
     >
-      <navbar className="flex justify-between w-full screen-center py-5">
-        <Link href="/">
-          <Logo />
-        </Link>
+      <navbar className="flex justify-between w-full screen-center py-5 items-center">
+        <Link href="/">{logoDark ? <LogoDark /> : <Logo />}</Link>
         <div className="flex items-center pr-[5%] lg:hidden">
           <div className="flex gap-5 ">
             <LanguageMobile />
@@ -25,9 +28,9 @@ const NavBar = () => {
               }}
               className={` relative w-6  items-center lg:hidden`}
             >
-              <div className={`${styles.hamburger} mt-0`}></div>
-              <div className={`${styles.hamburger} mt-2`}></div>
-              <div className={`${styles.hamburger} mt-2`}></div>
+              <div className={`${styles.hamburger} ${bgHamburger} mt-0`}></div>
+              <div className={`${styles.hamburger} ${bgHamburger} mt-2`}></div>
+              <div className={`${styles.hamburger} ${bgHamburger} mt-2`}></div>
             </div>
           </div>
         </div>
@@ -36,7 +39,13 @@ const NavBar = () => {
           <Link href="/services">Services</Link>
           <Link href="/blog">Blog</Link>
           <LanguageMobile />
-          <button className="button">Contact us</button>
+          <button
+            className={`navButton ${
+              logoDark ? "border-pri_dark" : "border-white"
+            }`}
+          >
+            Contact us
+          </button>
         </div>
         <AnimatePresence>
           {navOpen && (
@@ -45,7 +54,7 @@ const NavBar = () => {
               exit={{ x: 500 }}
               transition={{ duration: 0.7 }}
               animate={{ x: 0, opacity: 1 }}
-              className={`${styles.zindex2} top-0  absolute right-0  border-white  lg:hidden w-full`}
+              className={`${styles.zindex2} top-0  absolute right-0  text-white border-white  lg:hidden w-full`}
             >
               <div
                 className={`${styles.navborder} p-text h-screen pt-10 pb-5 gap-5 px-3 w-[60%] ml-auto bg-pri_dark flex flex-col`}

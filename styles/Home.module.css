@@ -1,5 +1,5 @@
 .hamburger {
-  @apply origin-center inset-0 w-[38px] h-[3px] rounded bg-white transition duration-500;
+  @apply origin-center inset-0 w-[38px] h-[3.5px] rounded  transition duration-500;
 }
 .cancel {
   @apply origin-center inset-0 w-[38px] h-[3px]  bg-white transition duration-500;

@@ -1,13 +1,19 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Layout from "../components/Layout";
 import Logo from "../components/Logo";
 import { motion } from "framer-motion";
 import Timer from "../components/Home/Timer";
 import HomePage from "../components/Home/HomePage";
+import { useAppContext } from "../components/AppContext";
 
 export default function Home() {
   const [start, setStart] = useState(true);
   const [animation, setAnimation] = useState(false);
+  const { setLogoDark } = useAppContext();
+  useEffect(() => {
+    setLogoDark(false);
+  }, []);
+
   const startTimer = () => {
     setStart(false);
     setTimeout(() => {
@@ -15,7 +21,12 @@ export default function Home() {
     }, 3500);
   };
   return (
-    <Layout title="Home">
+    <Layout
+      title="Home"
+      bgNav="bg-pri_dark"
+      textNav="text-white"
+      bgHamburger="bg-white"
+    >
       {/* <div className="text-white bg-pri_dark">
         {!animation ? (
           <div className="flex justify-center items-center h-screen">

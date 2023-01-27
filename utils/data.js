@@ -136,5 +136,33 @@ export const about = {
     },
   ],
 };
+export const services = {
+  data: [
+    {
+      id: 1,
+      title: "Business Deliveries",
+      text: "We offer delivery services to businesses in the retail and e-commerce sectors. Enjoy fast and reliable ship-from-store deliveries for all your clients. A customer places an order, your business logs a delivery and within minutes a rider is matched and dispatched. The rider picks up the parcel and delivers it to your happy consumer.",
+      image: "/images/services/a.png",
+    },
+    {
+      id: 2,
+      title: "Errands",
+      text: "We are available to deliver your goods and run your last-minute errands at all times. All you need to do is log your request and we'll be available to deliver. Do you need to get that urgent item from your home or anywhere else? Find riders on our platform to complete your errands right away.",
+      image: "/images/services/b.png",
+    },
+    {
+      id: 3,
+      title: "Tailored Deliveries",
+      text: "We are equipped to meet your varied demands and needs; ranging from delivery of fragile goods to bulk orders. Your company receives an order for goods located at two different stores, TexKoop will deploy riders to various locations to fulfill daunting deliveries in no time.",
+      image: "/images/services/c.png",
+    },
+    {
+      id: 4,
+      title: "Bike Rentals",
+      text: "Need some extra cash? becoming a rider with TexKoop is an amazing plan to start earning and with our readily available bike rental services you can get started right away!",
+      image: "/images/services/d.png",
+    },
+  ],
+};
 export const remaining_time = 32488;
 export const API_URL = "https://texkoop-backend.up.railway.app";

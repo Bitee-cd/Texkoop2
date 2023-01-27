@@ -1,9 +1,12 @@
+import { AppContext } from "../components/AppContext";
 import "../styles/globals.css";
 
 function MyApp({ Component, pageProps }) {
   return (
     <>
-      <Component {...pageProps} />
+      <AppContext>
+        <Component {...pageProps} />
+      </AppContext>
     </>
   );
 }

@@ -1,8 +1,6 @@
 import Image from "next/image";
 import React from "react";
 import styles from "../../styles/About.module.css";
-import a from "../../public/images/about/2b.png";
-import b from "../../public/images/about/2c.png";
 import { about } from "../../utils/data";
 
 const ImageSlider = () => {
@@ -11,7 +9,9 @@ const ImageSlider = () => {
     <section className="my-10 mt-20 inline-block">
       <div className={` flex ${styles.overflow} `}>
         {imageSlider.map((item) => (
-          <div className={`${styles.imageHeight} $ relative `}>
+          <div
+            className={`${styles.imageHeight} $ relative border-[5px] border-y-[10px] border-sec `}
+          >
             <div className={` ${styles.background}`}></div>
             <img
               src={item.image}

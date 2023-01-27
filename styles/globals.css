@@ -111,11 +111,17 @@ body {
   }
 }
 
+.navButton {
+  @apply border  min-w-[150px] lg:w-[200px]  flex justify-center py-2  p-text hover:border-sec active:border-sec ease-in hover:text-sec active:text-sec transition-all duration-300;
+}
 .button {
-  @apply border border-white min-w-[150px] lg:w-[200px]  flex justify-center py-2  p-text hover:border-sec active:border-sec ease-in hover:text-sec active:text-sec transition-all duration-500;
+  @apply border border-white min-w-[150px] lg:w-[200px]  flex justify-center py-2  p-text hover:border-sec active:border-sec ease-in hover:text-sec active:text-sec transition-all duration-300;
 }
 .button2 {
-  @apply border w-[200px]  flex justify-center py-2  p-text border-pri text-pri hover:border-sec active:border-sec ease-in hover:text-sec active:text-sec transition-all duration-500;
+  @apply border w-[200px]  flex justify-center py-2  p-text border-pri text-pri hover:border-sec active:border-sec ease-in hover:text-sec active:text-sec transition-all duration-300;
+}
+.button3 {
+  @apply border w-[200px]  flex justify-center py-2  p-text border-pri_dark text-pri_dark hover:border-sec active:border-sec ease-in hover:text-sec active:text-sec transition-all duration-300;
 }
 .screen-center {
   @apply container w-[90%] mx-auto;
