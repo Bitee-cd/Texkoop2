@@ -1,12 +1,13 @@
 import React, { useState } from "react";
-import Logo from "./Logo";
-import LanguageMobile from "./LanguageMobile";
+import Logo from "./Reusable/Logo";
+
 import Link from "next/link";
 import styles from "../styles/Home.module.css";
 import { AnimatePresence, motion } from "framer-motion";
-import SocialIcons from "./SocialIcons";
-import LogoDark from "./LogoDark";
+import SocialIcons from "./Reusable/SocialIcons";
+import LogoDark from "./Reusable/LogoDark";
 import { useAppContext } from "./AppContext";
+import LanguageMobile from "./Reusable/LanguageMobile";
 
 const NavBar = ({ bgNav, textNav, bgHamburger }) => {
   const [navOpen, setNavOpen] = useState(false);
@@ -39,13 +40,15 @@ const NavBar = ({ bgNav, textNav, bgHamburger }) => {
           <Link href="/services">Services</Link>
           <Link href="/blog">Blog</Link>
           <LanguageMobile />
-          <button
-            className={`navButton ${
-              logoDark ? "border-pri_dark" : "border-white"
-            }`}
-          >
-            Contact us
-          </button>
+          <Link href="/say-hi">
+            <button
+              className={`navButton ${
+                logoDark ? "border-pri_dark" : "border-white"
+              }`}
+            >
+              Contact us
+            </button>
+          </Link>
         </div>
         <AnimatePresence>
           {navOpen && (
@@ -73,7 +76,7 @@ const NavBar = ({ bgNav, textNav, bgHamburger }) => {
                 <Link href="/about">About </Link>
                 <Link href="/services">Services</Link>
                 <Link href="/blog">Blog</Link>
-                <Link href="/blog">Say Hi</Link>
+                <Link href="/say-hi">Say Hi</Link>
                 <div className="mt-auto">
                   <SocialIcons />
                 </div>

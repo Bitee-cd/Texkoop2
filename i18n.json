@@ -3,6 +3,8 @@
   "defaultLocale": "en-US",
   "pages": {
     "*": ["common"],
-    "/": ["home"]
+    "/": ["home"],
+    "/privacy-policy": ["privacy"],
+    "/terms-and-conditions": ["terms"]
   }
 }

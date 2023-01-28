@@ -1,7 +1,7 @@
 import Link from "next/link";
 import React from "react";
-import SocialIcons from "./SocialIcons";
-import ScrollButton from "./ScrollButton";
+import SocialIcons from "./Reusable/SocialIcons";
+import ScrollButton from "./Reusable/ScrollButton";
 
 const Footer = () => {
   return (
@@ -12,16 +12,16 @@ const Footer = () => {
           <Link href="/rider" className="">
             Become A Rider
           </Link>
-          <Link href="#" className="lg:text-center">
+          <Link href="/get-started" className="lg:text-center">
             Partner With Us
           </Link>
-          <Link href="#" className="lg:text-center">
+          <Link href="/privacy-policy" className="lg:text-center">
             Privacy Policy
           </Link>
-          <Link href="#" className="">
+          <Link href="/terms-and-conditions" className="">
             Terms and Conditions
           </Link>
-          <Link href="#" className="lg:text-end">
+          <Link href="/faqs" className="lg:text-end">
             FAQs
           </Link>
         </div>

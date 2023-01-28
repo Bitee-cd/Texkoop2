@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import Layout from "../components/Layout";
-import Logo from "../components/Logo";
+import Logo from "../components/Reusable/Logo";
 import { motion } from "framer-motion";
 import Timer from "../components/Home/Timer";
 import HomePage from "../components/Home/HomePage";

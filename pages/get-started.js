@@ -11,7 +11,7 @@ const GetStarted = () => {
 
   return (
     <Layout
-      title="Home"
+      title="Get Started "
       bgNav="bg-pri_dark"
       textNav="text-white"
       bgHamburger="bg-white"

@@ -1,6 +1,6 @@
 import React from "react";
 import Form from "./Form";
-import { one_super_app } from "../utils/data";
+import { one_super_app } from "../../utils/data";
 import useTranslation from "next-translate/useTranslation";
 import SocialIcons from "./SocialIcons";
 import ScrollButton from "./ScrollButton";

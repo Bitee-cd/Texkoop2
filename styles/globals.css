@@ -144,6 +144,9 @@ input:focus {
 .input {
   @apply w-full  h-[30px] lg:h-[50px]  rounded-none outline-none border-white border-b bg-transparent mt-2;
 }
+.input2 {
+  @apply w-full  h-[30px] lg:h-[50px]  rounded-none outline-none border-pri_dark border-b bg-transparent mt-2;
+}
 /*Timer animation*/
 .digit {
   display: inline-block;
