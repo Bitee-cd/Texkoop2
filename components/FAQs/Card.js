@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "../../styles/Faqs.module.css";
+import styles from "/../../styles/Faqs.module.css";
 
 const Card = () => {
   return (

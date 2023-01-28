@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import Logo from "./Reusable/Logo";
-
 import Link from "next/link";
 import styles from "../styles/Home.module.css";
 import { AnimatePresence, motion } from "framer-motion";
@@ -8,6 +7,7 @@ import SocialIcons from "./Reusable/SocialIcons";
 import LogoDark from "./Reusable/LogoDark";
 import { useAppContext } from "./AppContext";
 import LanguageMobile from "./Reusable/LanguageMobile";
+import Language from "./Reusable/Language";
 
 const NavBar = ({ bgNav, textNav, bgHamburger }) => {
   const [navOpen, setNavOpen] = useState(false);
