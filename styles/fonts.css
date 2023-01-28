@@ -14,7 +14,7 @@
   display: flex;
   position: relative;
 }
-.time-part-wrapper:not(:last-child):after {
+.time-part-wrapper {
   content: ":";
   display: block;
   width: 30px;

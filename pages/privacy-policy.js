@@ -3,7 +3,6 @@ import React, { useEffect } from "react";
 import Layout from "../components/Layout";
 import { privacy } from "../utils/data";
 import { useAppContext } from "../components/AppContext";
-import styles from "../styles/Faqs.module.css";
 
 const privacy_policy = () => {
   const { t } = useTranslation("privacy");
@@ -22,10 +21,7 @@ const privacy_policy = () => {
     >
       <section className="">
         {data.map((card) => (
-          <div
-            className={`${styles.termsShadowCard} my-10 pb-1 `}
-            key={card.id}
-          >
+          <div className={`termsShadowCard my-10 pb-1 `} key={card.id}>
             <div className="screen-center">
               <p className="my-5 h2-text font-bold text-pri_dark">
                 {t(card.head)}

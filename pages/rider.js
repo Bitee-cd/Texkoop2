@@ -1,7 +1,6 @@
 import React, { useEffect } from "react";
 import Layout from "../components/Layout";
 import { useAppContext } from "../components/AppContext";
-import GetStartedForm from "../components/GetStarted/Form";
 import RiderForm from "../components/Rider/Form";
 
 const Rider = () => {

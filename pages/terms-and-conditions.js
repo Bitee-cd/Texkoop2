@@ -3,7 +3,6 @@ import React, { useEffect } from "react";
 import Layout from "../components/Layout";
 import { terms } from "../utils/data";
 import { useAppContext } from "../components/AppContext";
-import styles from "../styles/Faqs.module.css";
 
 const TermsConditions = () => {
   const { t } = useTranslation("terms");
@@ -26,10 +25,7 @@ const TermsConditions = () => {
         </div>
         <div>
           {data.map((data) => (
-            <div
-              key={data.id}
-              className={`${styles.termsShadowCard} pb-2 mb:pb-5`}
-            >
+            <div key={data.id} className={`termsShadowCard pb-2 mb:pb-5`}>
               <div className="screen-center ">
                 {data.head && (
                   <p className="h2-text my-5 text-pri_dark">{t(data.head)}</p>
