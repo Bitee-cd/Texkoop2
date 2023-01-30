@@ -570,7 +570,6 @@ export const terms = {
     {
       id: 16,
       head: "head_p",
-      text: "text_p",
       sub: [
         {
           id: 1,
@@ -579,6 +578,26 @@ export const terms = {
         {
           id: 2,
           text: "text_p_ii",
+        },
+        {
+          id: 3,
+          text: "text_p_iii",
+        },
+        {
+          id: 4,
+          text: "text_p_iv",
+        },
+        {
+          id: 5,
+          text: "text_p_v",
+        },
+        {
+          id: 6,
+          text: "text_p_vi",
+        },
+        {
+          id: 7,
+          text: "text_p_vii",
         },
       ],
     },
@@ -609,6 +628,48 @@ export const terms = {
           text: "text_r_iv",
         },
       ],
+    },
+  ],
+};
+export const blog = {
+  topArticles: [
+    {
+      id: 1,
+      image: "images/blog/1a.png",
+      text: "Serial Killer promises to strike again",
+      date: "Feb, 2022",
+    },
+    {
+      id: 2,
+      image: "images/blog/1b.png",
+      text: "Serial Killer promises to strike again",
+      date: "Feb, 2022",
+    },
+    {
+      id: 3,
+      image: "images/blog/1c.png",
+      text: "Serial Killer promises to strike again",
+      date: "Feb, 2022",
+    },
+  ],
+  recentArticles: [
+    {
+      id: 1,
+      image: "images/blog/2a.png",
+      text: "Serial Killer promises to strike again",
+      date: "Feb, 2022",
+    },
+    {
+      id: 2,
+      image: "images/blog/2b.png",
+      text: "Serial Killer promises to strike again",
+      date: "Feb, 2022",
+    },
+    {
+      id: 3,
+      image: "images/blog/2c.png",
+      text: "Serial Killer promises to strike again",
+      date: "Feb, 2022",
     },
   ],
 };

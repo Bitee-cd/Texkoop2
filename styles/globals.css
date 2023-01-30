@@ -87,7 +87,7 @@ body {
 }
 .h2-text {
   font-size: clamp(1.25rem, 1.5vw + 1rem, 2.813rem);
-  font-weight: 700;
+  font-weight: 700 @apply font-Helvetica;
 }
 .h4-text {
   font-size: clamp(0.938rem, 0.1vw + 0.9rem, 1.25rem);
@@ -115,13 +115,13 @@ body {
   @apply border  min-w-[150px] lg:w-[200px]  flex justify-center py-2  p-text hover:border-sec active:border-sec ease-in hover:text-sec active:text-sec transition-all duration-300;
 }
 .button {
-  @apply border border-white min-w-[150px] lg:w-[200px]  flex justify-center py-2  p-text hover:border-sec active:border-sec ease-in hover:text-sec active:text-sec transition-all duration-300;
+  @apply border border-white min-w-[150px] lg:w-[200px]  flex justify-center py-4  p-text hover:border-sec active:border-sec ease-in hover:text-sec active:text-sec transition-all duration-300;
 }
 .button2 {
-  @apply border w-[200px]  flex justify-center py-2  p-text border-pri text-pri hover:border-sec active:border-sec ease-in hover:text-sec active:text-sec transition-all duration-300;
+  @apply border w-[200px]  flex justify-center py-4  p-text border-pri text-pri hover:border-sec active:border-sec ease-in hover:text-sec active:text-sec transition-all duration-300;
 }
 .button3 {
-  @apply border w-[200px]  flex justify-center py-2  p-text border-pri_dark text-pri_dark hover:border-sec active:border-sec ease-in hover:text-sec active:text-sec transition-all duration-300;
+  @apply border w-[200px]  flex justify-center py-4  p-text border-pri_dark text-pri_dark hover:border-sec active:border-sec ease-in hover:text-sec active:text-sec transition-all duration-300;
 }
 .screen-center {
   @apply container w-[90%] mx-auto;
