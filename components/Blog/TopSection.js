@@ -1,6 +1,7 @@
 import React from "react";
 import { blog } from "../../utils/data";
 import styles from "../../styles/Home.module.css";
+import Image from "next/image";
 
 const TopSection = () => {
   const { topArticles } = blog;
@@ -10,10 +11,19 @@ const TopSection = () => {
       <div className="grid grid-cols-2 md:grid-cols-3 md:gap-5 gap-2 mt-10">
         {topArticles.map((blog) => (
           <div key={blog.id} className="relative ">
-            <img
+            <Image
               src={blog.image}
               alt={blog.text}
+              placeholder="blur"
               className="w-full h-full image-cover "
+              width={700}
+              height={475}
+              sizes="100vw"
+              style={{
+                width: "100%",
+                height: "auto",
+              }}
+              blurDataURL="#f2f2f2"
             />
             <img
               src="/images/about/background.png"

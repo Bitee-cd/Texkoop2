@@ -2,20 +2,30 @@ import React from "react";
 import { blog } from "../../utils/data";
 import styles from "../../styles/Home.module.css";
 import Link from "next/link";
+import Image from "next/image";
 
 const RecentArticles = () => {
   const { recentArticles } = blog;
   return (
-    <section className="screen-center">
+    <section className="screen-center my-10">
       <p className="h2-text text-pri_dark font-[700] my-5">Recent Articles</p>
       <div className="grid grid-cols-2 md:grid-cols-3 md:gap-5 gap-2 mt-10">
         {recentArticles.map((blog) => (
           <div key={blog.id} className="">
             <div className={`${styles.blogBackground} relative `}>
-              <img
+              <Image
                 src={blog.image}
                 alt={blog.text}
+                placeholder="blur"
+                blurDataURL="#f2f2f2"
                 className="w-full h-full image-cover "
+                width={700}
+                height={475}
+                sizes="100vw"
+                style={{
+                  width: "100%",
+                  height: "auto",
+                }}
               />
             </div>
 
@@ -41,7 +51,6 @@ const RecentArticles = () => {
           </div>
         ))}
       </div>
-      <hr className=" hidden lg:block  border-pri_dark border-top w-full my-10 bottom-[3%] left-[10%]"></hr>
     </section>
   );
 };

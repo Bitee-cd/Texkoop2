@@ -635,19 +635,19 @@ export const blog = {
   topArticles: [
     {
       id: 1,
-      image: "images/blog/1a.png",
+      image: "/images/blog/1a.png",
       text: "Serial Killer promises to strike again",
       date: "Feb, 2022",
     },
     {
       id: 2,
-      image: "images/blog/1b.png",
+      image: "/images/blog/1b.png",
       text: "Serial Killer promises to strike again",
       date: "Feb, 2022",
     },
     {
       id: 3,
-      image: "images/blog/1c.png",
+      image: "/images/blog/1c.png",
       text: "Serial Killer promises to strike again",
       date: "Feb, 2022",
     },
@@ -655,19 +655,19 @@ export const blog = {
   recentArticles: [
     {
       id: 1,
-      image: "images/blog/2a.png",
+      image: "/images/blog/2a.png",
       text: "Serial Killer promises to strike again",
       date: "Feb, 2022",
     },
     {
       id: 2,
-      image: "images/blog/2b.png",
+      image: "/images/blog/2b.png",
       text: "Serial Killer promises to strike again",
       date: "Feb, 2022",
     },
     {
       id: 3,
-      image: "images/blog/2c.png",
+      image: "/images/blog/2c.png",
       text: "Serial Killer promises to strike again",
       date: "Feb, 2022",
     },
