@@ -15,7 +15,7 @@ const ThirdSection = () => {
           className={`${styles.boxCard2} rounded-[10px] bg-pri_dark lg:ml-[5%] mx-auto h-[50%] lg:w-[60%] my-10 lg:my-20 text-black p-5 lg:p-10 gap-y-5`}
         >
           <div className="lg:w-[80%]  2xl:my-20">
-            <p className="h4-text text-white font-extrabold">Reviews</p>
+            <p className="h2-text text-white ">Reviews</p>
             {testimonial.map((testimonial) => (
               <div key={testimonial.id} className="my-5 p-text">
                 <p className="text-sec">{testimonial.name}</p>
