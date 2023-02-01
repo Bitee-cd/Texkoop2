@@ -20,7 +20,7 @@ const NavBar = ({ bgNav, textNav, bgHamburger }) => {
       setSticky(false);
     }
   };
-  window.addEventListener("scroll", toggleVisible);
+  // window.addEventListener("scroll", toggleVisible);
 
   return (
     <div
