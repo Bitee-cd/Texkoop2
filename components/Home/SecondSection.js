@@ -13,7 +13,7 @@ const SecondSection = () => {
         className={`${styles.zindex2} ${styles.boxCard} screen-center rounded-[10px] my-20 bg-white py-10 lg:py-20 h-[90%] w-[90%] md:w-[80%]  text-[#3B3C3C] p-5  md:p-10 lg:flex lg:items-center gap-y-5`}
       >
         <div className="lg:w-[45%]">
-          <p className="h2-text  leading-tight text-pri">
+          <p className="h2-text font-[800] leading-tight text-pri">
             Become a Rider and Start Earning
           </p>
           <p className="p-text my-5 md:my-10">
