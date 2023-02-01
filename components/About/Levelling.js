@@ -7,14 +7,7 @@ const Levelling = () => {
       <div className="screen-center">
         <Fade delay={200} duration={500} damping={0.4} cascade>
           <p className="text-pri_dark h2-text font-[700]">
-            <span className="hidden md:block">
-              Levelling the playing field in last-mile
-              <br></br>
-              delivery
-            </span>
-            <span className="md:hidden">
-              Levelling the playing field in last-mile delivery
-            </span>
+            <span className="">Convenient last-mile delivery for all</span>
           </p>
           <p className="p-text mt-5">
             We understand that getting products to their destination on time is

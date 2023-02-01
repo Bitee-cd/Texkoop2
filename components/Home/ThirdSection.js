@@ -24,7 +24,9 @@ const ThirdSection = () => {
                   <p className="text-sec uppercase font-medium">
                     {testimonial.title}
                   </p>
-                  <p className="mt-5 text-white">{testimonial.text}</p>
+                  <p className="mt-5 text-white font-[300]">
+                    {testimonial.text}
+                  </p>
                 </div>
               ))}
             </Fade>

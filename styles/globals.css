@@ -77,6 +77,9 @@ body {
 body {
   position: relative;
 }
+.zindex2 {
+  z-index: 2;
+}
 .blur {
   /* Any browser which supports CSS3 */
   filter: blur(4px);

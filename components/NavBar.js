@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Logo from "./Reusable/Logo";
 import Link from "next/link";
 import styles from "../styles/Home.module.css";
@@ -9,11 +9,24 @@ import { useAppContext } from "./AppContext";
 import LanguageMobile from "./Reusable/LanguageMobile";
 
 const NavBar = ({ bgNav, textNav, bgHamburger }) => {
+  const [sticky, setSticky] = useState(false);
   const { logoDark, navOpen, setNavOpen } = useAppContext();
+
+  const toggleVisible = () => {
+    const scrolled = document.documentElement.scrollTop;
+    if (scrolled > 1) {
+      setSticky(true);
+    } else if (scrolled <= 500) {
+      setSticky(false);
+    }
+  };
+  window.addEventListener("scroll", toggleVisible);
 
   return (
     <div
-      className={`${styles.filter}relative min-w-screen overflow-x-hidden ${bgNav} ${textNav} `}
+      className={`${
+        sticky && "fixed"
+      } w-full top-0 duration-300 transition-all ease-in z-10 min-w-screen overflow-x-hidden ${bgNav} ${textNav} `}
     >
       <nav
         className={`flex justify-between w-full screen-center py-5 items-center`}
