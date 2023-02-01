@@ -9,19 +9,19 @@ const Footer = () => {
       <div className="screen-center ">
         <div className="grid grid-cols-2 lg:flex lg:w-full justify-between">
           <Link href="/about">About</Link>
-          <Link href="/rider" className="">
+          <Link href="/rider" className="text-end">
             Become A Rider
           </Link>
           <Link href="/get-started" className="lg:text-center">
             Partner With Us
           </Link>
-          <Link href="/privacy-policy" className="lg:text-center">
+          <Link href="/privacy-policy" className="text-end lg:text-center">
             Privacy Policy
           </Link>
           <Link href="/terms-and-conditions" className="">
             Terms and Conditions
           </Link>
-          <Link href="/faqs" className="lg:text-end">
+          <Link href="/faqs" className="text-end ">
             FAQs
           </Link>
         </div>
