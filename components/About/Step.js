@@ -8,7 +8,7 @@ const Step = ({ step }) => {
       <div
         className={`${styles.shadowSteps} px-2 md:px-5 py-2 md:py-4 rounded-[5px] lg:rounded-[10px] `}
       >
-        <p className="text-pri_dark md:font-[700]">{step.title}</p>
+        <p className="text-pri_dark font-[400] md:font-[700]">{step.title}</p>
         <div className={`${styles.cardHeight} flex justify-center`}>
           <img
             src={step.image}
