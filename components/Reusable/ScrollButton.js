@@ -9,13 +9,13 @@ const ScrollButton = () => {
     });
   };
   return (
-    <div className="relative">
-      <button
+    <div className="relative flex flex-end ml-auto">
+      <div
         className="h-[30px] duration-1000 scroll-smooth cursor-pointer"
         onClick={scrollToTop}
       >
         <BsArrowUp className="w-full" size="100%" />
-      </button>
+      </div>
     </div>
   );
 };
