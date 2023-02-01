@@ -8,6 +8,7 @@ import OurMission from "../components/About/OurMission";
 import OurFocus from "../components/About/OurFocus";
 import SuperApp from "../components/Home/SuperApp";
 import { useAppContext } from "../components/AppContext";
+import { Fade } from "react-awesome-reveal";
 
 const about = () => {
   const { setLogoDark } = useAppContext();
@@ -21,13 +22,15 @@ const about = () => {
       textNav="text-pri_dark"
       bgHamburger="bg-pri_dark"
     >
-      <Levelling />
-      <YouLog />
-      <WhoWeWorkWith />
-      <ImageSlider />
-      <OurMission />
-      <OurFocus />
-      <SuperApp bgcolor="bg-white" />
+      <Fade duration={500} damping={0.1} cascade>
+        <Levelling />
+        <YouLog />
+        <WhoWeWorkWith />
+        <ImageSlider />
+        <OurMission />
+        <OurFocus />
+        <SuperApp bgcolor="bg-white" />
+      </Fade>
     </Layout>
   );
 };

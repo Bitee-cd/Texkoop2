@@ -2,6 +2,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import styles from "../../styles/Services.module.css";
 import Link from "next/link";
+import { Fade, Slide } from "react-awesome-reveal";
 
 const Card = ({ item }) => {
   return (
@@ -12,20 +13,28 @@ const Card = ({ item }) => {
         className={`md:flex md:flex-row-reverse gap-10 gap-y-10 justify-between`}
       >
         <div className=" flex md:w-[50%] mb-5">
-          <img
-            src={item.image}
-            loading="lazy"
-            className={`${item.id === 4 && "w-[70%]"} ${
-              styles.slideIn
-            } h-full object-contain`}
-          />
+          <Slide direction="right">
+            <img
+              src={item.image}
+              loading="lazy"
+              className={`${item.id === 4 && "w-[70%]"} ${
+                styles.slideIn
+              } h-full object-contain`}
+            />
+          </Slide>
         </div>
         <div className="md:w-[50%]">
-          <p className="h2-text text-pri_dark">{item.title}</p>
-          <p className="p-text text-[#3B3C3C] mt-5 font-[500]">{item.text}</p>
-          <Link href="/get-started">
-            <button className="button3 mt-5">Get Started</button>
-          </Link>
+          <Slide direction="left">
+            <Fade delay={200} duration={500} damping={0.4} cascade>
+              <p className="h2-text text-pri_dark">{item.title}</p>
+              <p className="p-text text-[#3B3C3C] mt-5 font-[500]">
+                {item.text}
+              </p>
+              <Link href="/get-started">
+                <button className="button3 mt-5">Get Started</button>
+              </Link>
+            </Fade>
+          </Slide>
         </div>
       </div>
     </div>

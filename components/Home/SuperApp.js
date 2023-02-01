@@ -1,19 +1,22 @@
 import React from "react";
 import styles from "../../styles/Home.module.css";
+import { Fade } from "react-awesome-reveal";
 const SuperApp = (bgcolor) => {
   return (
     <section className={`${styles.shadowCard} ${bgcolor} `}>
       <div className="screen-center py-10 lg:py-20 md:flex">
         <div className="lg:w-[60%] flex justify-between">
           <div className="w-[60%]">
-            <p className="p-text text-pri_dark font-black leading-tight">
-              ONE SUPER APP FOR SWIFT DELIVERIES!
-            </p>
-            <p className="p-text my-2 lg:my-10 text-[#3B3C3C]">
-              We provide on-demand and customizable delivery services through
-              our seamless digital platform that is designed to support users’
-              need for easy and transparency.
-            </p>
+            <Fade delay={200} duration={500} damping={0.2} cascade>
+              <p className="h2-text text-pri_dark font-black leading-tight">
+                ONE SUPER APP FOR SWIFT DELIVERIES!
+              </p>
+              <p className="p-text my-2 lg:my-10 text-[#3B3C3C]">
+                We provide on-demand and customizable delivery services through
+                our seamless digital platform that is designed to support users’
+                need for easy and transparency.
+              </p>
+            </Fade>
             <div className="flex gap-2 lg:gap-10">
               <div>
                 <img
