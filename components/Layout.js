@@ -30,7 +30,7 @@ const Layout = ({ children, title, bgNav, textNav, bgHamburger }) => {
   }, []);
   useEffect(() => {}, []);
   return (
-    <div className="relative h-full">
+    <>
       <Head>
         <title>{title ? title + " - Texkoop" : "Texkoop"}</title>
         <meta name="description" content="Texkoop Logistics Company" />
@@ -43,14 +43,13 @@ const Layout = ({ children, title, bgNav, textNav, bgHamburger }) => {
             x: circle.x,
             y: circle.y,
           }}
-          className={`h-[20px] w-[20px] bg-sec z-10 absolute top-0 rounded-full`}
+          className={`hidden h-[20px] w-[20px] bg-sec border z-10 absolute top-auto rounded-full translate-x-1/2`}
         ></motion.div>
       </div>
       <NavBar bgNav={bgNav} textNav={textNav} bgHamburger={bgHamburger} />
       <main className={` min-h-screen font-Helvetica`}>{children}</main>
-
       <Footer />
-    </div>
+    </>
   );
 };
 

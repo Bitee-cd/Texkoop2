@@ -9,7 +9,7 @@ const OurFocus = () => {
     <>
       <section className={`${styles.shadowCard}  py-10`}>
         <div className="screen-center">
-          <p className="text-pri_dark h2-text">Our Focus </p>
+          <p className="text-pri_dark h2-text font-[700]">Our Focus </p>
           <p className="p-text mt-5 md:w-[80%]">
             We are committed to our core values of excellence, innovation,
             sustainability, social responsibility, and customer satisfaction. We

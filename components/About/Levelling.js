@@ -4,7 +4,7 @@ const Levelling = () => {
   return (
     <section className={`${styles.shadowCard}  py-10`}>
       <div className="screen-center">
-        <p className="text-pri_dark h2-text ">
+        <p className="text-pri_dark h2-text font-[700]">
           <span className="hidden md:block">
             Levelling the playing field in last-mile
             <br></br>

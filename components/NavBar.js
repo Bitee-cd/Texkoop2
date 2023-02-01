@@ -53,6 +53,7 @@ const NavBar = ({ bgNav, textNav, bgHamburger }) => {
         <AnimatePresence>
           {navOpen && (
             <motion.div
+              key={navOpen}
               initial={{ x: 500, opacity: 0 }}
               exit={{ x: 500 }}
               transition={{ duration: 0.7 }}

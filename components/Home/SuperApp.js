@@ -6,7 +6,7 @@ const SuperApp = (bgcolor) => {
       <div className="screen-center py-10 lg:py-20 md:flex">
         <div className="lg:w-[60%] flex justify-between">
           <div className="w-[60%]">
-            <p className="h2-text text-pri_dark font-[700] leading-tight">
+            <p className="h2-text text-pri_dark font-bold leading-tight">
               ONE SUPER APP FOR SWIFT DELIVERIES!
             </p>
             <p className="p-text my-2 lg:my-10 text-[#3B3C3C]">

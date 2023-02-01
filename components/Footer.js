@@ -26,7 +26,7 @@ const Footer = () => {
           </Link>
         </div>
         <hr className=" bg-white border-white border w-full my-5 lg:my-10 "></hr>
-        <div className="grid grid-cols-2 justify-between">
+        <div className="flex justify-between">
           <SocialIcons />
           <div className="ml-auto">
             <ScrollButton />
