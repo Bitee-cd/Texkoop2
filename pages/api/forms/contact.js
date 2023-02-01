@@ -4,7 +4,7 @@ const contactUsApi = async (req, res) => {
   if (req.method === "POST") {
     const body = JSON.stringify(req.body);
     try {
-      const apiRes = await fetch(`${API_URL}/api/contact-us/`, {
+      const apiRes = await fetch(`${API_URL}/contact-us/`, {
         method: "POST",
         headers: {
           Accept: "application/json",
@@ -12,6 +12,7 @@ const contactUsApi = async (req, res) => {
         },
         body: body,
       });
+      
       const data = await apiRes.json();
       if (apiRes.status === 201) {
         return res.status(201).json({ success: data.success });

@@ -2,24 +2,18 @@ import useTranslation from "next-translate/useTranslation";
 import Link from "next/link";
 import React, { useState } from "react";
 import styles from "../../styles/Check.module.css";
+import postData from "../formHandlers/post";
 
 const RiderForm = () => {
   const [success, setSuccess] = useState(false);
   const [error, setError] = useState(false);
 
-  const createWaitlist = async (form_values) => {
-    const waitlist = await fetch(`/api/forms/waitlist/`, {
-      method: "POST",
+  const createData = async (form_values) => {
+    let url = `/api/forms/rider/`
+    let response = await postData(url,form_values) 
+    //it returns status of true if it was successfull and false if not successfull
 
-      headers: {
-        Accept: "application/json",
-        "content-type": "application/json",
-      },
-      body: JSON.stringify(form_values),
-    });
-    //it returns status of 201 if it was successfull and 400 if not successfull
-
-    if (waitlist.status === 201) {
+    if (response) {
       setSuccess(true);
     } else setError(true);
   };
@@ -30,7 +24,7 @@ const RiderForm = () => {
 
     const form_values = Object.fromEntries(formData);
 
-    createWaitlist(form_values);
+    createData(form_values);
   };
 
   const { t, lang } = useTranslation("home");
@@ -43,11 +37,11 @@ const RiderForm = () => {
     >
       <div className="my-5">
         <label className="">First Name</label>
-        <input required type="text" name="name" className="input" />
+        <input required type="text" name="first_name" className="input" />
       </div>
       <div className="mt-5">
         <label className="">Last Name</label>
-        <input required type="text" name="business_name" className="input" />
+        <input required type="text" name="last_name" className="input" />
       </div>
       <div className="mt-5">
         <label className="">Email</label>
@@ -55,11 +49,11 @@ const RiderForm = () => {
       </div>
       <div className="mt-5">
         <label className="">Phone Number</label>
-        <input required type="number" name="number" className="input" />
+        <input required type="number" name="phone_number" className="input" />
       </div>
       <div className="mt-5">
         <label className="">City</label>
-        <input required type="text" name="country" className="input" />
+        <input required type="text" name="city" className="input" />
       </div>
 
       <div className=" relative mt-5">
@@ -70,7 +64,7 @@ const RiderForm = () => {
           rows="10"
           required
           type="number"
-          name="volume"
+          name="message"
           className="bg-transparent border border-white w-full p-5"
         />
       </div>
@@ -88,7 +82,7 @@ const RiderForm = () => {
           </span>
         </p>
         <label className={`${styles.checkbox}`}>
-          <input type="checkbox" />
+          <input required type="checkbox" />
           <span className={styles.checkmark}></span>
         </label>
       </div>

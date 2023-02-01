@@ -674,4 +674,4 @@ export const blog = {
   ],
 };
 export const remaining_time = 32488;
-export const API_URL = "https://texkoop-backend.up.railway.app";
+export const API_URL = "http://127.0.0.1:8000";

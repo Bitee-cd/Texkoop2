@@ -4,7 +4,7 @@ const contactUsApi = async (req, res) => {
   if (req.method === "POST") {
     const body = JSON.stringify(req.body);
     try {
-      const apiRes = await fetch(`${API_URL}/api/rider/`, {
+      const apiRes = await fetch(`${API_URL}/rider/`, {
         method: "POST",
         headers: {
           Accept: "application/json",
