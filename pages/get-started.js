@@ -4,7 +4,7 @@ import { useAppContext } from "../components/AppContext";
 import GetStartedForm from "../components/GetStarted/Form";
 
 const GetStarted = () => {
-  const { setLogoDark } = useAppContext();
+  const { setLogoDark, navOpen } = useAppContext();
   useEffect(() => {
     setLogoDark(false);
   }, []);
@@ -16,7 +16,11 @@ const GetStarted = () => {
       textNav="text-white"
       bgHamburger="bg-white"
     >
-      <section className="min-h-screen  bg-pri_dark text-white py-20">
+      <section
+        className={`${
+          navOpen && "blur"
+        } min-h-screen  bg-pri_dark text-white py-20`}
+      >
         <div className="screen-center">
           <div className="md:w-[70%]">
             <p className="h2-text">

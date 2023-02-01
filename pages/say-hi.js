@@ -4,7 +4,7 @@ import { useAppContext } from "../components/AppContext";
 import SayHiForm from "../components/SayHI/Form";
 
 const GetStarted = () => {
-  const { setLogoDark } = useAppContext();
+  const { setLogoDark, navOpen } = useAppContext();
   useEffect(() => {
     setLogoDark(true);
   }, []);
@@ -16,7 +16,11 @@ const GetStarted = () => {
       textNav="text-bg-pri_dark"
       bgHamburger="bg-pri_dark"
     >
-      <section className="min-h-screen  bg-white text-pri_dark py-20">
+      <section
+        className={`${
+          navOpen && "blur"
+        } min-h-screen  bg-white text-pri_dark py-20`}
+      >
         <div className="screen-center">
           <div className="md:w-[70%]">
             <p className="h2-text">Interact with the Team</p>

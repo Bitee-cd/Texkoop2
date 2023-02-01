@@ -5,7 +5,7 @@ import { services } from "../utils/data";
 import Card from "../components/FAQs/Card";
 
 const FAQs = () => {
-  const { setLogoDark } = useAppContext();
+  const { setLogoDark, navOpen } = useAppContext();
   useEffect(() => {
     setLogoDark(true);
   }, []);
@@ -18,7 +18,11 @@ const FAQs = () => {
       textNav="text-bg-pri_dark"
       bgHamburger="bg-pri_dark"
     >
-      <section className="min-h-screen  bg-white text-pri_dark py-10">
+      <section
+        className={`${
+          navOpen && "blur"
+        } min-h-screen  bg-white text-pri_dark py-10`}
+      >
         <div className="screen-center">
           <p className="h2-text">Frequently Asked Questions</p>
           <div className="my-5">

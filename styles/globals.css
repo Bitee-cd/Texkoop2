@@ -77,6 +77,15 @@ body {
 body {
   position: relative;
 }
+.blur {
+  /* Any browser which supports CSS3 */
+  filter: blur(4px);
+
+  /* Firefox version 34 and earlier */
+
+  /* Webkit in Chrome 52, Safari 9, Opera 39, and earlier */
+  -webkit-filter: blur(4px);
+}
 .big-text {
   font-size: clamp(1.25rem, 4vw + 0.8rem, 5.938rem);
   font-weight: 900;

@@ -10,6 +10,7 @@ const ImageSlider = () => {
       <div className={` flex ${styles.overflow} `}>
         {imageSlider.map((item) => (
           <div
+            key={item.id}
             className={`${styles.imageHeight} $ relative border-[5px] border-y-[10px] border-sec `}
           >
             <div className={` ${styles.background}`}></div>

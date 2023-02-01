@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import Logo from "./Reusable/Logo";
 import Link from "next/link";
 import styles from "../styles/Home.module.css";
@@ -7,20 +7,23 @@ import SocialIcons from "./Reusable/SocialIcons";
 import LogoDark from "./Reusable/LogoDark";
 import { useAppContext } from "./AppContext";
 import LanguageMobile from "./Reusable/LanguageMobile";
-import Language from "./Reusable/Language";
 
 const NavBar = ({ bgNav, textNav, bgHamburger }) => {
-  const [navOpen, setNavOpen] = useState(false);
-
-  const { logoDark } = useAppContext();
+  const { logoDark, navOpen, setNavOpen } = useAppContext();
 
   return (
     <div
       className={`${styles.filter}relative min-w-screen overflow-x-hidden ${bgNav} ${textNav} `}
     >
-      <navbar className="flex justify-between w-full screen-center py-5 items-center">
-        <Link href="/">{logoDark ? <LogoDark /> : <Logo />}</Link>
-        <div className="flex items-center pr-[5%] lg:hidden">
+      <nav
+        className={`flex justify-between w-full screen-center py-5 items-center`}
+      >
+        <div className={`${navOpen && "blur"}`}>
+          <Link href="/">{logoDark ? <LogoDark /> : <Logo />}</Link>
+        </div>
+        <div
+          className={`${navOpen && "blur"} flex items-center pr-[5%] lg:hidden`}
+        >
           <div className="flex gap-5 ">
             <LanguageMobile />
             <div
@@ -85,7 +88,7 @@ const NavBar = ({ bgNav, textNav, bgHamburger }) => {
             </motion.div>
           )}
         </AnimatePresence>
-      </navbar>
+      </nav>
     </div>
   );
 };
