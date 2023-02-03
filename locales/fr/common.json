@@ -1,34 +1,24 @@
 {
-    "Nav1": "L'Entreprise",
-    "Nav2": "Services",
-    "Nav3": "Contactez- Nous",
-    "Nav4": "Blog",
-    "Nav5": "Démarrez Avec Nous",   
-    "Foo1a":"Support",
-    "Foo1ai":"FAQ's",
-    "Foo1aii":"Politique de Confientialite",
-    "Foo1aiii":"Termes et Conditions",
-    "Foo1b":"L'Entreprise",
-    "Foo1bi":"A Propos de Nous",
-    "Foo1bii":"Durabilité",
-    "Foo1biii":"Carrières",
-    "Foo1c":"Services",
-    "Foo1ci":"Expédier Depuis le Magasin",
-    "Foo1cii":"Pharma",
-    "Foo1ciii":"Électronique",
-    "Foo1civ":"Vêtements",
-    "Foo1cv":"Services Spéciaux",
-    "Copyright":"Tous droits réservés."
+  "Nav1": "À Propos",
+  "Nav2": "Services",
+  "contact_button": "Contactez- Nous",
+  "Nav4": "Blog",
+  "Nav5": "Say Hi",
+
+  "Fooa": "À Propos ",
+  "Foob": "Devenez un Coursier",
+  "Fooc": "Devenez Partenaire",
+  "Food": "Politique de Confidentialité",
+  "Fooe": " Conditions Générales",
+  "Foof": "FAQs",
+
+  "Copyright": "Tous droits réservés.",
+  "button2": "Soyez Informé",
+  "error": "Oups! Quelque chose a mal tourné",
+  "success": "Vous avez été ajouté à la liste d'attente",
+
+  "super_app_head": "UNE SUPER APP POUR LES LIVRAISONS RAPIDE ! ",
+  "super_app_text": "Nous fournissons des services de livraison à la demande et sur mesure, par le biais de notre plateforme numérique transparente, conçue pour répondre aux besoins des utilisateurs d’une manière plus facile et transparente. ",
+
+  "buttona": "Démarrez"
 }
-
-
-
-
-
-
-
-
-
-
-
-

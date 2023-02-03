@@ -4,8 +4,10 @@ import Link from "next/link";
 import { Fade } from "react-awesome-reveal";
 import bike from "../../public/images/bike-rider.png";
 import Image from "next/image";
+import useTranslation from "next-translate/useTranslation";
 
 const SecondSection = () => {
+  const { t, lang } = useTranslation("home");
   return (
     <div
       className={`bg-[#ECF3FF] min-h-screen 2xl:min-h-[50vh] relative overflow-hidden  flex items-center justify-center ${styles.shadowCard}`}
@@ -17,16 +19,11 @@ const SecondSection = () => {
       >
         <div className="lg:w-[45%]">
           <Fade delay={200} duration={500} damping={0.2} cascade>
-            <p className="h2-text leading-tight text-pri">
-              Become a Rider and Start Earning
-            </p>
-            <p className="p-text my-5 md:my-10">
-              Would you like to earn extra income while working in a
-              rider-friendly environment? Join our community of riders today!
-            </p>
+            <p className="h2-text leading-tight text-pri">{t("Headb")}</p>
+            <p className="p-text my-5 md:my-10">{t("textb")}</p>
             <div className="hidden lg:block">
               <Link href="rider">
-                <button className="button2 ">Ride With Us</button>
+                <button className="button2 "> {t("buttonb")}</button>
               </Link>
             </div>
           </Fade>
@@ -45,7 +42,7 @@ const SecondSection = () => {
               height: "auto",
             }}
           />
-          <button className="button2 lg:hidden mt-10">Ride With Us</button>
+          <button className="button2 lg:hidden mt-10"> {t("buttonb")}</button>
         </div>
       </div>
     </div>

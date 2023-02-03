@@ -81,13 +81,11 @@ body {
   z-index: 2;
 }
 .blur {
-  /* Any browser which supports CSS3 */
-  filter: blur(4px);
-
-  /* Firefox version 34 and earlier */
-
-  /* Webkit in Chrome 52, Safari 9, Opera 39, and earlier */
-  -webkit-filter: blur(4px);
+  filter: blur(2px);
+  -webkit-filter: blur(2px);
+}
+.blur-background {
+  box-shadow: 0 0 5px 10px #2c4e86;
 }
 .big-text {
   font-size: clamp(1.25rem, 4vw + 0.8rem, 5.938rem);
@@ -263,4 +261,12 @@ input:focus {
 }
 .termsShadowCard {
   box-shadow: -3px 3px 4px 0px #00000040;
+}
+.mf-container {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  background: purple;
+  border-radius: 50%;
+  box-shadow: 1px 1px 15px purple;
 }

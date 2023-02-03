@@ -6,7 +6,7 @@ import Card from "../components/Services/Card";
 import styles from "../styles/Services.module.css";
 
 const Services = () => {
-  const { setLogoDark, navOpen } = useAppContext();
+  const { setLogoDark } = useAppContext();
   useEffect(() => {
     setLogoDark(true);
   }, []);
@@ -18,7 +18,7 @@ const Services = () => {
       textNav="text-pri_dark"
       bgHamburger="bg-pri_dark"
     >
-      <div className={` ${navOpen && "blur"} relative bottom-0 `}>
+      <div className={` relative bottom-0 `}>
         <section className="w-[90%] max-w-[1440px] mx-auto lg:px-1 py-10  overflow-hidden ">
           <div
             className={`${styles.circle} hidden md:block ${styles.cornerRight}`}

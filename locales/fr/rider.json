@@ -1,0 +1,18 @@
+{
+  "headai": "Faites partie du bon travail.",
+  "headaii": "Soyez un partenaire de transport efficace livraison!",
+  "textai": "Aimeriez-vous gagner un revenu supplémentaire tout en travaillant dans un environnement favorable aux coursiers ? ",
+  "textaii": "Rejoignez notre communauté de coureurs dès aujourd'hui !",
+  "f_name": "Prénom ",
+  "l_name": "Nom ",
+  "email": "Email",
+  "number": "Numéro de Téléphone",
+  "message": "Message",
+  "city": " Ville ",
+  "select_a": "Nous collectons ces données dans le but de traiter votre candidature. En cliquant sur cette case, vous reconnaissez avoir lu et compris la",
+  "required": "required",
+  "select_b": "et",
+  "privacy_policy": "politique de confidentialité",
+  "terms_of service": "les conditions de service.",
+  "button_send": "Envoyez"
+}

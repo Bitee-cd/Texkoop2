@@ -2,59 +2,63 @@ import Link from "next/link";
 import React from "react";
 import SocialIcons from "./Reusable/SocialIcons";
 import ScrollButton from "./Reusable/ScrollButton";
+import useTranslation from "next-translate/useTranslation";
+import { useAppContext } from "./AppContext";
 
 const Footer = () => {
+  const { t } = useTranslation("common");
+  const { navOpen } = useAppContext();
   return (
-    <footer className="bg-pri_dark py-10 text-white ">
+    <footer className={`${navOpen && "blur"} bg-pri_dark py-10 text-white `}>
       <div className="screen-center ">
         <div className="hidden lg:flex lg:w-full justify-between">
-          <Link href="/about">About</Link>
+          <Link href="/about"> {t("Fooa")}</Link>
           <Link href="/rider" className="text-end">
-            Become A Rider
+            {t("Foob")}
           </Link>
           <Link href="/get-started" className="lg:text-center">
-            Partner With Us
+            {t("Fooc")}
           </Link>
           <Link href="/privacy-policy" className="text-end lg:text-center">
-            Privacy Policy
+            {t("Food")}
           </Link>
           <Link href="/terms-and-conditions" className="">
-            Terms and Conditions
+            {t("Fooe")}
           </Link>
           <Link href="/faqs" className="text-end ">
-            FAQs
+            {t("Foof")}
           </Link>
         </div>
         <div className="lg:hidden flex justify-between text-[15px] md:text-[17px]">
           <div>
             <div>
-              <Link href="/about">About</Link>
+              <Link href="/about"> {t("Fooa")}</Link>
             </div>
             <div>
               <Link href="/privacy-policy" className="">
-                Privacy Policy
+                {t("Food")}
               </Link>
             </div>
             <div>
               <Link href="/terms-and-conditions" className="">
-                Terms and Conditions
+                {t("Fooe")}
               </Link>
             </div>
           </div>
           <div>
             <div>
               <Link href="/rider" className="">
-                Become A Rider
+                {t("Foob")}
               </Link>
             </div>
             <div>
               <Link href="/get-started" className="">
-                Partner With Us
+                {t("Fooc")}
               </Link>
             </div>
             <div>
               <Link href="/faqs" className=" ">
-                FAQs
+                {t("Foof")}
               </Link>
             </div>
           </div>

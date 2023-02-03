@@ -9,7 +9,7 @@ import { useAppContext } from "../components/AppContext";
 export default function Home() {
   const [start, setStart] = useState(true);
   const [animation, setAnimation] = useState(false);
-  const { setLogoDark, navOpen } = useAppContext();
+  const { setLogoDark } = useAppContext();
   useEffect(() => {
     setLogoDark(false);
   }, []);
@@ -58,9 +58,7 @@ export default function Home() {
           <HomePage />
         )}
       </div> */}
-      <div className={`${navOpen && "blur"} `}>
-        <HomePage />
-      </div>
+      <HomePage />
     </Layout>
   );
 }

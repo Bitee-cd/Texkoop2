@@ -2,9 +2,11 @@ import React, { useEffect } from "react";
 import Layout from "../components/Layout";
 import { useAppContext } from "../components/AppContext";
 import SayHiForm from "../components/SayHI/Form";
+import useTranslation from "next-translate/useTranslation";
 
 const GetStarted = () => {
-  const { setLogoDark, navOpen } = useAppContext();
+  const { setLogoDark } = useAppContext();
+  const { t } = useTranslation("contact");
   useEffect(() => {
     setLogoDark(true);
   }, []);
@@ -12,22 +14,19 @@ const GetStarted = () => {
   return (
     <Layout
       title="Say Hi "
-      bgNav="white"
+      bgNav="bg-white"
       textNav="text-bg-pri_dark"
       bgHamburger="bg-pri_dark"
     >
-      <section
-        className={`${
-          navOpen && "blur"
-        } min-h-screen  bg-white text-pri_dark py-20`}
-      >
+      <section className={` min-h-screen  bg-white text-pri_dark py-20`}>
         <div className="screen-center">
           <div className="md:w-[70%]">
-            <p className="h2-text">Interact with the Team</p>
+            <p className="h2-text">{t("head")}</p>
             <div className="lg:w-[60%] mt-5">
               <p>
-                Have a Suggestion, Request or Complaint? We are here to take
-                them all. Kindly fill in the form below.
+                {t("textai")}
+                <br></br>
+                {t("textaii")}
               </p>
             </div>
             <SayHiForm />

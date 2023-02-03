@@ -67,10 +67,6 @@
   border-left: 2px solid #ffffff;
   z-index: 5;
 }
-.filter {
-  -webkit-filter: blur(10px); /* Safari 6.0 - 9.0 */
-  filter: blur(10px);
-}
 .slideIn {
   animation: slide-in;
   animation-duration: 1000ms;

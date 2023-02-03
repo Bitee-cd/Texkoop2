@@ -1,10 +1,12 @@
 import React from "react";
 import styles from "../../styles/Home.module.css";
+import useTranslation from "next-translate/useTranslation";
 const Partners = () => {
+  const { t } = useTranslation("home");
   return (
     <div className={`${styles.shadowCard} bg-white  `}>
       <div className=" w-[90%] md:ml-auto  mx-auto max-w-[1440px] py-10 md:pt-20">
-        <p className="h2-text leading-tight text-pri ">Partners</p>
+        <p className="h2-text leading-tight text-pri ">{t("Headd")}</p>
         <hr className="hidden md:block bg-black border-black border-top w-screen mt-5"></hr>
         <div className="flex items-center  xl:gap-10">
           <div className="min-w-[200px]">

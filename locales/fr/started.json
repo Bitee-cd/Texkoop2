@@ -1,0 +1,21 @@
+{
+  "headai": "Intégrez la solution Texkoop",
+  "headaii": "dans votre service de vente au détail.",
+  "textai": "Vous dirigez une entreprise de vente au détail ?  ",
+  "textaii": "Souscrivez au service entreprise de TexKoop et bénéficiez de notre solution intégrée de manière transparente pour traiter vos commandes en temps réel.",
+  "name": "Votre nom",
+  "c_name": "Nom de l'entreprise",
+  "email": "Email",
+  "number": "Numéro de Téléphone",
+  "city": "Ville",
+  "country": "Pays",
+  "industry": "Industrie",
+  "volume": "Volume de livraison ",
+  "message": "Message",
+  "select_a": "Nous collectons ces données dans le but de traiter votre candidature. En cliquant sur cette case, vous reconnaissez avoir lu et compris la",
+  "required": "required",
+  "select_b": "et",
+  "privacy_policy": "politique de confidentialité",
+  "terms_of_service": "les conditions de service.",
+  "button_send": "Envoyez"
+}

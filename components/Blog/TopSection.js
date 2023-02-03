@@ -27,10 +27,10 @@ const TopSection = () => {
             />
             <img
               src="/images/about/background.png"
-              className={`${styles.zindez2} top-0 right-0 h-full w-full absolute`}
+              className={`${styles.zindz2} top-0 right-0 h-full w-full absolute`}
             />
             <div
-              className={`${styles.zindez2} absolute bottom-0 left-0 right-0 p-2 md:p-5  text-white`}
+              className={`${styles.zinde2} absolute bottom-0 left-0 right-0 p-2 md:p-5  text-white`}
             >
               <p className="p-tiny-text">{blog.text}</p>
               <p className="p-tiny-text mt-2 md:mt-5">{blog.date}</p>

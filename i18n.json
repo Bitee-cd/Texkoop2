@@ -4,6 +4,11 @@
   "pages": {
     "*": ["common"],
     "/": ["home"],
+    "/about": ["about"],
+    "/rider": ["rider"],
+    "/get-started": ["started"],
+    "/say-hi": ["contact"],
+    "/services": ["services"],
     "/privacy-policy": ["privacy"],
     "/terms-and-conditions": ["terms"]
   }

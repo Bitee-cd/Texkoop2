@@ -1,16 +1,17 @@
 {
-  "Nav1": "About Us",
+  "Nav1": "About ",
   "Nav2": "Services",
-  "Nav3": "Contact Us",
+  "contact_button": "Contact Us",
   "Nav4": "Blog",
-  "Nav5": "Start with us",
-  "Foo1a": "Support",
-  "Foo1ai": "FAQs",
-  "Foo1aii": "Privacy Policy",
-  "Foo1aiii": "Terms and Conditions",
-  "Foo1b": "Company",
-  "Foo1bi": "About Us",
-  "Foo1bii": "Sustainability",
+  "Nav5": "Say Hi",
+
+  "Fooa": "About",
+  "Foob": "Become a Rider",
+  "Fooc": "Partner with Us",
+  "Food": "Privacy Policy",
+  "Fooe": "Terms and Conditions",
+  "Foof": "FAQs",
+
   "Foo1biii": "Partner With Us",
   "Foo1c": "Services",
   "Foo1ci": "Ship From Store",
@@ -18,5 +19,13 @@
   "Foo1ciii": "Electronics",
   "Foo1civ": "Clothing",
   "Foo1cv": "Special Services",
-  "Copyright": "All rights reserved"
+  "Copyright": "All rights reserved",
+  "button2": "Notify me",
+  "error": " Something went wrong",
+  "success": "You have been added to our waitlist",
+
+  "super_app_head": "ONE SUPER APP FOR SWIFT DELIVERIES! ",
+  "super_app_text": "We provide on-demand and customizable delivery services through our seamless digital platform that is  designed to support users’ need for easy and transparency.",
+
+  "buttona": "Get Started"
 }

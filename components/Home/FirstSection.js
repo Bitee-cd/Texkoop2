@@ -13,7 +13,7 @@ const FirstSection = () => {
   });
 
   return (
-    <section className="relative min-h-screen gap-10 text-white bg-pri_dark  lg:h-auto flex justify-center items-center">
+    <section className=" blur-background relative min-h-screen gap-10 text-white bg-pri_dark  lg:h-auto flex justify-center items-center">
       <div className="my-10 mt-20 lg:my-20 container w-[90%] lg:w-[80%] mx-auto">
         <div className="lg:hidden flex justify-center  h-[250px] md:h-[350px] w-full lg:mb-20 ">
           <ImageSliderMobile text={text} />

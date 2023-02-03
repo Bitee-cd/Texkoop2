@@ -2,9 +2,11 @@ import React from "react";
 import styles from "../../styles/Home.module.css";
 import { home } from "../../utils/data";
 import { Fade } from "react-awesome-reveal";
+import useTranslation from "next-translate/useTranslation";
 
 const ThirdSection = () => {
   const { testimonial } = home;
+  const { t } = useTranslation("home");
   return (
     <div
       className={`bg-[#F4F8FF]  relative overflow-hidden  flex items-center ${styles.shadowCard}`}
@@ -17,15 +19,13 @@ const ThirdSection = () => {
         >
           <div className="lg:w-[80%]  2xl:my-20">
             <Fade delay={200} duration={500} damping={0.3} cascade>
-              <p className="h2-text text-white ">Reviews</p>
+              <p className="h2-text text-white ">{t("Headc")}</p>
               {testimonial.map((testimonial) => (
                 <div key={testimonial.id} className="my-5 p-text">
-                  <p className="text-sec">{testimonial.name}</p>
-                  <p className="text-sec uppercase font-medium">
-                    {testimonial.title}
-                  </p>
+                  <p className="text-sec">{t(testimonial.name)}</p>
+                  <p className="text-sec font-medium">{t(testimonial.title)}</p>
                   <p className="mt-5 text-white font-[300]">
-                    {testimonial.text}
+                    {t(testimonial.text)}
                   </p>
                 </div>
               ))}

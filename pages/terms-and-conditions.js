@@ -7,7 +7,7 @@ import { useAppContext } from "../components/AppContext";
 const TermsConditions = () => {
   const { t } = useTranslation("terms");
   const { data } = terms;
-  const { setLogoDark, navOpen } = useAppContext();
+  const { setLogoDark } = useAppContext();
   useEffect(() => {
     setLogoDark(true);
   }, []);
@@ -15,11 +15,11 @@ const TermsConditions = () => {
   return (
     <Layout
       title="Terms and Conditions"
-      bgNav="white"
+      bgNav="bg-white"
       textNav="text-bg-pri_dark"
       bgHamburger="bg-pri_dark"
     >
-      <section className={`${navOpen && "blur"} my-10`}>
+      <section className={` my-10`}>
         <div className="screen-center">
           <p className="h2-text font-[700] text-pri_dark">{t("main_head")}</p>
         </div>

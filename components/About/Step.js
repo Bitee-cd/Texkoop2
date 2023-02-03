@@ -3,8 +3,10 @@ import { about } from "../../utils/data";
 import styles from "../../styles/About.module.css";
 import { Fade, Slide } from "react-awesome-reveal";
 import Image from "next/image";
+import useTranslation from "next-translate/useTranslation";
 
 const Step = ({ step }) => {
+  const { t } = useTranslation("about");
   return (
     <Slide cascade damping={0.3}>
       <div>
@@ -13,7 +15,7 @@ const Step = ({ step }) => {
             className={`${styles.shadowSteps} px-2 md:px-5 py-2 md:py-4 rounded-[5px] lg:rounded-[10px] `}
           >
             <p className="text-pri_dark font-[400] md:font-[700]">
-              {step.title}
+              {t(step.title)}
             </p>
             <div className={`${styles.cardHeight} flex justify-center`}>
               <Image
@@ -30,7 +32,7 @@ const Step = ({ step }) => {
               />
             </div>
           </div>
-          <p className="mt-3 lg:mt-5 leading-tight">{step.text}</p>
+          <p className="mt-3 lg:mt-5 leading-tight">{t(step.text)}</p>
         </Fade>
       </div>
     </Slide>

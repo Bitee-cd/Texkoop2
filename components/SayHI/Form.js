@@ -9,8 +9,8 @@ const SayHiForm = () => {
   const [error, setError] = useState(false);
 
   const createData = async (form_values) => {
-    let url = `/api/forms/contact/`
-    let response = await postData(url,form_values) 
+    let url = `/api/forms/contact/`;
+    let response = await postData(url, form_values);
     //it returns status of true if it was successfull and false if not successfull
 
     if (response) {
@@ -18,18 +18,16 @@ const SayHiForm = () => {
     } else setError(true);
   };
 
-
   const submitHandler = (e) => {
     e.preventDefault();
     var formData = new FormData(e.target);
 
     const form_values = Object.fromEntries(formData);
 
-
     createData(form_values);
   };
 
-  const { t, lang } = useTranslation("home");
+  const { t, lang } = useTranslation("contact");
 
   return (
     <form
@@ -38,25 +36,25 @@ const SayHiForm = () => {
       className=" grid gap-2 md:gap-5 py-5 md:py-10  p-text"
     >
       <div className="my-5">
-        <label className="">Your Name</label>
+        <label className="">{t("name")}</label>
         <input required type="text" name="name" className="input2" />
       </div>
 
       <div className="mt-5">
-        <label className="">Email</label>
+        <label className="">{t("email")}</label>
         <input required type="email" name="email" className="input2" />
       </div>
       <div className="mt-5">
-        <label className="">Phone Number</label>
+        <label className="">{t("number")}</label>
         <input required type="number" name="phone_number" className="input2" />
       </div>
       <div className="mt-5">
-        <label className="">City</label>
+        <label className="">{t("city")}</label>
         <input required type="text" name="city" className="input2" />
       </div>
       <div className=" relative mt-5">
         <label className="absolute bg-white -translate-y-[50%] px-3 ml-2">
-          Message
+          {t("message")}
         </label>
         <textarea
           rows="10"
@@ -68,15 +66,19 @@ const SayHiForm = () => {
       </div>
       <div>
         <button type={"submit"} className="button3">
-          Send
+          {t("button_send")}
         </button>
       </div>
       <div>
         {success && (
-          <p className="text-pri_dark p-tiny-text font-[500]">{t("success")}</p>
+          <p className="text-pri_dark p-tiny-text font-[500]">
+            {t("common:success")}
+          </p>
         )}
         {error && (
-          <p className="text-red-600 p-tiny-text font-[500]">{t("error")}</p>
+          <p className="text-red-600 p-tiny-text font-[500]">
+            {t("common:error")}
+          </p>
         )}
       </div>
     </form>

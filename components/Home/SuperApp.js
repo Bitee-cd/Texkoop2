@@ -1,7 +1,9 @@
 import React from "react";
 import styles from "../../styles/Home.module.css";
 import { Fade } from "react-awesome-reveal";
+import useTranslation from "next-translate/useTranslation";
 const SuperApp = (bgcolor) => {
+  const { t } = useTranslation("common");
   return (
     <section className={`${styles.shadowCard} ${bgcolor} `}>
       <div className="screen-center py-10 lg:py-20 md:flex">
@@ -9,12 +11,10 @@ const SuperApp = (bgcolor) => {
           <div className="w-[60%]">
             <Fade delay={200} duration={500} damping={0.2} cascade>
               <p className="h2-text text-pri_dark font-black leading-tight">
-                ONE SUPER APP FOR SWIFT DELIVERIES!
+                {t("super_app_head")}
               </p>
               <p className="p-text my-2 lg:my-10 text-[#3B3C3C]">
-                We provide on-demand and customizable delivery services through
-                our seamless digital platform that is designed to support users’
-                need for easy and transparency.
+                {t("super_app_text")}
               </p>
             </Fade>
             <div className="flex gap-2 lg:gap-10">

@@ -5,18 +5,17 @@ import TopSection from "../components/Blog/TopSection";
 import RecentArticles from "../components/Blog/RecentArticles";
 
 const Blog = () => {
-  const { setLogoDark, navOpen } = useAppContext();
+  const { setLogoDark } = useAppContext();
   useEffect(() => {
     setLogoDark(true);
   }, []);
   return (
     <Layout
       title="Blog"
-      bgNav="white"
+      bgNav="bg-white"
       textNav="text-bg-pri_dark"
       bgHamburger="bg-pri_dark"
     >
-      <div className={`${navOpen && "blur"}`}></div>
       <TopSection />
       <RecentArticles />
     </Layout>

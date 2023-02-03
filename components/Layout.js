@@ -1,34 +1,20 @@
 import Head from "next/head";
-import dynamic from "next/dynamic";
-import { useEffect, useState } from "react";
-import NavBar from "./NavBar";
 import Footer from "./Footer";
-import { motion, spring } from "framer-motion";
+import dynamic from "next/dynamic";
+import { useAppContext } from "./AppContext";
+const AnimatedCursor = dynamic(() => import("react-animated-cursor"), {
+  ssr: false,
+});
+
+const NavBar = dynamic(
+  () => {
+    return import("./NavBar");
+  },
+  { ssr: false }
+);
 
 const Layout = ({ children, title, bgNav, textNav, bgHamburger }) => {
-  const [circle, setCirlce] = useState({ x: 0, y: 0 });
-  const [scaling, setScaling] = useState(false);
-  useEffect(() => {
-    scrollToTop;
-  }, []);
-  const scrollToTop = () => {
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth",
-    });
-  };
-  useEffect(() => {
-    const mousemove = (e) => {
-      setCirlce({ x: e.screenX, y: e.screenY });
-      console.log(e);
-    };
-    window.addEventListener("mousemove", mousemove);
-
-    return () => {
-      window.removeEventListener("mousemove", mousemove);
-    };
-  }, []);
-  useEffect(() => {}, []);
+  const { navOpen } = useAppContext();
   return (
     <>
       <Head>
@@ -37,17 +23,34 @@ const Layout = ({ children, title, bgNav, textNav, bgHamburger }) => {
         <link rel="icon" href="/favicon.ico" sizes="any" />
         <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
       </Head>
-      <div>
-        <motion.div
-          animate={{
-            x: circle.x,
-            y: circle.y,
-          }}
-          className={`hidden h-[20px] w-[20px] bg-sec border z-10 absolute top-auto rounded-full translate-x-1/2`}
-        ></motion.div>
+      <div className="hidden lg:block">
+        <AnimatedCursor
+          color="221, 134, 38"
+          outerAlpha={0.5}
+          innerScale={0.7}
+          outerScale={5}
+          innerSize={10}
+          outerSize={20}
+          clickables={[
+            "a",
+            'input[type="text"]',
+            'input[type="email"]',
+            'input[type="number"]',
+            'input[type="submit"]',
+            'input[type="image"]',
+            "label[for]",
+            "select",
+            "textarea",
+            "button",
+            ".link",
+          ]}
+        />
+        {/* <Mouse /> */}
       </div>
       <NavBar bgNav={bgNav} textNav={textNav} bgHamburger={bgHamburger} />
-      <main className={` min-h-screen font-Helvetica`}>{children}</main>
+      <main className={`${navOpen && "blur"} min-h-screen font-Helvetica`}>
+        {children}
+      </main>
       <Footer />
     </>
   );

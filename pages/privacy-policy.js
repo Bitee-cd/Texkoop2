@@ -7,7 +7,7 @@ import { useAppContext } from "../components/AppContext";
 const privacy_policy = () => {
   const { t } = useTranslation("privacy");
   const { data } = privacy;
-  const { setLogoDark, navOpen } = useAppContext();
+  const { setLogoDark } = useAppContext();
   useEffect(() => {
     setLogoDark(true);
   }, []);
@@ -15,11 +15,11 @@ const privacy_policy = () => {
   return (
     <Layout
       title="Privacy Policy"
-      bgNav="white"
+      bgNav="bg-white"
       textNav="text-bg-pri_dark"
       bgHamburger="bg-pri_dark"
     >
-      <section className={`${navOpen && "blur"}`}>
+      <section className="">
         {data.map((card) => (
           <div className={`termsShadowCard my-10 pb-1 `} key={card.id}>
             <div className="screen-center">

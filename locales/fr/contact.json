@@ -1,0 +1,11 @@
+{
+  "head": "Interagissez avec l'équipe",
+  "textai": "Vous avez une suggestion, une demande ou une plainte ? Nous sommes là pour les prendre. ",
+  "textaii": "Veuillez remplir le formulaire ci-dessous. ",
+  "name": "Votre nom",
+  "email": "Email",
+  "number": "Numéro de Téléphone",
+  "city": "Ville",
+  "message": "Message",
+  "button_send": "Envoyez"
+}

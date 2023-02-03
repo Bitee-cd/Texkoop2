@@ -7,20 +7,25 @@ import SocialIcons from "./Reusable/SocialIcons";
 import LogoDark from "./Reusable/LogoDark";
 import { useAppContext } from "./AppContext";
 import LanguageMobile from "./Reusable/LanguageMobile";
+import useTranslation from "next-translate/useTranslation";
+import { useRouter } from "next/router";
 
 const NavBar = ({ bgNav, textNav, bgHamburger }) => {
   const [sticky, setSticky] = useState(false);
   const { logoDark, navOpen, setNavOpen } = useAppContext();
+  const { route } = useRouter();
+  console.log(route);
+  const { t } = useTranslation("common");
 
   const toggleVisible = () => {
     const scrolled = document.documentElement.scrollTop;
-    if (scrolled > 1) {
+    if (scrolled > 20) {
       setSticky(true);
     } else if (scrolled <= 500) {
       setSticky(false);
     }
   };
-  // window.addEventListener("scroll", toggleVisible);
+  window.addEventListener("scroll", toggleVisible);
 
   return (
     <div
@@ -28,9 +33,7 @@ const NavBar = ({ bgNav, textNav, bgHamburger }) => {
         sticky && "fixed"
       } w-full top-0 duration-300 transition-all ease-in z-10 min-w-screen overflow-x-hidden ${bgNav} ${textNav} `}
     >
-      <nav
-        className={`flex justify-between w-full screen-center py-5 items-center`}
-      >
+      <nav className={`flex justify-between  screen-center py-5 items-center`}>
         <div className={`${navOpen && "blur"}`}>
           <Link href="/">{logoDark ? <LogoDark /> : <Logo />}</Link>
         </div>
@@ -52,9 +55,9 @@ const NavBar = ({ bgNav, textNav, bgHamburger }) => {
           </div>
         </div>
         <div className="lg:flex-row p-tiny-text  hidden lg:flex w-[60%] ml-auto justify-between items-center">
-          <Link href="/about">About </Link>
-          <Link href="/services">Services</Link>
-          <Link href="/blog">Blog</Link>
+          <Link href="/about">{t("Nav1")} </Link>
+          <Link href="/services">{t("Nav2")} </Link>
+          <Link href="/blog">{t("Nav4")} </Link>
           <LanguageMobile />
           <Link href="/say-hi">
             <button
@@ -62,7 +65,7 @@ const NavBar = ({ bgNav, textNav, bgHamburger }) => {
                 logoDark ? "border-pri_dark" : "border-white"
               }`}
             >
-              Contact us
+              {t("contact_button")}
             </button>
           </Link>
         </div>
@@ -74,7 +77,7 @@ const NavBar = ({ bgNav, textNav, bgHamburger }) => {
               exit={{ x: 500 }}
               transition={{ duration: 0.7 }}
               animate={{ x: 0, opacity: 1 }}
-              className={`${styles.zindex2} top-0  absolute right-0  text-white border-white  lg:hidden w-full`}
+              className={`${styles.zindex2} top-0  fixed right-0  text-white  lg:hidden w-full`}
             >
               <div
                 className={`${styles.navborder} p-text h-screen pt-10 pb-5 gap-5 px-3 w-[60%] ml-auto bg-pri_dark flex flex-col`}
@@ -90,10 +93,10 @@ const NavBar = ({ bgNav, textNav, bgHamburger }) => {
                     className={`${styles.cancel} -rotate-45 absolute `}
                   ></div>
                 </div>
-                <Link href="/about">About </Link>
-                <Link href="/services">Services</Link>
-                <Link href="/blog">Blog</Link>
-                <Link href="/say-hi">Say Hi</Link>
+                <Link href="/about">{t("Nav1")} </Link>
+                <Link href="/services">{t("Nav2")} </Link>
+                <Link href="/blog">{t("Nav4")} </Link>
+                <Link href="/say-hi">{t("Nav5")}</Link>
                 <div className="mt-auto">
                   <SocialIcons />
                 </div>

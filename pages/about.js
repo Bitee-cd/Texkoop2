@@ -11,7 +11,7 @@ import { useAppContext } from "../components/AppContext";
 import { Fade } from "react-awesome-reveal";
 
 const about = () => {
-  const { setLogoDark, navOpen } = useAppContext();
+  const { setLogoDark } = useAppContext();
   useEffect(() => {
     setLogoDark(true);
   }, []);
@@ -22,17 +22,15 @@ const about = () => {
       textNav="text-pri_dark"
       bgHamburger="bg-pri_dark"
     >
-      <div className={`${navOpen && "blur"} `}>
-        <Fade duration={500} damping={0.1} cascade>
-          <Levelling />
-          <YouLog />
-          <WhoWeWorkWith />
-          <ImageSlider />
-          <OurMission />
-          <OurFocus />
-          <SuperApp bgcolor="bg-white" />
-        </Fade>
-      </div>
+      <Fade duration={500} damping={0.1} cascade>
+        <Levelling />
+        <YouLog />
+        <WhoWeWorkWith />
+        <ImageSlider />
+        <OurMission />
+        <OurFocus />
+        <SuperApp bgcolor="bg-white" />
+      </Fade>
     </Layout>
   );
 };

@@ -9,8 +9,8 @@ const GetStartedForm = () => {
   const [error, setError] = useState(false);
 
   const createData = async (form_values) => {
-    let url = `/api/forms/partner/`
-    let response = await postData(url,form_values) 
+    let url = `/api/forms/partner/`;
+    let response = await postData(url, form_values);
     //it returns status of true if it was successfull and false if not successfull
 
     if (response) {
@@ -27,7 +27,7 @@ const GetStartedForm = () => {
     createData(form_values);
   };
 
-  const { t, lang } = useTranslation("home");
+  const { t, lang } = useTranslation("started");
 
   return (
     <form
@@ -36,40 +36,45 @@ const GetStartedForm = () => {
       className=" grid gap-2 md:gap-5 py-5 md:py-10  p-text"
     >
       <div className="my-5">
-        <label className="">Your Name</label>
+        <label className="">{t("name")}</label>
         <input required type="text" name="name" className="input" />
       </div>
       <div className="mt-5">
-        <label className="">Business Name</label>
+        <label className="">{t("c_name")}</label>
         <input required type="text" name="business_name" className="input" />
       </div>
       <div className="mt-5">
-        <label className="">Your Email</label>
+        <label className="">{t("email")}</label>
         <input required type="email" name="email" className="input" />
       </div>
       <div className="mt-5">
-        <label className="">Phone Number</label>
+        <label className="">{t("number")}</label>
         <input required type="number" name="phone_number" className="input" />
       </div>
       <div className="mt-5">
-        <label className="">Country</label>
+        <label className="">{t("country")}</label>
         <input required type="text" name="country" className="input" />
       </div>
       <div className="mt-5">
-        <label className="">City</label>
+        <label className="">{t("city")}</label>
         <input required type="text" name="city" className="input" />
       </div>
       <div className="mt-5">
-        <label className="">Industry</label>
+        <label className="">{t("industry")}</label>
         <input required type="text" name="industry" className="input" />
       </div>
       <div className="mt-5">
-        <label className="">Delivery Volume</label>
-        <input required type="number" name="delivery_volume" className="input" />
+        <label className="">{t("volume")}</label>
+        <input
+          required
+          type="number"
+          name="delivery_volume"
+          className="input"
+        />
       </div>
       <div className=" relative mt-5">
         <label className="absolute bg-pri_dark -translate-y-[50%] px-3 ml-2">
-          Message
+          {t("message")}
         </label>
         <textarea
           rows="10"
@@ -81,15 +86,13 @@ const GetStartedForm = () => {
       </div>
       <div className="mb-3">
         <p>
-          We collect this data for the purposes of processing your application.
-          By clicking this box, you acknowledge that you have read and
-          understood the
+          {t("select_a")}
           <span className="text-sec mx-2">
-            <Link href="#">privacy policy</Link>
+            <Link href="#">{t("privacy_policy")}</Link>
           </span>
-          and
+          {t("select_a")}
           <span className="text-sec mx-2">
-            <Link href="#">terms of service</Link>
+            <Link href="#">{t("terms_of_service")}</Link>
           </span>
         </p>
         <label className={`${styles.checkbox}`}>
@@ -100,15 +103,19 @@ const GetStartedForm = () => {
 
       <div>
         <button type={"submit"} className="button">
-          Send
+          {t("button_send")}
         </button>
       </div>
       <div>
         {success && (
-          <p className="text-pri_dark p-tiny-text font-[500]">{t("success")}</p>
+          <p className="text-pri_dark p-tiny-text font-[500]">
+            {t("common:success")}
+          </p>
         )}
         {error && (
-          <p className="text-red-600 p-tiny-text font-[500]">{t("error")}</p>
+          <p className="text-red-600 p-tiny-text font-[500]">
+            {t("common:error")}
+          </p>
         )}
       </div>
     </form>
