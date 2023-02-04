@@ -9,7 +9,7 @@ const Card = ({ item }) => {
   const { t } = useTranslation("services");
   return (
     <div
-      className={`${styles.shadowCard} rounded-[15px] p-5 lg:p-10 lg:py-16 h-auto lg:min-h-[400px] my-10 2xl:my-20 flex `}
+      className={`${styles.shadowCard} rounded-[15px] p-5 lg:p-10 lg:py-16 h-auto  my-10 2xl:my-20 flex `}
     >
       <div
         className={`md:flex md:flex-row-reverse lg:gap-10 gap-y-10 justify-between`}
