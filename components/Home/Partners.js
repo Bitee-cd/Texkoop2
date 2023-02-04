@@ -8,7 +8,7 @@ const Partners = () => {
       <div className=" w-[90%] md:ml-auto  mx-auto max-w-[1440px] py-10 md:pt-20">
         <p className="h2-text leading-tight text-pri ">{t("Headd")}</p>
         <hr className="hidden md:block bg-black border-black border-top w-screen mt-5"></hr>
-        <div className="flex items-center  xl:gap-10">
+        <div className={`${styles.overflow} flex items-center  xl:gap-10`}>
           <div className="min-w-[200px]">
             <img
               src="/images/logo/amazon.png"
@@ -37,10 +37,24 @@ const Partners = () => {
               className=" w-[50%]"
             />
           </div>
+          <div className="min-w-[100px]">
+            <img
+              src="/images/logo/soleil-vert.png"
+              alt="soleil-vert"
+              className=" w-[50%]"
+            />
+          </div>
           <div className="min-w-[200px]">
             <img
               src="/images/logo/electric.png"
               alt="electric"
+              className=" w-full"
+            />
+          </div>
+          <div className="min-w-[200px]">
+            <img
+              src="/images/logo/logo_isowatt.png"
+              alt="isowatt"
               className=" w-full"
             />
           </div>

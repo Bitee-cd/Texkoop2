@@ -108,3 +108,13 @@
   height: 100%;
   width: 100%;
 }
+.overflow {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: scroll;
+  -ms-overflow-style: none;
+  width: 100vw;
+}
+.overflow::-webkit-scrollbar {
+  display: none;
+}
