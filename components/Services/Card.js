@@ -12,19 +12,6 @@ const Card = ({ item }) => {
       className={`${styles.shadowCard} rounded-[15px] p-5 lg:p-10 lg:py-16 h-auto  my-10 2xl:my-20 flex `}
     >
       <div className={`md:flex lg:gap-10 gap-y-10 justify-between`}>
-        <div className=" flex md:w-[50%] mb-5">
-          <Slide direction="right">
-            <div
-              className={`${item.id === 4 && "w-[80%] mx-auto lg:ml-auto"} `}
-            >
-              <img
-                src={item.image}
-                loading="lazy"
-                className={` ${styles.slideIn} h-full object-contain`}
-              />
-            </div>
-          </Slide>
-        </div>
         <div className="md:w-[50%]">
           <Slide direction="left">
             <Fade delay={200} duration={500} damping={0.4} cascade>
@@ -36,6 +23,19 @@ const Card = ({ item }) => {
                 <button className="button3 mt-5">{t("common:buttona")}</button>
               </Link>
             </Fade>
+          </Slide>
+        </div>
+        <div className=" flex md:w-[50%] mb-5">
+          <Slide direction="right">
+            <div
+              className={`${item.id === 4 && "w-[80%] mx-auto lg:ml-auto"} `}
+            >
+              <img
+                src={item.image}
+                loading="lazy"
+                className={` ${styles.slideIn} h-full object-contain`}
+              />
+            </div>
           </Slide>
         </div>
       </div>
