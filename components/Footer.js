@@ -66,7 +66,7 @@ const Footer = () => {
         <hr className=" bg-white border-white border w-full my-5 lg:my-10 "></hr>
         <div className="flex justify-between">
           <SocialIcons />
-          <div className="ml-auto">
+          <div className="absolute right-[5%]">
             <ScrollButton />
           </div>
         </div>
