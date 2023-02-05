@@ -9,7 +9,7 @@ const ScrollButton = () => {
     });
   };
   return (
-    <div className="relative flex flex-end ml-auto">
+    <div className="flex items-center   ml-auto">
       <div
         className="h-[30px] duration-1000 scroll-smooth cursor-pointer"
         onClick={scrollToTop}
