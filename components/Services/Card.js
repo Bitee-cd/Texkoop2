@@ -11,9 +11,7 @@ const Card = ({ item }) => {
     <div
       className={`${styles.shadowCard} rounded-[15px] p-5 lg:p-10 lg:py-16 h-auto  my-10 2xl:my-20 flex `}
     >
-      <div
-        className={`md:flex md:flex-row-reverse lg:gap-10 gap-y-10 justify-between`}
-      >
+      <div className={`md:flex lg:gap-10 gap-y-10 justify-between`}>
         <div className=" flex md:w-[50%] mb-5">
           <Slide direction="right">
             <div
