@@ -10,7 +10,7 @@ const Footer = () => {
   const { navOpen } = useAppContext();
   return (
     <footer className={`${navOpen && "blur"} bg-pri_dark py-10 text-white `}>
-      <div className="screen-center ">
+      <div className="screen-center">
         <div className="hidden lg:flex lg:w-full justify-between">
           <Link href="/about"> {t("Fooa")}</Link>
           <Link href="/rider" className="text-end">
@@ -64,11 +64,11 @@ const Footer = () => {
           </div>
         </div>
         <hr className=" bg-white border-white border w-full my-5 lg:my-10 "></hr>
-        <div className="flex justify-between">
-          <SocialIcons />
-          <div className="absolute right-[5%]">
-            <ScrollButton />
-          </div>
+      </div>
+      <div className="screen-center flex justify-between">
+        <SocialIcons />
+        <div className="absolute right-[5%]">
+          <ScrollButton />
         </div>
       </div>
     </footer>
