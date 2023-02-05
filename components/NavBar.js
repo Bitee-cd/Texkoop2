@@ -13,8 +13,6 @@ import { useRouter } from "next/router";
 const NavBar = ({ bgNav, textNav, bgHamburger }) => {
   const [sticky, setSticky] = useState(false);
   const { logoDark, navOpen, setNavOpen } = useAppContext();
-  const { route } = useRouter();
-  console.log(route);
   const { t } = useTranslation("common");
 
   const toggleVisible = () => {

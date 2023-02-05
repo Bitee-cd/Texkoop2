@@ -10,9 +10,7 @@ export const AppContext = ({ children }) => {
   const router = useRouter();
   useEffect(() => {
     setNavOpen(false);
-    console.log(navOpen);
   }, [router]);
-  console.log(navOpen);
 
   return (
     <Context.Provider value={{ logoDark, setLogoDark, navOpen, setNavOpen }}>

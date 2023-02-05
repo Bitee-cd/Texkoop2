@@ -125,12 +125,13 @@ body {
   }
 }
 
-.top {
-  /* These values specify the start and end states of the animation */
+/*.top {
+
   100% {
     top: 20px;
   }
 }
+*/
 
 .navButton {
   @apply border  min-w-[150px] lg:w-[200px]  flex justify-center py-2  p-text hover:border-sec active:border-sec ease-in hover:text-sec active:text-sec transition-all duration-300;

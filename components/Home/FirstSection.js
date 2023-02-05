@@ -32,7 +32,7 @@ const FirstSection = () => {
                 }}
               />
             ) : text === 2 ? (
-              <p>
+              <div>
                 <Typewriter
                   options={{
                     strings: ["Errand Services"],
@@ -41,9 +41,9 @@ const FirstSection = () => {
                     cursorClassName: "cursor",
                   }}
                 />
-              </p>
+              </div>
             ) : (
-              <p>
+              <div>
                 <Typewriter
                   options={{
                     strings: ["Bike Rentals"],
@@ -52,11 +52,11 @@ const FirstSection = () => {
                     cursorClassName: "cursor",
                   }}
                 />
-              </p>
+              </div>
             )}
           </div>
         </div>
-        <div className="md:flex md:justify-between my-10">
+        <div className="md:flex md:justify-between my-10 2xl:mt-20">
           <div className="lg:w-[50%]">
             <p className="lg:my-5 p-big-text leading-tight font-[600]">
               We provide on-demand and customizable delivery services, through

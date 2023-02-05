@@ -5,13 +5,17 @@ import { motion } from "framer-motion";
 import Timer from "../components/Home/Timer";
 import HomePage from "../components/Home/HomePage";
 import { useAppContext } from "../components/AppContext";
+import NormalTimer from "../components/Home/NormalTimer";
 
-export default function Home() {
+export default function Home({ previousRoute }) {
   const [start, setStart] = useState(true);
   const [animation, setAnimation] = useState(false);
   const { setLogoDark } = useAppContext();
   useEffect(() => {
     setLogoDark(false);
+    if (previousRoute) {
+      setAnimation(true);
+    }
   }, []);
 
   const startTimer = () => {
@@ -21,15 +25,10 @@ export default function Home() {
     }, 3500);
   };
   return (
-    <Layout
-      title="Home"
-      bgNav="bg-pri_dark"
-      textNav="text-white"
-      bgHamburger="bg-white"
-    >
-      {/* <div className="text-white bg-pri_dark">
-        {!animation ? (
-          <div className="flex justify-center items-center h-screen">
+    <>
+      {!animation ? (
+        <div className="h-screen w-screen bg-pri_dark text-white flex justify-center items-center ">
+          <div className="">
             {start ? (
               <div
                 onClick={() => startTimer()}
@@ -49,16 +48,22 @@ export default function Home() {
                   animate={{ opacity: 1 }}
                   transition={{ delay: 0.7 }}
                 >
-                  <Timer setAnimation={setAnimation} />
+                  <NormalTimer />
                 </motion.div>
               </motion.div>
             )}
           </div>
-        ) : (
+        </div>
+      ) : (
+        <Layout
+          title="Home"
+          bgNav="bg-pri_dark"
+          textNav="text-white"
+          bgHamburger="bg-white"
+        >
           <HomePage />
-        )}
-      </div> */}
-      <HomePage />
-    </Layout>
+        </Layout>
+      )}
+    </>
   );
 }
