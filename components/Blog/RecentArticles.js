@@ -44,7 +44,7 @@ const RecentArticles = () => {
                 lectus enim gravida aliquet. Magna ut nibh urna mauris tempor
                 nisi tortor at. Mattis senectus porta risus nisi.
               </p>
-              <Link href="#">
+              <Link href={`/blog/${blog.id}`}>
                 <p className="text-sec hover:text-pri_dark">Read more</p>
               </Link>
             </div>
