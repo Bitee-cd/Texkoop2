@@ -159,6 +159,7 @@ textarea {
   -moz-border-radius: 0;
   border-radius: 0;
   -khtml-border-radius: 0;
+  -webkit-appearance: none;
 }
 textarea:focus,
 input:focus {
