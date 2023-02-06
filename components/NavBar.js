@@ -78,7 +78,7 @@ const NavBar = ({ bgNav, textNav, bgHamburger }) => {
               className={`${styles.zindex2} top-0  fixed right-0  text-white  lg:hidden w-full`}
             >
               <div
-                className={`${styles.navborder} p-text h-screen pt-10 pb-5 gap-5 px-3 w-[60%] ml-auto bg-pri_dark flex flex-col`}
+                className={`${styles.navborder} p-text h-screen pt-10 pb-5 gap-5 gap-y-5 px-3 w-[60%] ml-auto bg-pri_dark flex flex-col`}
               >
                 <div
                   onClick={() => {
