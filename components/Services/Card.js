@@ -25,7 +25,7 @@ const Card = ({ item }) => {
             </Fade>
           </Slide>
         </div>
-        <div className="hidden md:w-[50%] mb-5">
+        <div className=" md:w-[50%] mb-5">
           <Slide direction="right">
             <div
               className={`${item.id === 4 && "w-[80%] mx-auto lg:ml-auto"} `}
