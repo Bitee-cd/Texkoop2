@@ -153,7 +153,8 @@ input::placeholder {
   font-weight: 300;
 }
 
-.input {
+.input,
+textarea {
   -webkit-border-radius: 0;
   -moz-border-radius: 0;
   border-radius: 0;
