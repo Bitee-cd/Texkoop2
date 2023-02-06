@@ -143,24 +143,28 @@ export const services = {
       title: "card_title_a",
       text: "card_text_a",
       image: "/images/services/a.png",
+      image2: "/images/services/a2.png",
     },
     {
       id: 2,
       title: "card_title_b",
       text: "card_text_b",
       image: "/images/services/b.png",
+      image2: "/images/services/b2.png",
     },
     {
       id: 3,
       title: "card_title_c",
       text: "card_text_c",
       image: "/images/services/c.png",
+      image2: "/images/services/c2.png",
     },
     {
       id: 4,
       title: "card_title_d",
       text: "card_text_d",
       image: "/images/services/d.png",
+      image2: "/images/services/d2.png",
     },
   ],
 };

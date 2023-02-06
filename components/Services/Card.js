@@ -26,17 +26,32 @@ const Card = ({ item }) => {
           </Slide>
         </div>
         <div className=" md:w-[50%] mb-5">
-          <Slide direction="right">
-            <div
-              className={`${item.id === 4 && "w-[80%] mx-auto lg:ml-auto"} `}
-            >
-              <img
-                src={item.image}
-                loading="lazy"
-                className={` ${styles.slideIn} h-full object-contain`}
-              />
-            </div>
-          </Slide>
+          <div className="hidden md:block ">
+            <Slide direction="right">
+              <div
+                className={`${item.id === 4 && "w-[80%] mx-auto lg:ml-auto"} `}
+              >
+                <img
+                  src={item.image}
+                  loading="lazy"
+                  className={` ${styles.slideIn} h-full object-contain`}
+                />
+              </div>
+            </Slide>
+          </div>
+          <div className="md:hidden">
+            <Slide direction="right">
+              <div
+                className={`${item.id === 4 && " mx-auto "} flex items-center`}
+              >
+                <img
+                  src={item.image2}
+                  loading="lazy"
+                  className={` ${styles.slideIn} h-full object-contain`}
+                />
+              </div>
+            </Slide>
+          </div>
         </div>
       </div>
     </div>
