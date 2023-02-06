@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import Layout from "../../components/Layout";
 import { useAppContext } from "../../components/AppContext";
+import SinglePost from "../../components/Blog/SinglePost";
 
 const BlogDetail = () => {
   const { setLogoDark } = useAppContext();
@@ -14,7 +15,7 @@ const BlogDetail = () => {
       textNav="text-bg-pri_dark"
       bgHamburger="bg-pri_dark"
     >
-      Blog
+      <SinglePost />
     </Layout>
   );
 };
