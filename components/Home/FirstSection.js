@@ -3,14 +3,20 @@ import Typewriter from "typewriter-effect";
 import ImageSlider from "./ImageSlider";
 import ImageSliderMobile from "./ImageSliderMobile";
 import Link from "next/link";
+import useTranslation from "next-translate/useTranslation";
 
 const FirstSection = () => {
   const [text, setText] = useState(1);
+  const { t, lang } = useTranslation("home");
   useEffect(() => {
     setTimeout(function () {
       setText((text % 3) + 1);
     }, 4000);
   });
+  const texta = t("home:card_title_a");
+  const textb = t("home:card_title_b");
+  const textc = t("home:card_title_c");
+  console.log(texta);
 
   return (
     <section className=" blur-background relative min-h-screen gap-10 text-white bg-pri_dark  lg:h-auto flex justify-center items-center">
@@ -19,13 +25,14 @@ const FirstSection = () => {
           <ImageSliderMobile text={text} />
         </div>
         <div className="big-text ">
-          We are Professionally Equipped to Render
+          {t("Headi")}
           <br></br>
+          {t("Headii")}
           <div className="text-sec">
             {text === 1 ? (
               <Typewriter
                 options={{
-                  strings: ["Business Deliveries"],
+                  strings: [texta],
                   autoStart: true,
                   delay: 50,
                   cursorClassName: "cursor",
@@ -35,7 +42,7 @@ const FirstSection = () => {
               <div>
                 <Typewriter
                   options={{
-                    strings: ["Errand Services"],
+                    strings: [textb],
                     autoStart: true,
                     delay: 70,
                     cursorClassName: "cursor",
@@ -46,7 +53,7 @@ const FirstSection = () => {
               <div>
                 <Typewriter
                   options={{
-                    strings: ["Bike Rentals"],
+                    strings: [textc],
                     autoStart: true,
                     delay: 80,
                     cursorClassName: "cursor",
@@ -59,12 +66,12 @@ const FirstSection = () => {
         <div className="md:flex md:justify-between my-10 2xl:mt-20">
           <div className="lg:w-[50%]">
             <p className="lg:my-5 p-big-text leading-tight font-[600]">
-              We provide on-demand and customizable delivery services, through
-              our seamless digital platform, that is designed to support users'
-              need for ease and transparency.
+              {" "}
+              {t("texta")}
             </p>
+
             <Link href="/get-started">
-              <button className="button mt-10">Get Started</button>
+              <button className="button mt-10"> {t("buttona")} </button>
             </Link>
           </div>
           <div className="hidden lg:w-[45%] h-[300px] lg:flex items-center">

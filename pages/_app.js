@@ -3,6 +3,7 @@ import "../styles/globals.css";
 import { useRouter, Router } from "next/router";
 import { useEffect, useState } from "react";
 import dynamic from "next/dynamic";
+import PreLoader from "../components/PreLoader";
 const AnimatedCursor = dynamic(() => import("react-animated-cursor"), {
   ssr: false,
 });
@@ -11,6 +12,7 @@ function MyApp({ Component, pageProps }) {
   const router = useRouter();
   const [currentRoute, setCurrentRoute] = useState(router.route);
   const [previousRoute, setPreviousRoute] = useState(null);
+  const [loading, setLoading] = useState(false);
   useEffect(() => {
     const handleRouteChange = (url) => {
       setPreviousRoute(currentRoute);
@@ -22,6 +24,14 @@ function MyApp({ Component, pageProps }) {
     };
   }, []);
 
+  Router.events.on("routeChangeStart", (url) => {
+    setLoading(true);
+  });
+  Router.events.on("routeChangeComplete", (url) => {
+    setTimeout(() => {
+      setLoading(false);
+    });
+  });
   useEffect(() => {
     console.log(`Previous route: ${(previousRoute, currentRoute)}`);
   }, [router.route]);
@@ -51,7 +61,12 @@ function MyApp({ Component, pageProps }) {
             ]}
           />
         </div>
-        <Component {...pageProps} previousRoute={previousRoute} />
+
+        {loading ? (
+          <PreLoader />
+        ) : (
+          <Component {...pageProps} previousRoute={previousRoute} />
+        )}
       </AppContext>
     </>
   );
