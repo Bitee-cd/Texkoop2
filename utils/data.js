@@ -134,6 +134,12 @@ export const about = {
       text: "imgd",
       class: "d",
     },
+    {
+      id: 5,
+      image: "/images/about/2e.png",
+      text: "imge",
+      class: "e",
+    },
   ],
 };
 export const services = {

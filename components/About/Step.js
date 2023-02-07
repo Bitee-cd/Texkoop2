@@ -8,9 +8,9 @@ import useTranslation from "next-translate/useTranslation";
 const Step = ({ step }) => {
   const { t } = useTranslation("about");
   return (
-    <Slide cascade damping={0.3}>
+    <Slide cascade duration={2000}>
       <div>
-        <Fade delay={200} duration={500} damping={0.2} cascade>
+        <Fade delay={200} duration={1000} cascade>
           <div
             className={`${styles.shadowSteps} px-2 md:px-5 py-2 md:py-4 rounded-[5px] lg:rounded-[10px] `}
           >

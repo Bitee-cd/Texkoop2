@@ -7,7 +7,7 @@ const Levelling = () => {
   return (
     <section className={`${styles.shadowCard}  py-10`}>
       <div className="screen-center">
-        <Fade delay={200} duration={500} damping={0.4} cascade>
+        <Fade delay={200} duration={1000} cascade>
           <p className="text-pri_dark h2-text font-[700]">
             <span className="">{t("Heada")}</span>
           </p>
