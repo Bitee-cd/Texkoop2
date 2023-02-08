@@ -128,14 +128,6 @@ body {
   }
 }
 
-/*.top {
-
-  100% {
-    top: 20px;
-  }
-}
-*/
-
 .navButton {
   @apply border  min-w-[150px] lg:w-[200px]  flex justify-center py-2  p-text hover:border-sec active:border-sec ease-in hover:text-sec active:text-sec transition-all duration-300;
 }
@@ -276,3 +268,24 @@ input:focus {
   border-radius: 50%;
   box-shadow: 1px 1px 15px purple;
 }
+/*slider animation */
+.animation {
+  animation: slide 20s infinite linear;
+}
+
+/* top trending */
+/* @keyframes slide {
+  "0%": {
+    transform: "translate(-100px 0px)";
+  }
+
+  "50%": {
+    transform: "translate(-550px, 0px)";
+  }
+
+  "100%": {
+    transform: "translate(-100px 0px)";
+  }
+} */
+
+/*slider animation */

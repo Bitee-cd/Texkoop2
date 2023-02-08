@@ -49,9 +49,19 @@ const Card = ({ item }) => {
               <p className="p-text text-[#3B3C3C] mt-5 font-[500]">
                 {t(item.text)}
               </p>
-              <Link href="/get-started">
-                <button className="button3 mt-5">{t("common:buttona")}</button>
-              </Link>
+              {item.id === 4 ? (
+                <Link href="/rider">
+                  <button className="button3 mt-5">
+                    {t("common:buttona")}
+                  </button>
+                </Link>
+              ) : (
+                <Link href="/get-started">
+                  <button className="button3 mt-5">
+                    {t("common:buttona")}
+                  </button>
+                </Link>
+              )}
             </Fade>
           </Slide>
         </div>

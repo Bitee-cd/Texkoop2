@@ -18,6 +18,27 @@ module.exports = {
         Helvetica: ["Helvetica", "sans-serif"],
         Aharoni: ["Aharoni", "sans-serif"],
       },
+      animation: {
+        slide: "slide 20s infinite linear",
+        slide2: "slide2 20s infinite linear",
+      },
+
+      keyframes: {
+        /* top trending */
+        slide: {
+          "0%": {
+            transform: "translate(0, 0px)",
+          },
+
+          "50%": {
+            transform: "translate(-650px, 0px)",
+          },
+
+          "100%": {
+            transform: "translate(0, 0px)",
+          },
+        },
+      },
       screens: {},
     },
   },
