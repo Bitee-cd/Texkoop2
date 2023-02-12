@@ -34,7 +34,7 @@ const SuperApp = (bgcolor) => {
               </div>
             </div>
           </div>
-          <div className="w-[50%]">
+          <div className="w-[50%] mt-2">
             <img
               src="/images/phone.png"
               alt="texkoop mobile phone"
@@ -43,7 +43,7 @@ const SuperApp = (bgcolor) => {
             <img
               src="/images/mobile_phone.png"
               alt="texkoop mobile phone"
-              className={`w-full h-full lg:hidden object-contain`}
+              className={`w-full h-full lg:hidden `}
             />
           </div>
         </div>

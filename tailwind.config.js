@@ -21,7 +21,8 @@ module.exports = {
       animation: {
         slide: "slide 20s infinite linear",
         slide2: "slide2 20s infinite linear",
-        slide3: "slide3 20s infinite linear",
+        slide_mobile: "slide_mobile 20s infinite linear",
+        slide2_mobile: "slide2_mobile 20s infinite linear",
       },
 
       keyframes: {
@@ -45,7 +46,20 @@ module.exports = {
           },
 
           "50%": {
-            transform: "translate(-250px, 0px)",
+            transform: "translate(-300px, 0px)",
+          },
+
+          "100%": {
+            transform: "translate(0, 0px)",
+          },
+        },
+        slide2_mobile: {
+          "0%": {
+            transform: "translate(0, 0px)",
+          },
+
+          "50%": {
+            transform: "translate(-800px, 0px)",
           },
 
           "100%": {

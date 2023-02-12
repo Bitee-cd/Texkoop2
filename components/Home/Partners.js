@@ -10,7 +10,7 @@ const Partners = () => {
         <hr className="hidden md:block bg-black border-black border-top w-screen mt-5"></hr>
         <div className="inline-block">
           <div
-            className={`animate-slide md:animate-slide2 flex items-center  xl:gap-10`}
+            className={`animate-slide2_mobile md:animate-slide2 flex items-center  xl:gap-10`}
           >
             <div className="min-w-[200px]">
               <img

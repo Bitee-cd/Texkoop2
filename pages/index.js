@@ -32,9 +32,9 @@ export default function Home({ previousRoute }) {
             {start ? (
               <div
                 onClick={() => startTimer()}
-                className="uppercase font-[700] text-xl cursor-pointer "
+                className="uppercase font-[700] text-xl cursor-pointer h-screen w-screen flex justify-center items-center"
               >
-                click to start
+                <div> click to start</div>
               </div>
             ) : (
               <motion.div

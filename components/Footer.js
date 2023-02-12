@@ -67,7 +67,7 @@ const Footer = () => {
       </div>
       <div className="screen-center flex justify-between">
         <SocialIcons />
-        <div className="absolute right-[5%]">
+        <div className="">
           <ScrollButton />
         </div>
       </div>
