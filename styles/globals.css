@@ -118,13 +118,21 @@ body {
   font-size: clamp(0.938rem, 0.1vw + 0.9rem, 1.25rem);
   text-align: justify;
 }
-
+.small-text {
+  font-size: clamp(0.875rem, 1vw + 0.5rem, 1.25rem);
+}
+.superapp-text {
+  font-size: clamp(1rem, 1vw + 1.3rem, 1.875rem);
+}
 @media only screen and (max-width: 600px) {
   .big-text {
     font-size: clamp(1.25rem, 4vw + 0.4rem, 5.938rem);
   }
   .h2-text {
     font-size: clamp(1.25rem, 1.5vw + 1rem, 2.813rem);
+  }
+  .superapp-text {
+    font-size: clamp(1rem, 1vw + 0.5rem, 1.875rem);
   }
 }
 
@@ -269,23 +277,7 @@ input:focus {
   box-shadow: 1px 1px 15px purple;
 }
 /*slider animation */
-.animation {
-  animation: slide 20s infinite linear;
-}
 
 /* top trending */
-/* @keyframes slide {
-  "0%": {
-    transform: "translate(-100px 0px)";
-  }
-
-  "50%": {
-    transform: "translate(-550px, 0px)";
-  }
-
-  "100%": {
-    transform: "translate(-100px 0px)";
-  }
-} */
 
 /*slider animation */

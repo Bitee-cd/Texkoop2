@@ -9,7 +9,9 @@ const Partners = () => {
         <p className="h2-text leading-tight text-pri ">{t("Headd")}</p>
         <hr className="hidden md:block bg-black border-black border-top w-screen mt-5"></hr>
         <div className="inline-block">
-          <div className={`animate-slide flex items-center  xl:gap-10`}>
+          <div
+            className={`animate-slide md:animate-slide2 flex items-center  xl:gap-10`}
+          >
             <div className="min-w-[200px]">
               <img
                 src="/images/logo/amazon.png"
