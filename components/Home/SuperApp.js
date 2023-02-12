@@ -14,7 +14,7 @@ const SuperApp = (bgcolor) => {
                 <p className="superapp-text text-pri_dark font-black leading-tight">
                   {t("super_app_head")}
                 </p>
-                <p className="small-text mt-3 text-[#3B3C3C]">
+                <p className="small-text mt-3 text-main_black">
                   {t("super_app_text")}
                 </p>
               </Fade>

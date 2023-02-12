@@ -20,7 +20,7 @@ const SecondSection = () => {
         <div className="lg:w-[45%]">
           <Fade delay={200} duration={500} damping={0.2} cascade>
             <p className="h2-text leading-tight text-pri">{t("Headb")}</p>
-            <p className="p-text my-5 md:my-10">{t("textb")}</p>
+            <p className="p-text my-5 md:my-10 text-main_black">{t("textb")}</p>
             <div className="hidden lg:block">
               <Link href="rider">
                 <button className="button2 "> {t("buttonb")}</button>

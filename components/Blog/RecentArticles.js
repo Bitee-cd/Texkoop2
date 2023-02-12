@@ -38,7 +38,7 @@ const RecentArticles = () => {
                 <p>By Carol Abinson</p>
                 <p className="font-[700] text-[#3B3C3C]">-{blog.date}</p>
               </div>
-              <p className="p-tiny-text mt-2 md:mt-5">
+              <p className="p-tiny-text mt-2 md:mt-5 text-main_black">
                 Lorem ipsum dolor sit amet consectetur. Vulputate dui dui nunc
                 tellus ac egestas netus risus leo. Ut ullamcorper amet in purus
                 lectus enim gravida aliquet. Magna ut nibh urna mauris tempor

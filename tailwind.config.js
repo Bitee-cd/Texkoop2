@@ -13,6 +13,7 @@ module.exports = {
         pri_dark: "#2C4E86",
         sec: "#DD8626",
         ter: "#D9D9D9",
+        main_black: "#3B3C3C",
       },
       fontFamily: {
         Helvetica: ["Helvetica", "sans-serif"],

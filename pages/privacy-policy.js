@@ -26,7 +26,7 @@ const privacy_policy = () => {
               <p className="my-5 h2-text font-bold text-pri_dark">
                 {t(card.head)}
               </p>
-              <p className="my-5 p-text ">{t(card.text)}</p>
+              <p className="my-5 p-text text-main_black">{t(card.text)}</p>
               <div>
                 {card.sub &&
                   card.sub.map((data) => (
@@ -34,7 +34,9 @@ const privacy_policy = () => {
                       <p className="my-5 p-text font-[700] text-pri_dark">
                         {t(data.head)}
                       </p>
-                      <p className="my-5 p-text ">{t(data.text)}</p>
+                      <p className="my-5 p-text text-main_black">
+                        {t(data.text)}
+                      </p>
                     </div>
                   ))}
               </div>

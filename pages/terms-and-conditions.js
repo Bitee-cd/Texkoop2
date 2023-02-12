@@ -32,7 +32,9 @@ const TermsConditions = () => {
                     {t(data.head)}
                   </p>
                 )}
-                {data.text && <p className="p-text">{t(data.text)}</p>}
+                {data.text && (
+                  <p className="p-text text-main_black">{t(data.text)}</p>
+                )}
                 {data.sub &&
                   data.sub.map((item) => (
                     <div key={item.id}>
@@ -41,7 +43,9 @@ const TermsConditions = () => {
                           {t(item.head)}
                         </p>
                       )}
-                      {item.text && <p className="p-text">{t(item.text)}</p>}
+                      {item.text && (
+                        <p className="p-text text-main_black">{t(item.text)}</p>
+                      )}
                     </div>
                   ))}
               </div>

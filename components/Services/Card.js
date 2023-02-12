@@ -46,7 +46,7 @@ const Card = ({ item }) => {
           <Slide direction="left">
             <Fade delay={200} duration={500} damping={0.4} cascade>
               <p className="h2-text text-pri_dark">{t(item.title)}</p>
-              <p className="p-text text-[#3B3C3C] mt-5 font-[500]">
+              <p className="p-text text-main_black mt-5 font-[500]">
                 {t(item.text)}
               </p>
               {item.id === 4 ? (
