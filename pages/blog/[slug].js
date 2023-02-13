@@ -21,9 +21,9 @@ const BlogDetail = () => {
       <SinglePost />
       <MiddleSection />
       <div className="bg-[#f5f5f5] py-10">
-        {topArticles.map((post) => (
-          <RelatedArticle key={post.id} />
-        ))}
+        
+          <RelatedArticle />
+        
       </div>
     </Layout>
   );
