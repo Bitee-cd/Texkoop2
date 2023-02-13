@@ -9,7 +9,7 @@ const ImageSlider = () => {
   const { t } = useTranslation("about");
   return (
     <section className="my-10 mt-20 inline-block">
-      <div className={` flex ${styles.overflow} `}>
+      <div className={`animate-slide flex trans translate-x-[-100px]`}>
         {imageSlider.map((item) => (
           <div
             key={item.id}
