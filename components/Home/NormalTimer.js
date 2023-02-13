@@ -6,13 +6,13 @@ const NormalTimer = () => {
   useEffect(() => {
     const intervalId = setInterval(() => {
       setPercentage((prevPercentage) => {
-        if (prevPercentage >= 100) {
+        if (prevPercentage >= 99) {
           clearInterval(intervalId);
-          return 100;
+          return 99;
         }
         return prevPercentage + 1;
       });
-    }, 50);
+    }, 30);
 
     return () => {
       clearInterval(intervalId);

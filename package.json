@@ -13,6 +13,7 @@
     "@react-google-maps/api": "^2.17.0",
     "framer-motion": "^8.1.7",
     "gsap": "^3.11.4",
+    "html-react-parser": "^3.0.8",
     "mouse-follower": "^1.1.2",
     "next": "13.0.2",
     "next-translate": "^1.6.0",
@@ -22,6 +23,7 @@
     "react-creative-cursor": "^1.2.7",
     "react-dom": "18.2.0",
     "react-icons": "^4.6.0",
+    "swr": "^2.0.3",
     "typewriter-effect": "^2.19.0"
   },
   "devDependencies": {

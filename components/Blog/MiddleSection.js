@@ -2,15 +2,38 @@ import useTranslation from "next-translate/useTranslation";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
+import { useState, useEffect } from "react";
+import parse from 'html-react-parser';
+import { useRouter } from "next/router";
+
 
 const MiddleSection = () => {
+  const router = useRouter()
+  const [message, setMessage] = useState(undefined)
+
+  const getFeaturedMessage=async()=>{
+    const res = await fetch('/api/blog/featured-message/')
+    if(res.ok){
+      const response = await res.json()
+    
+      setMessage(response?.data?.featuredMessage)
+    }
+    
+  }
+  useEffect(()=>{
+    getFeaturedMessage()
+  }, [])
+  const language = router.locale
+  const orig = ''
   const { t } = useTranslation("common");
+  if(message){
   return (
+    
     <section className="screen-center my-10">
       <div className="md:flex justify-between md:gap-10  lg:gap-20 gap-y-10 mt-10">
         <div className={` relative md:w-[40%] `}>
           <Image
-            src="/images/blog/middle.png"
+            src={message?.image ?? ''}
             alt="blog slug"
             placeholder="blur"
             blurDataURL="#f2f2f2"
@@ -27,21 +50,14 @@ const MiddleSection = () => {
 
         <div className={`md:w-[55%]`}>
           <p className="h2 text-pri_dark font-[900] ">
-            Lorem ipsum dolor sit amet consectetur. Sed faucibus consectetur id
-            risus mauris fermentum.
+            
+            {language === 'fr' && message?.french_message ?  message?.french_message.title:message?.title}
           </p>
 
-          <p className="p-text mt-2 md:mt-5">
-            Lorem ipsum dolor sit amet consectetur. Sit aliquam et volutpat id
-            in rhoncus egestas. Eleifend tempus gravida diam posuere ipsum massa
-            tincidunt. Ac pellentesque eget mattis tellus etiam pellentesque
-            nibh lacus morbi. Velit tincidunt tristique quam nulla lectus et.
-            Elit tincidunt integer consectetur massa metus velit molestie in
-            commodo. Consequat sagittis feugiat tristique ac blandit consequat
-            dolor pellentesque erat. Neque ridiculus elit malesuada neque
-            ultrices diam. Ornare lacus sed ac urna. Scelerisque posuere et
-            etiam vitae. Est varius quam in ac integer pulvinar eget.
-          </p>
+          <div className="p-text mt-2 md:mt-5">
+          
+          {language === 'fr' && message?.french_message   ?  parse(message?.french_message?.body):parse(message?.body)}
+          </div>
           <Link href="/get-started">
             <button className="button3 mt-5">{t("common:buttona")}</button>
           </Link>
@@ -49,6 +65,7 @@ const MiddleSection = () => {
       </div>
     </section>
   );
+          };
 };
 
 export default MiddleSection;

@@ -94,7 +94,7 @@ const NavBar = ({ bgNav, textNav, bgHamburger }) => {
                 <Link href="/about">{t("Nav1")} </Link>
                 <Link href="/services">{t("Nav2")} </Link>
                 <Link href="/blog">{t("Nav4")} </Link>
-                <Link href="/say-hi">{t("Nav5")}</Link>
+                <Link href="/say-hi">{t("contact_button")}</Link>
                 <div className="mt-auto">
                   <SocialIcons />
                 </div>

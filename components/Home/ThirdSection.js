@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import styles from "../../styles/Home.module.css";
 import { home } from "../../utils/data";
 import { Fade } from "react-awesome-reveal";
@@ -6,7 +6,14 @@ import useTranslation from "next-translate/useTranslation";
 
 const ThirdSection = () => {
   const { testimonial } = home;
+  const [data, setData] = useState(testimonial);
+  const [change, setChange] = useState(false);
+
   const { t } = useTranslation("home");
+  useEffect(() => {
+    change ? setData(testimonial.slice(0, 2)) : setData(testimonial);
+  }, [change]);
+
   return (
     <div
       className={`bg-[#F4F8FF]  relative overflow-hidden  flex items-center ${styles.shadowCard}`}
@@ -20,7 +27,7 @@ const ThirdSection = () => {
           <div className="lg:w-[80%]  2xl:my-20">
             <Fade delay={200} duration={500} damping={0.3} cascade>
               <p className="h2-text text-white ">{t("Headc")}</p>
-              {testimonial.map((testimonial) => (
+              {data.map((testimonial) => (
                 <div key={testimonial.id} className="my-5 p-text">
                   <p className="text-sec">{t(testimonial.name)}</p>
                   <p className="text-sec font-medium">{t(testimonial.title)}</p>
@@ -30,6 +37,12 @@ const ThirdSection = () => {
                 </div>
               ))}
             </Fade>
+            <div
+              onClick={() => setChange(!change)}
+              className="md:hidden text-sec"
+            >
+              {change ? <p>Read More</p> : <p>Read Less</p>}
+            </div>
           </div>
         </div>
       </div>

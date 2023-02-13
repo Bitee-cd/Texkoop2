@@ -10,7 +10,7 @@
   "city": "Ville",
   "country": "Pays",
   "industry": "Industrie",
-  "volume": "Volume de livraison(hebdomadaire)",
+  "volume": "Volume de livraison Hebdomadaire",
   "message": "Message",
   "select_a": "Nous collectons ces données dans le but de traiter votre candidature. En cliquant sur cette case, vous reconnaissez avoir lu et compris la",
   "required": "required",
