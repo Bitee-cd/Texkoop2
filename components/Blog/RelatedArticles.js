@@ -23,10 +23,10 @@ const RelatedArticle = () => {
 
   const truncate = (str) => {
     
-    return str.length > 30 ? str.substring(0, 300) + "..." : str;
+    return str.length > 60 ? str.substring(0, 200) + "..." : str;
   };
 
-  const orig = 'http://127.0.0.1:8000'
+  const orig =''
   return (
     <>
     {articles?.map((item, index)=>{
@@ -35,7 +35,7 @@ const RelatedArticle = () => {
       <div className="grid md:grid-cols-2 md:gap-10 gap-5 mt-10">
         <div className={` relative `}>
           <Image
-            src={orig + item.image}
+            src={item?.image}
             alt="blog slug"
             placeholder="blur"
             blurDataURL="#f2f2f2"
@@ -53,16 +53,16 @@ const RelatedArticle = () => {
         <div className={`mt-5`}>
           <p className="h1-text text-pri_dark font-[600]">
             
-            {language === 'fr' && item?.french_article ?  item.french_article?.title:item.title}
+            {language === 'fr' && item?.french_article ?  item.french_article?.title:item?.title}
           </p>
           <div className="flex my-2 p-tiny-text items-center gap-2 ">
             <div className="bg-[#D9D9D9] w-[39px] h-[39px] rounded-full"></div>
-            <p>By {item.author.name}</p>
-            <p className="font-[700] text-[#3B3C3C]">-{item.date_created}</p>
+            <p>By {item?.author.name}</p>
+            <p className="font-[700] text-[#3B3C3C]">-{item?.date_created}</p>
           </div>
           <div className="p-tiny-text mt-2 md:mt-5">
           
-          {language === 'fr' && item?.french_article  ?  parse(item.french_article?.body):parse(item?.body)}
+          {language === 'fr' && item?.french_article  ?  parse(truncate(item?.french_article?.body)):parse(truncate(item?.body))}
           </div>
         </div>
       </div>

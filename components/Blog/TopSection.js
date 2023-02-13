@@ -24,7 +24,7 @@ const TopSection = () => {
   }, [])
   const language = router.locale
   const { topArticles } = blog;
-  const orig = 'http://127.0.0.1:8000'
+  const orig = ''
   return (
     <section className="screen-center">
       <p className="h2-text text-pri_dark font-[700] my-5">Blog</p>
@@ -33,8 +33,8 @@ const TopSection = () => {
           <div key={index} className="relative ">
             <Image
               // src={'/images/blog/1a.png'}
-              src={orig + blog.image}
-              alt={blog.text}
+              src={blog?.image}
+              alt={blog?.text}
               placeholder="blur"
               className="w-full h-full image-cover "
               width={700}
@@ -55,9 +55,9 @@ const TopSection = () => {
             >
               <Link href={`/blog/${blog.slug}`} className="p-tiny-text">
                
-                {language === 'fr' && blog?.french_article ?  blog.french_article?.title:blog.title}
+                {language === 'fr' && blog?.french_article ?  blog?.french_article?.title:blog?.title}
                 </Link>
-              <p className="p-tiny-text mt-2 md:mt-5">{blog.date_created}</p>
+              <p className="p-tiny-text mt-2 md:mt-5">{blog?.date_created}</p>
             </div>
           </div>
         ))}

@@ -4,7 +4,6 @@ import Link from "next/link";
 import React from "react";
 import { useState, useEffect } from "react";
 import parse from 'html-react-parser';
-import { API_URL } from "../../utils/data";
 import { useRouter } from "next/router";
 
 
@@ -17,7 +16,7 @@ const MiddleSection = () => {
     if(res.ok){
       const response = await res.json()
     
-      setMessage(response.data.featuredMessage)
+      setMessage(response?.data?.featuredMessage)
     }
     
   }
@@ -25,7 +24,7 @@ const MiddleSection = () => {
     getFeaturedMessage()
   }, [])
   const language = router.locale
-  const orig = 'http://127.0.0.1:8000'
+  const orig = ''
   const { t } = useTranslation("common");
   if(message){
   return (
@@ -34,7 +33,7 @@ const MiddleSection = () => {
       <div className="md:flex justify-between md:gap-10  lg:gap-20 gap-y-10 mt-10">
         <div className={` relative md:w-[40%] `}>
           <Image
-            src={message && orig + message.image}
+            src={message?.image ?? ''}
             alt="blog slug"
             placeholder="blur"
             blurDataURL="#f2f2f2"
@@ -52,12 +51,12 @@ const MiddleSection = () => {
         <div className={`md:w-[55%]`}>
           <p className="h2 text-pri_dark font-[900] ">
             {message?.title}
-            {language === 'fr' && message?.french_message ?  message.french_message.title:message?.title}
+            {language === 'fr' && message?.french_message ?  message?.french_message.title:message?.title}
           </p>
 
           <div className="p-text mt-2 md:mt-5">
           
-          {language === 'fr' && message?.french_message   ?  parse(message.french_message?.body):parse(message?.body)}
+          {language === 'fr' && message?.french_message   ?  parse(message?.french_message?.body):parse(message?.body)}
           </div>
           <Link href="/get-started">
             <button className="button3 mt-5">{t("common:buttona")}</button>

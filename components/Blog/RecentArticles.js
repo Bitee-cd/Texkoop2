@@ -31,7 +31,7 @@ const RecentArticles = () => {
     
     return str.length > 30 ? str.substring(0, 100) + "..." : str;
   };
-  const orig = 'http://127.0.0.1:8000'
+  const orig = ''
   const { recentArticles } = blog;
   
   if(data){
@@ -44,8 +44,8 @@ const RecentArticles = () => {
             <div className={`${styles.blogBackground} relative `}>
               <Image
                 // src={orig + blog.image}
-                src={orig + blog.image}
-                alt={blog.title}
+                src={blog?.image}
+                alt={blog?.title}
                 placeholder="blur"
                 blurDataURL="#f2f2f2"
                 className="w-full h-full image-cover "
@@ -62,14 +62,14 @@ const RecentArticles = () => {
             <div className={`mt-5`}>
               <p className="h1-text text-pri_dark font-[600]">
                 
-                {language === 'fr' && blog?.french_article ?  blog.french_article?.title:blog.title}
+                {language === 'fr' && blog?.french_article ?  blog?.french_article?.title:blog?.title}
               </p>
               <div className="flex my-2 p-tiny-text items-center gap-2 ">
                 <div className="bg-[#D9D9D9] w-[39px] h-[39px] rounded-full overflow-hidden">
                 <Image
                 // src={orig + blog.image}
-                src={orig + blog.author.image}
-                alt={blog.title}
+                src={blog?.author.image}
+                alt={blog?.title}
                 placeholder="blur"
                 blurDataURL="#f2f2f2"
                 className="w-full h-full image-cover "
@@ -83,14 +83,14 @@ const RecentArticles = () => {
               />
 
                 </div>
-                <p>By {blog.author.name}</p>
-                <p className="font-[700] text-[#3B3C3C]">-{blog.date_created}</p>
+                <p>By {blog?.author.name}</p>
+                <p className="font-[700] text-[#3B3C3C]">-{blog?.date_created}</p>
               </div>
               <div className="p-tiny-text mt-2 md:mt-5">
                 
-                {language === 'fr' && blog?.french_article ?  parse(truncate(blog.french_article.body)):parse(truncate(blog.body))}
+                {language === 'fr' && blog?.french_article ?  parse(truncate(blog?.french_article.body)):parse(truncate(blog?.body))}
               </div>
-              <Link href={`/blog/${blog.slug}`}>
+              <Link href={`/blog/${blog?.slug}`}>
                 <p className="text-sec hover:text-pri_dark">Read more</p>
               </Link>
             </div>
