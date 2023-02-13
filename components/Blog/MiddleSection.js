@@ -50,7 +50,7 @@ const MiddleSection = () => {
 
         <div className={`md:w-[55%]`}>
           <p className="h2 text-pri_dark font-[900] ">
-            {message?.title}
+            
             {language === 'fr' && message?.french_message ?  message?.french_message.title:message?.title}
           </p>
 
