@@ -9,13 +9,9 @@ const PreLoader = () => {
   useEffect(() => {
     const intervalId = setInterval(() => {
       setPercentage((prevPercentage) => {
-        if (prevPercentage >= 99) {
-          clearInterval(intervalId);
-          return 99;
-        }
         return prevPercentage + 1;
       });
-    }, 100);
+    }, 50);
 
     return () => {
       clearInterval(intervalId);
