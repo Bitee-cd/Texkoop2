@@ -15,7 +15,7 @@ const PreLoader = () => {
         }
         return prevPercentage + 1;
       });
-    }, 50);
+    }, 100);
 
     return () => {
       clearInterval(intervalId);

@@ -2,9 +2,11 @@ import React, { useEffect } from "react";
 import Layout from "../components/Layout";
 import { useAppContext } from "../components/AppContext";
 import GetStartedForm from "../components/GetStarted/Form";
+import useTranslation from "next-translate/useTranslation";
 
 const GetStarted = () => {
   const { setLogoDark } = useAppContext();
+  const { t } = useTranslation("started");
   useEffect(() => {
     setLogoDark(false);
   }, []);
@@ -22,14 +24,13 @@ const GetStarted = () => {
         <div className="screen-center">
           <div className="md:w-[70%]">
             <p className="h2-text">
-              Integrate TexKoop’s Solution <br></br>Into Your Retail Service.
+              {t("headai")}
+              <br></br>
+              {t("headaii")}
             </p>
             <div className="md:w-[80%] mt-5">
-              <p className="mb-5">Run a retail enterprise?</p>
-              <p>
-                Subscribe to TexKoop’s enterprise service and have our solution
-                seamlessly built in to handle your orders in real-time.
-              </p>
+              <p className="mb-5">{t("textai")}</p>
+              <p>{t("textaii")}</p>
             </div>
             <GetStartedForm />
           </div>
