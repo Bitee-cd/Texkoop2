@@ -38,21 +38,25 @@ const RecentArticles = () => {
           {data &&
             data?.data?.result?.map((blog, index) => (
               <div key={index} className="">
-                <div className={`${styles.blogBackground} relative `}>
+                <div className={` relative `}>
                   <Image
                     // src={orig + blog.image}
                     src={blog?.image}
                     alt={blog?.title}
                     placeholder="blur"
                     blurDataURL="#f2f2f2"
-                    className="w-full h-full image-cover "
+                    className=" image-cover "
                     width={700}
-                    height={475}
+                    height={700}
                     sizes="100vw"
                     style={{
                       width: "100%",
                       height: "auto",
                     }}
+                  />
+                  <img
+                    src="/images/about/background.png"
+                    className={`${styles.zindz2} top-0 right-0 h-full w-full absolute`}
                   />
                 </div>
 

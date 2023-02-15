@@ -7,7 +7,7 @@ import useTranslation from "next-translate/useTranslation";
 const ThirdSection = () => {
   const { testimonial } = home;
   const [data, setData] = useState(testimonial);
-  const [change, setChange] = useState(false);
+  const [change, setChange] = useState(true);
 
   const { t } = useTranslation("home");
   useEffect(() => {
@@ -24,7 +24,7 @@ const ThirdSection = () => {
         <div
           className={`${styles.boxCard2} rounded-[10px] bg-pri_dark lg:ml-[5%] mx-auto h-[50%] lg:w-[60%] my-10 lg:my-20 text-black p-5 lg:p-10 gap-y-5`}
         >
-          <div className="lg:w-[80%]  2xl:my-20">
+          <div className="md:hidden lg:w-[80%]  2xl:my-20">
             <Fade delay={200} duration={500} damping={0.3} cascade>
               <p className="h2-text text-white ">{t("Headc")}</p>
               {data.map((testimonial) => (
@@ -44,6 +44,22 @@ const ThirdSection = () => {
               {change ? <p>Read More</p> : <p>Read Less</p>}
             </div>
           </div>
+          {/* dekstop versopm  */}
+          <div className="hidden md:block lg:w-[80%]  2xl:my-20">
+            <Fade delay={200} duration={500} damping={0.3} cascade>
+              <p className="h2-text text-white ">{t("Headc")}</p>
+              {testimonial.map((testimonial) => (
+                <div key={testimonial.id} className="my-5 p-text">
+                  <p className="text-sec">{t(testimonial.name)}</p>
+                  <p className="text-sec font-medium">{t(testimonial.title)}</p>
+                  <p className="mt-5 text-white font-[300]">
+                    {t(testimonial.text)}
+                  </p>
+                </div>
+              ))}
+            </Fade>
+          </div>
+          {/* deskop  */}
         </div>
       </div>
     </div>
