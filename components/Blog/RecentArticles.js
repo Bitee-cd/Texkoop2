@@ -45,14 +45,10 @@ const RecentArticles = () => {
                     alt={blog?.title}
                     placeholder="blur"
                     blurDataURL="#f2f2f2"
-                    className=" image-cover "
+                    className=" image-contain w-full h-[200px] md:h-[300px] lg:h-[400px]"
                     width={700}
                     height={700}
                     sizes="100vw"
-                    style={{
-                      width: "100%",
-                      height: "auto",
-                    }}
                   />
                   <img
                     src="/images/about/background.png"
@@ -61,11 +57,14 @@ const RecentArticles = () => {
                 </div>
 
                 <div className={`mt-5`}>
-                  <p className="h1-text text-pri_dark font-[600]">
-                    {language === "fr" && blog?.french_article
-                      ? blog?.french_article?.title
-                      : blog?.title}
-                  </p>
+                  <Link href={`/blog/${blog?.slug}`}>
+                    {" "}
+                    <p className="h1-text text-pri_dark font-[600]">
+                      {language === "fr" && blog?.french_article
+                        ? blog?.french_article?.title
+                        : blog?.title}
+                    </p>
+                  </Link>
                   <div className="flex my-2 p-tiny-text items-center gap-2 ">
                     <div className="bg-[#D9D9D9] w-[39px] h-[39px] rounded-full overflow-hidden">
                       <Image

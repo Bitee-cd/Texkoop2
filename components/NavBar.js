@@ -8,7 +8,6 @@ import LogoDark from "./Reusable/LogoDark";
 import { useAppContext } from "./AppContext";
 import LanguageMobile from "./Reusable/LanguageMobile";
 import useTranslation from "next-translate/useTranslation";
-import { useRouter } from "next/router";
 
 const NavBar = ({ bgNav, textNav, bgHamburger }) => {
   const [sticky, setSticky] = useState(false);

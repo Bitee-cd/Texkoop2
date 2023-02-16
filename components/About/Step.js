@@ -21,6 +21,8 @@ const Step = ({ step }) => {
               <Image
                 src={step.image}
                 alt={step.title}
+                placeholder="blur"
+                blurDataURL="/images/logo.png"
                 width={700}
                 height={475}
                 sizes="100vw"

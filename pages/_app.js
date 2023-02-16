@@ -33,7 +33,7 @@ function MyApp({ Component, pageProps }) {
     });
   });
   useEffect(() => {
-    console.log(`Previous route: ${(previousRoute, currentRoute)}`);
+    `Previous route: ${(previousRoute, currentRoute)}`;
   }, [router.route]);
   return (
     <>

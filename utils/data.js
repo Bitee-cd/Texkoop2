@@ -146,13 +146,15 @@ export const services = {
   data: [
     {
       id: 1,
+      alt: "texkoop cargo",
       title: "card_title_a",
       text: "card_text_a",
-      image: "/images/services/a.png",
-      image2: "/images/services/a2.png",
+      image: "/images/texcargo.png",
+      image2: "/images/cargomobile.png",
     },
     {
       id: 2,
+      alt: "texkoop bike",
       title: "card_title_b",
       text: "card_text_b",
       image: "/images/services/b.png",
@@ -160,6 +162,7 @@ export const services = {
     },
     {
       id: 3,
+      alt: "texkoop van",
       title: "card_title_c",
       text: "card_text_c",
       image: "/images/services/c.png",
@@ -167,10 +170,11 @@ export const services = {
     },
     {
       id: 4,
+      alt: "texkoop bike",
       title: "card_title_d",
       text: "card_text_d",
-      image: "/images/services/d.png",
-      image2: "/images/services/d2.png",
+      image: "/images/texbike.png",
+      image2: "/images/bikemobile.png",
     },
   ],
 };
@@ -685,4 +689,3 @@ export const blog = {
 };
 export const remaining_time = 32488;
 export const API_URL = "https://truebackend.texkoop.com";
-

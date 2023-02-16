@@ -16,7 +16,6 @@ const FirstSection = () => {
   const texta = t("home:card_title_a");
   const textb = t("home:card_title_b");
   const textc = t("home:card_title_c");
-  console.log(texta);
 
   return (
     <section className=" blur-background relative min-h-screen gap-10 text-white bg-pri_dark  lg:h-auto flex justify-center items-center">

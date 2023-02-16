@@ -4,6 +4,7 @@ import styles from "../../styles/Services.module.css";
 import Link from "next/link";
 import { Fade, Slide } from "react-awesome-reveal";
 import useTranslation from "next-translate/useTranslation";
+import Image from "next/image";
 
 const Card = ({ item }) => {
   const { t } = useTranslation("services");
@@ -20,10 +21,20 @@ const Card = ({ item }) => {
               <div
                 className={`${item.id === 4 && "w-[80%] mx-auto lg:ml-auto"} `}
               >
-                <img
+                <Image
                   src={item.image}
-                  loading="lazy"
-                  className={` ${styles.slideIn} h-full object-contain`}
+                  alt={item.alt}
+                  placeholder="blur"
+                  blurDataURL="/images/logo.png"
+                  width={700}
+                  height={475}
+                  priority
+                  sizes="100vw"
+                  style={{
+                    width: "100%",
+                    height: "auto",
+                  }}
+                  className={` ${styles.slideIn} w-full h-full object-contain`}
                 />
               </div>
             </Slide>
@@ -33,10 +44,20 @@ const Card = ({ item }) => {
               <div
                 className={`${item.id === 4 && " mx-auto "} flex items-center`}
               >
-                <img
+                <Image
                   src={item.image2}
-                  loading="lazy"
-                  className={` ${styles.slideIn} h-full object-contain`}
+                  alt={item.alt}
+                  placeholder="blur"
+                  blurDataURL="/images/logo.png"
+                  width={700}
+                  height={475}
+                  priority
+                  sizes="100vw"
+                  style={{
+                    width: "100%",
+                    height: "auto",
+                  }}
+                  className={` ${styles.slideIn} w-full h-full object-contain`}
                 />
               </div>
             </Slide>

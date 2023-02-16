@@ -16,12 +16,19 @@ const ImageSlider = () => {
             className={`${styles.imageHeight} $ relative border-[5px] border-y-[10px] border-sec `}
           >
             <div className={` ${styles.background}`}></div>
-            <img
+            <Image
               src={item.image}
               alt={t(item.text)}
               blurDataURL="data:..."
               placeholder="blur"
-              className=" w-full h-full object-cover"
+              className="w-full h-full image-cover "
+              width={700}
+              height={475}
+              sizes="100vw"
+              style={{
+                width: "100%",
+                height: "100%",
+              }}
             />
             <p
               className={`${styles.zindex2} bottom-[5%] absolute mx-5 text-white`}

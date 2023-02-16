@@ -40,7 +40,7 @@ const MiddleSection = () => {
               sizes="100vw"
               style={{
                 width: "100%",
-                height: "auto",
+                height: "100%",
               }}
             />
           </div>

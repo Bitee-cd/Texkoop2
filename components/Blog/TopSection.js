@@ -2,29 +2,28 @@ import React from "react";
 import { blog } from "../../utils/data";
 import styles from "../../styles/Home.module.css";
 import Image from "next/image";
-import {useState, useEffect} from 'react'
+import { useState, useEffect } from "react";
 import Link from "next/link";
 import { useRouter } from "next/router";
 
 const TopSection = () => {
-  const router = useRouter()
-  const [articles, setArticles] = useState(undefined)
+  const router = useRouter();
+  const [articles, setArticles] = useState(undefined);
 
-  const getTopArticles=async()=>{
-    const res = await fetch('/api/blog/top-articles/')
-    if(res.ok){
-      const response = await res.json()
-      
-      setArticles(response.data.articles)
+  const getTopArticles = async () => {
+    const res = await fetch("/api/blog/top-articles/");
+    if (res.ok) {
+      const response = await res.json();
+
+      setArticles(response.data.articles);
     }
-    
-  }
-  useEffect(()=>{
-    getTopArticles()
-  }, [])
-  const language = router.locale
+  };
+  useEffect(() => {
+    getTopArticles();
+  }, []);
+  const language = router.locale;
   const { topArticles } = blog;
-  const orig = ''
+  const orig = "";
   return (
     <section className="screen-center">
       <p className="h2-text text-pri_dark font-[700] my-5">Blog</p>
@@ -42,9 +41,9 @@ const TopSection = () => {
               sizes="100vw"
               style={{
                 width: "100%",
-                height: "auto",
+                height: "100%",
               }}
-              blurDataURL="#f2f2f2"
+              blurDataURL="/images/logo.png"
             />
             <img
               src="/images/about/background.png"
@@ -54,9 +53,10 @@ const TopSection = () => {
               className={`${styles.zinde2} absolute bottom-0 left-0 right-0 p-2 md:p-5  text-white`}
             >
               <Link href={`/blog/${blog.slug}`} className="p-tiny-text">
-               
-                {language === 'fr' && blog?.french_article ?  blog?.french_article?.title:blog?.title}
-                </Link>
+                {language === "fr" && blog?.french_article
+                  ? blog?.french_article?.title
+                  : blog?.title}
+              </Link>
               <p className="p-tiny-text mt-2 md:mt-5">{blog?.date_created}</p>
             </div>
           </div>

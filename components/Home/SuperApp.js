@@ -2,6 +2,12 @@ import React from "react";
 import styles from "../../styles/Home.module.css";
 import { Fade } from "react-awesome-reveal";
 import useTranslation from "next-translate/useTranslation";
+import mobile from "../../public/images/phone.png";
+import mobile_phone from "../../public/images/mobile2.png";
+import googleplay from "../../public/images/logo/googleplay.png";
+import appstore from "../../public/images/logo/appstore.png";
+import Image from "next/image";
+
 const SuperApp = (bgcolor) => {
   const { t } = useTranslation("common");
   return (
@@ -21,28 +27,32 @@ const SuperApp = (bgcolor) => {
             </div>
             <div className="flex items-end gap-2 lg:gap-10">
               <div>
-                <img
-                  src="/images/logo/googleplay.png"
+                <Image
+                  src={googleplay}
+                  placeholder="blur"
                   alt="download on google play"
                 />
               </div>
               <div>
-                <img
-                  src="/images/logo/appstore.png"
+                <Image
+                  src={appstore}
+                  placeholder="blur"
                   alt="download on apple store"
                 />
               </div>
             </div>
           </div>
           <div className="w-[50%] mt-2">
-            <img
-              src="/images/phone.png"
+            <Image
+              src={mobile}
               alt="texkoop mobile phone"
+              placeholder="blur"
               className={`w-full h-full hidden lg:block object-contain`}
             />
-            <img
-              src="/images/mobile_phone.png"
+            <Image
+              src={mobile_phone}
               alt="texkoop mobile phone"
+              placeholder="blur"
               className={`w-full h-full lg:hidden `}
             />
           </div>
