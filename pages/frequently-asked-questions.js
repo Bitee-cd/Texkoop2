@@ -1,15 +1,17 @@
 import React, { useEffect } from "react";
 import Layout from "../components/Layout";
 import { useAppContext } from "../components/AppContext";
-import { services } from "../utils/data";
+import { FAQ, services } from "../utils/data";
 import Card from "../components/FAQs/Card";
+import useTranslation from "next-translate/useTranslation";
 
 const FAQs = () => {
   const { setLogoDark } = useAppContext();
   useEffect(() => {
     setLogoDark(true);
   }, []);
-  const { data } = services;
+  const { faquestions } = FAQ;
+  const { t } = useTranslation("faq");
 
   return (
     <Layout
@@ -22,8 +24,13 @@ const FAQs = () => {
         <div className="screen-center">
           <p className="h2-text">Frequently Asked Questions</p>
           <div className="my-5">
-            {data.map((item) => (
-              <Card item={item} key={item.id} />
+            {faquestions.map((faq) => (
+              <div key={faq.id} className="my-10">
+                <p className="h2-text">{t(faq.text)}</p>
+                {faq.data.map((item) => (
+                  <Card item={item} key={item.id} />
+                ))}
+              </div>
             ))}
           </div>
         </div>

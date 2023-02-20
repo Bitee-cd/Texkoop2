@@ -25,7 +25,7 @@ const Footer = () => {
           <Link href="/terms-and-conditions" className="">
             {t("Fooe")}
           </Link>
-          <Link href="/faqs" className="text-end ">
+          <Link href="/frequently-asked-questions" className="text-end ">
             {t("Foof")}
           </Link>
         </div>
@@ -57,7 +57,7 @@ const Footer = () => {
               </Link>
             </div>
             <div>
-              <Link href="/faqs" className=" ">
+              <Link href="/frequently-asked-questions" className=" ">
                 {t("Foof")}
               </Link>
             </div>

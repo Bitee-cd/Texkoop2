@@ -267,6 +267,89 @@ export const FAQ = {
       data: [{ id: 1 }, { id: 2 }],
     },
   ],
+  faquestions: [
+    {
+      id: 1,
+      text: "head_a",
+      data: [
+        { id: 1, question: "q_1a", answer: "a_1a" },
+        { id: 2, question: "q_1b", answer: "a_1b" },
+        { id: 3, question: "q_1c", answer: "a_1c" },
+        { id: 4, question: "q_1d", answer: "a_1d" },
+        { id: 5, question: "q_1e", answer: "a_1e" },
+        { id: 6, question: "q_1f", answer: "a_1f" },
+        { id: 7, question: "q_1g", answer: "a_1g" },
+        { id: 8, question: "q_1h", answer: "a_1h" },
+      ],
+    },
+    {
+      id: 2,
+      text: "head_b",
+      data: [
+        { id: 1, question: "q_2a", answer: "a_2a" },
+        { id: 2, question: "q_2b", answer: "a_2b" },
+        { id: 3, question: "q_2c", answer: "a_2c" },
+        { id: 4, question: "q_2d", answer: "a_2d" },
+        { id: 5, question: "q_2e", answer: "a_2e" },
+        { id: 6, question: "q_2f", answer: "a_2f" },
+        { id: 7, question: "q_2g", answer: "a_2g" },
+        { id: 8, question: "q_2h", answer: "a_2h" },
+        { id: 9, question: "q_2i", answer: "a_2i" },
+        { id: 10, question: "q_2j", answer: "a_2j" },
+        { id: 11, question: "q_2k", answer: "a_2k" },
+      ],
+    },
+    {
+      id: 3,
+      text: "head_c",
+      data: [
+        { id: 1, question: "q_3a", answer: "a_3a" },
+        { id: 2, question: "q_3b", answer: "a_3b" },
+        {
+          id: 3,
+          question: "q_3c",
+          sub_answers: [
+            {
+              id: 1,
+              head: "head_3a",
+              sub: [
+                { id: 1, text: "text_3ai" },
+                { id: 2, text: "text_3aii" },
+                { id: 2, text: "text_3aiii" },
+              ],
+            },
+            {
+              id: 2,
+              head: "head_3b",
+              sub: [
+                { id: 1, text: "text_3bi" },
+                { id: 2, text: "text_3bii" },
+                { id: 2, text: "text_3biii" },
+              ],
+            },
+            {
+              id: 3,
+              head: "head_3c",
+              sub: [
+                { id: 1, text: "text_3ci" },
+                { id: 2, text: "text_3cii" },
+                { id: 2, text: "text_3ciii" },
+              ],
+            },
+          ],
+        },
+        { id: 4, question: "q_3d", answer: "a_3d" },
+      ],
+    },
+    {
+      id: 4,
+      text: "head_d",
+      data: [
+        { id: 1, question: "q_4a", answer: "a_4a" },
+        { id: 2, question: "q_4b", answer: "a_4b" },
+      ],
+    },
+  ],
 };
 export const terms = {
   data: [

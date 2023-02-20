@@ -10,6 +10,7 @@
     "/say-hi": ["contact"],
     "/services": ["services"],
     "/privacy-policy": ["privacy"],
-    "/terms-and-conditions": ["terms"]
+    "/terms-and-conditions": ["terms"],
+    "/frequently-asked-questions": ["faq"]
   }
 }

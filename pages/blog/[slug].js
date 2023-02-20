@@ -21,9 +21,7 @@ const BlogDetail = () => {
       <SinglePost />
       <MiddleSection />
       <div className="bg-[#f5f5f5] py-10">
-        
-          <RelatedArticle />
-        
+        <RelatedArticle />
       </div>
     </Layout>
   );

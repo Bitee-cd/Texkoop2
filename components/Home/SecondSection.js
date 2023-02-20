@@ -2,7 +2,7 @@ import React from "react";
 import styles from "../../styles/Home.module.css";
 import Link from "next/link";
 import { Fade } from "react-awesome-reveal";
-import bike from "../../public/images/bike-rider.png";
+import bike from "../../public/images/bike-rider.jpg";
 import Image from "next/image";
 import useTranslation from "next-translate/useTranslation";
 
