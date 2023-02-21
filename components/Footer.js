@@ -5,11 +5,15 @@ import ScrollButton from "./Reusable/ScrollButton";
 import useTranslation from "next-translate/useTranslation";
 import { useAppContext } from "./AppContext";
 
-const Footer = () => {
+const Footer = ({ modal }) => {
   const { t } = useTranslation("common");
   const { navOpen } = useAppContext();
   return (
-    <footer className={`${navOpen && "blur"} bg-pri_dark py-10 text-white `}>
+    <footer
+      className={`${navOpen && "blur"} ${
+        modal && "blur"
+      } bg-pri_dark py-10 text-white `}
+    >
       <div className="screen-center">
         <div className="hidden lg:flex lg:w-full justify-between">
           <Link href="/about"> {t("Fooa")}</Link>

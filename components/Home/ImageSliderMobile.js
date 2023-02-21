@@ -55,7 +55,7 @@ const ImageSliderMobile = ({ text }) => {
             <Image
               src={bike}
               alt="texkoop bikes"
-              className="h-full w-full object-cover"
+              className="h-full w-[80%] object-cover"
               placeholder="blur"
             />
           </motion.div>

@@ -8,7 +8,9 @@ import styles from "../styles/Services.module.css";
 const Services = () => {
   const { setLogoDark } = useAppContext();
   useEffect(() => {
-    setLogoDark(true);
+    setTimeout(() => {
+      setLogoDark(true);
+    }, 500);
   }, []);
   const { data } = services;
   return (

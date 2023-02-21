@@ -9,7 +9,7 @@ import { useAppContext } from "./AppContext";
 import LanguageMobile from "./Reusable/LanguageMobile";
 import useTranslation from "next-translate/useTranslation";
 
-const NavBar = ({ bgNav, textNav, bgHamburger }) => {
+const NavBar = ({ modal, bgNav, textNav, bgHamburger }) => {
   const [sticky, setSticky] = useState(false);
   const { logoDark, navOpen, setNavOpen } = useAppContext();
   const { t } = useTranslation("common");
@@ -26,8 +26,8 @@ const NavBar = ({ bgNav, textNav, bgHamburger }) => {
 
   return (
     <div
-      className={`${
-        sticky && "fixed"
+      className={`${sticky && "fixed"} ${
+        modal && "blur"
       } w-full top-0 duration-300 transition-all ease-in z-10 min-w-screen overflow-x-hidden ${bgNav} ${textNav} `}
     >
       <nav className={`flex justify-between  screen-center py-5 items-center`}>

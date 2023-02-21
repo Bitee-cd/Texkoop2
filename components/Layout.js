@@ -10,7 +10,7 @@ const NavBar = dynamic(
   { ssr: false }
 );
 
-const Layout = ({ children, title, bgNav, textNav, bgHamburger }) => {
+const Layout = ({ modal, children, title, bgNav, textNav, bgHamburger }) => {
   const { navOpen } = useAppContext();
   return (
     <>
@@ -21,7 +21,12 @@ const Layout = ({ children, title, bgNav, textNav, bgHamburger }) => {
         <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
       </Head>
 
-      <NavBar bgNav={bgNav} textNav={textNav} bgHamburger={bgHamburger} />
+      <NavBar
+        bgNav={bgNav}
+        textNav={textNav}
+        bgHamburger={bgHamburger}
+        modal={modal}
+      />
       <main className={`${navOpen && "blur"} min-h-screen font-Helvetica`}>
         {children}
       </main>

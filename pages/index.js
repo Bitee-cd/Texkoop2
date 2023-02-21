@@ -6,11 +6,13 @@ import Timer from "../components/Home/Timer";
 import HomePage from "../components/Home/HomePage";
 import { useAppContext } from "../components/AppContext";
 import NormalTimer from "../components/Home/NormalTimer";
+import Modal from "../components/Home/Modal";
 
 export default function Home({ previousRoute }) {
   const [start, setStart] = useState(true);
   const [animation, setAnimation] = useState(false);
   const { setLogoDark } = useAppContext();
+  const [modal, setModal] = useState(false);
   useEffect(() => {
     setLogoDark(false);
     if (previousRoute) {
@@ -22,6 +24,13 @@ export default function Home({ previousRoute }) {
     setStart(false);
     setTimeout(() => {
       setAnimation(true);
+      startModal();
+    }, 3500);
+  };
+
+  const startModal = () => {
+    setTimeout(() => {
+      setModal(true);
     }, 3500);
   };
   return (
@@ -60,8 +69,10 @@ export default function Home({ previousRoute }) {
           bgNav="bg-pri_dark"
           textNav="text-white"
           bgHamburger="bg-white"
+          modal={modal}
         >
-          <HomePage />
+          <HomePage modal={modal} />
+          <Modal modal={modal} setModal={setModal} />
         </Layout>
       )}
     </>
