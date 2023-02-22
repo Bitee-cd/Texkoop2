@@ -9,7 +9,7 @@ const ImageSlider = () => {
   const { t } = useTranslation("about");
   return (
     <section className="my-10 mt-20 inline-block">
-      <div className={`animate-slide flex  translate-x-[-500px]`}>
+      <div className={`animate-slide flex`}>
         {imageSlider.map((item) => (
           <div
             key={item.id}
