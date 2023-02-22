@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useLayoutEffect } from "react";
 import Layout from "../components/Layout";
 import { useAppContext } from "../components/AppContext";
 import { services } from "../utils/data";
@@ -7,10 +7,8 @@ import styles from "../styles/Services.module.css";
 
 const Services = () => {
   const { setLogoDark } = useAppContext();
-  useEffect(() => {
-    setTimeout(() => {
-      setLogoDark(true);
-    }, 500);
+  useLayoutEffect(() => {
+    setLogoDark(true);
   }, []);
   const { data } = services;
   return (

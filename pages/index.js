@@ -31,7 +31,7 @@ export default function Home({ previousRoute }) {
   const startModal = () => {
     setTimeout(() => {
       setModal(true);
-    }, 3500);
+    }, 12000);
   };
   return (
     <>
