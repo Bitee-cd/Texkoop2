@@ -19,7 +19,7 @@ const ImageSlider = () => {
             <Image
               src={item.image}
               alt={t(item.text)}
-              blurDataURL="data:..."
+              blurDataURL="/images/about/2d.png"
               placeholder="blur"
               className="w-full h-full image-cover "
               width={700}
