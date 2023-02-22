@@ -41,7 +41,7 @@ const ThirdSection = () => {
               onClick={() => setChange(!change)}
               className="md:hidden text-sec"
             >
-              {change ? <p>Read More</p> : <p>Read Less</p>}
+              {change ? <p>{t("read_more")}</p> : <p>{t("read_less")}</p>}
             </div>
           </div>
           {/* dekstop versopm  */}

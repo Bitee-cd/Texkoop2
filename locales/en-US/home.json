@@ -29,5 +29,7 @@
   "Modal_text": " Join the wait list and be the first to know as soon as the Texkoop app goes live",
   "f_name": "First name",
   "email": "Email address",
-  "Modal_button": "Get Notified"
+  "Modal_button": "Get Notified",
+  "read_more": "Read More",
+  "read_less": "Read Less"
 }

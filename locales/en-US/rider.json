@@ -13,6 +13,6 @@
   "required": "required",
   "select_b": "and",
   "privacy_policy": "privacy policy",
-  "terms_of service": "terms of service",
+  "terms_of_service": "terms of service",
   "button_send": "Send"
 }
