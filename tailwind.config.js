@@ -34,7 +34,7 @@ module.exports = {
           },
 
           "50%": {
-            transform: "translate(0, 0px)",
+            transform: "translate(-750px, 0px)",
           },
 
           "100%": {
