@@ -16,7 +16,7 @@ const Card = ({ item }) => {
         className={`md:flex md:flex-row-reverse lg:gap-10 gap-y-10 justify-between`}
       >
         <div className=" md:w-[50%] mb-5">
-          <div className="block ">
+          <div className="hidden md:block ">
             <Slide direction="right">
               <div
                 className={`${item.id === 4 && "w-[80%] mx-auto lg:ml-auto"} `}
@@ -39,7 +39,7 @@ const Card = ({ item }) => {
               </div>
             </Slide>
           </div>
-          {/* <div className="hidden">
+          <div className="md:hidden mb-5">
             <Slide direction="right">
               <div
                 className={`${item.id === 4 && " mx-auto "} flex items-center`}
@@ -61,7 +61,7 @@ const Card = ({ item }) => {
                 />
               </div>
             </Slide>
-          </div> */}
+          </div>
         </div>
         <div className="md:w-[50%]">
           <Slide direction="left">

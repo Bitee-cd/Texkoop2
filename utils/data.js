@@ -150,7 +150,7 @@ export const services = {
       title: "card_title_a",
       text: "card_text_a",
       image: "/images/texcargo.png",
-      image2: "/images/cargomobile.png",
+      image2: "/images/texcargo.png",
     },
     {
       id: 2,
@@ -158,7 +158,7 @@ export const services = {
       title: "card_title_b",
       text: "card_text_b",
       image: "/images/services/b.png",
-      image2: "/images/services/b2.png",
+      image2: "/images/services/b.png",
     },
     {
       id: 3,
@@ -166,7 +166,7 @@ export const services = {
       title: "card_title_c",
       text: "card_text_c",
       image: "/images/services/c.png",
-      image2: "/images/services/c2.png",
+      image2: "/images/services/c.png",
     },
     {
       id: 4,
