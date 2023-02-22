@@ -16,7 +16,7 @@ const Services = () => {
       title="Our Services"
       bgNav="bg-white"
       textNav="text-pri_dark"
-      bgHamburger="bg-red-500"
+      bgHamburger="bg-pri_dark"
     >
       <div className={` relative bottom-0 `}>
         <section className="w-[90%] max-w-[1440px] mx-auto lg:px-1 py-10  overflow-hidden ">
