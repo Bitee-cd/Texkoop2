@@ -174,7 +174,7 @@ export const services = {
       title: "card_title_d",
       text: "card_text_d",
       image: "/images/texbike.png",
-      image2: "/images/bikemobile.png",
+      image2: "/images/texbike.png",
     },
   ],
 };

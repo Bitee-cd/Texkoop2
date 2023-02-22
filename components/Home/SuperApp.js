@@ -53,7 +53,7 @@ const SuperApp = (bgcolor) => {
               src={mobile_phone}
               alt="texkoop mobile phone"
               placeholder="blur"
-              className={`w-full h-full lg:hidden `}
+              className={`w-full h-full lg:hidden object-contain`}
             />
           </div>
         </div>

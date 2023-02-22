@@ -42,7 +42,9 @@ const SecondSection = () => {
               height: "auto",
             }}
           />
-          <button className="button2 lg:hidden mt-10"> {t("buttonb")}</button>
+          <Link href="/rider">
+            <button className="button2 lg:hidden mt-10"> {t("buttonb")}</button>
+          </Link>
         </div>
       </div>
     </div>

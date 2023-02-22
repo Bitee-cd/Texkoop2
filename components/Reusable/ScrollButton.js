@@ -14,7 +14,7 @@ const ScrollButton = () => {
         className="h-[30px] duration-1000 scroll-smooth cursor-pointer"
         onClick={scrollToTop}
       >
-        <BsArrowUp className="w-full" size="100%" />
+        {/* <BsArrowUp className="w-full" size="100%" /> */}top
       </div>
     </div>
   );

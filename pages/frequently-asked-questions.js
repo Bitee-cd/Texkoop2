@@ -22,7 +22,7 @@ const FAQs = () => {
     >
       <section className={` min-h-screen  bg-white text-pri_dark py-10`}>
         <div className="screen-center">
-          <p className="h2-text">Frequently Asked Questions</p>
+          <p className="h2-text uppercase">{t("faq_title")}</p>
           <div className="my-5">
             {faquestions.map((faq) => (
               <div key={faq.id} className="my-10">
