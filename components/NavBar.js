@@ -49,17 +49,17 @@ const NavBar = ({ modal, bgNav, textNav, bgHamburger }) => {
             >
               <div
                 className={`${styles.hamburger} ${bgHamburger} ${
-                  router.route === "/services" && "bg-pri_dark"
+                  router.route.includes("services") && "bg-pri_dark"
                 } mt-0`}
               ></div>
               <div
                 className={`${styles.hamburger} ${bgHamburger} ${
-                  router.route === "/services" && "bg-pri_dark"
+                  router.route.includes("services") && "bg-pri_dark"
                 }  mt-2`}
               ></div>
               <div
                 className={`${styles.hamburger} ${bgHamburger} ${
-                  router.route === "/services" && "bg-pri_dark"
+                  router.route.includes("services") && "bg-pri_dark"
                 }  mt-2`}
               ></div>
             </div>
