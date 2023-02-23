@@ -8,11 +8,13 @@ import LogoDark from "./Reusable/LogoDark";
 import { useAppContext } from "./AppContext";
 import LanguageMobile from "./Reusable/LanguageMobile";
 import useTranslation from "next-translate/useTranslation";
+import { useRouter } from "next/router";
 
 const NavBar = ({ modal, bgNav, textNav, bgHamburger }) => {
   const [sticky, setSticky] = useState(false);
   const { logoDark, navOpen, setNavOpen } = useAppContext();
   const { t } = useTranslation("common");
+  const router = useRouter();
 
   const toggleVisible = () => {
     const scrolled = document.documentElement.scrollTop;
@@ -23,7 +25,7 @@ const NavBar = ({ modal, bgNav, textNav, bgHamburger }) => {
     }
   };
   window.addEventListener("scroll", toggleVisible);
-
+  console.log(router);
   return (
     <div
       className={`${sticky && "fixed"} ${
@@ -45,9 +47,21 @@ const NavBar = ({ modal, bgNav, textNav, bgHamburger }) => {
               }}
               className={` relative w-6  items-center lg:hidden`}
             >
-              <div className={`${styles.hamburger} ${bgHamburger} mt-0`}></div>
-              <div className={`${styles.hamburger} ${bgHamburger} mt-2`}></div>
-              <div className={`${styles.hamburger} ${bgHamburger} mt-2`}></div>
+              <div
+                className={`${styles.hamburger} ${bgHamburger} ${
+                  router.route === "/services" && "bg-pri_dark"
+                } mt-0`}
+              ></div>
+              <div
+                className={`${styles.hamburger} ${bgHamburger} ${
+                  router.route === "/services" && "bg-pri_dark"
+                }  mt-2`}
+              ></div>
+              <div
+                className={`${styles.hamburger} ${bgHamburger} ${
+                  router.route === "/services" && "bg-pri_dark"
+                }  mt-2`}
+              ></div>
             </div>
           </div>
         </div>
