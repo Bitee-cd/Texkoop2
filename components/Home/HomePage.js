@@ -4,8 +4,14 @@ import SecondSection from "./SecondSection";
 import ThirdSection from "./ThirdSection";
 import Partners from "./Partners";
 import SuperApp from "./SuperApp";
+import { useAppContext } from "../AppContext";
 
 const HomePage = ({ modal }) => {
+  const { setLogoDark } = useAppContext();
+  useEffect(() => {
+    setLogoDark(false);
+  }, []);
+
   return (
     <div className={`${modal && "blur"}`}>
       <FirstSection />
