@@ -106,6 +106,7 @@ const NavBar = ({ modal, bgNav, textNav, bgHamburger }) => {
                 </div>
                 <Link href="/about">{t("Nav1")} </Link>
                 <Link href="/services">{t("Nav2")} </Link>
+                <Link href="/newpage">NewPage </Link>
                 <Link href="/blog">{t("Nav4")} </Link>
                 <Link href="/say-hi">{t("contact_button")}</Link>
                 <div className="mt-auto">
