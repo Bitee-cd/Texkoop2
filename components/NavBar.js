@@ -72,7 +72,7 @@ const NavBar = ({ modal, bgNav, textNav, bgHamburger }) => {
               exit={{ x: 500 }}
               transition={{ duration: 0.7 }}
               animate={{ x: 0, opacity: 1 }}
-              className={`${styles.zindex2} top-0  fixed right-0  text-white  lg:hidden w-full`}
+              className={`z-50 top-0  fixed right-0  text-white  lg:hidden w-full`}
             >
               <div
                 className={`${styles.navborder} p-text h-screen pt-10 pb-5 gap-5 gap-y-10 px-3 w-[60%] ml-auto bg-pri_dark flex flex-col`}
