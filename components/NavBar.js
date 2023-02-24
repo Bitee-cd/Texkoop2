@@ -83,9 +83,9 @@ const NavBar = ({ modal, bgNav, textNav, bgHamburger }) => {
                   }}
                   className="mt-5 mb-10 relative"
                 >
-                  <div className={`${styles.cancel}  rotate-45`}></div>
+                  <div className={`${styles.cancel} bg-white  rotate-45`}></div>
                   <div
-                    className={`${styles.cancel} -rotate-45 absolute `}
+                    className={`${styles.cancel} bg-white -rotate-45 absolute `}
                   ></div>
                 </div>
                 <Link href="/about">{t("Nav1")} </Link>
