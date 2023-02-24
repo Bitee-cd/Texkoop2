@@ -81,12 +81,9 @@ const NavBar = ({ modal, bgNav, textNav, bgHamburger }) => {
                   onClick={() => {
                     setNavOpen(!navOpen);
                   }}
-                  className="mt-5 mb-10 relative"
+                  className="mt-5 mb-10"
                 >
-                  <div className={`${styles.cancel} bg-white  rotate-45`}></div>
-                  <div
-                    className={`${styles.cancel} bg-white -rotate-45 absolute `}
-                  ></div>
+                  <Cancel />
                 </div>
                 <Link href="/about">{t("Nav1")} </Link>
                 <Link href="/services">{t("Nav2")} </Link>
@@ -119,6 +116,21 @@ export const Hamburger = ({ logoDark }) => (
       clipRule="evenodd"
       d="M0 3C0 1.34314 1.34314 0 3 0H35C36.6568 0 38 1.34314 38 3C38 4.65686 36.6568 6 35 6H3C1.34314 6 0 4.65686 0 3ZM0 15C0 13.3432 1.34314 12 3 12H35C36.6568 12 38 13.3432 38 15C38 16.6568 36.6568 18 35 18H3C1.34314 18 0 16.6568 0 15ZM0 27C0 25.3432 1.34314 24 3 24H35C36.6568 24 38 25.3432 38 27C38 28.6568 36.6568 30 35 30H3C1.34314 30 0 28.6568 0 27Z"
       fill={!logoDark ? "#FFF" : "#2C4E86"}
+    />
+  </svg>
+);
+
+export const Cancel = () => (
+  <svg
+    width={37}
+    height={37}
+    viewBox="0 0 37 37"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path
+      d="M-6.10352e-05 33.1114L14.7658 18.3455L-6.10352e-05 3.57961L3.57955 0L18.3454 14.7659L33.1113 0L36.6909 3.57961L21.925 18.3455L36.6909 33.1114L33.1113 36.691L18.3454 21.9251L3.57955 36.691L-6.10352e-05 33.1114Z"
+      fill="white"
     />
   </svg>
 );

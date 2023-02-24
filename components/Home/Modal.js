@@ -2,7 +2,7 @@ import useTranslation from "next-translate/useTranslation";
 import React from "react";
 
 const Modal = ({ modal, setModal }) => {
-  const { t } = useTranslation("home");
+  const { t } = useTranslation("common");
   return (
     <>
       {modal ? (
