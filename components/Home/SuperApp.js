@@ -7,6 +7,7 @@ import mobile_phone from "../../public/images/mobile2.png";
 import googleplay from "../../public/images/logo/googleplay.png";
 import appstore from "../../public/images/logo/appstore.png";
 import Image from "next/image";
+import AppWaiting from "./AppWaiting";
 
 const SuperApp = (bgcolor) => {
   const { t } = useTranslation("common");
@@ -15,7 +16,7 @@ const SuperApp = (bgcolor) => {
       <div className="screen-center py-10 lg:py-20 md:flex">
         <div className="lg:w-[60%] flex justify-between">
           <div className="w-[50%] grid content-around  lg:pb-10">
-            <div>
+            {/* <div>
               <Fade delay={200} duration={500} damping={0.2} cascade>
                 <p className="superapp-text text-pri_dark font-black leading-tight">
                   {t("super_app_head")}
@@ -40,20 +41,21 @@ const SuperApp = (bgcolor) => {
                   alt="download on apple store"
                 />
               </div>
-            </div>
+            </div> */}
+            <AppWaiting />
           </div>
           <div className="w-[50%] mt-2">
             <Image
               src={mobile}
               alt="texkoop mobile phone"
               placeholder="blur"
-              className={`w-full h-full hidden lg:block object-contain`}
+              className={`w-full h-full hidden lg:block object-cover`}
             />
             <Image
               src={mobile_phone}
               alt="texkoop mobile phone"
               placeholder="blur"
-              className={`w-full h-full lg:hidden object-contain`}
+              className={`w-full h-full lg:hidden object-cover`}
             />
           </div>
         </div>
