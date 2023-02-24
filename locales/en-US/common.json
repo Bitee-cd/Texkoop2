@@ -27,5 +27,12 @@
   "super_app_head": "ONE SUPER APP FOR SWIFT DELIVERIES! ",
   "super_app_text": "We provide on-demand and customizable delivery services through our seamless digital platform that is  designed to support users’ need for ease and transparency.",
 
-  "buttona": "Get Started"
+  "buttona": "Get Started",
+
+  "Modal_button": "Get Notified",
+  "Modal_headi": "What is coming ?",
+  "Modal_headii": " The texkoop app ",
+  "Modal_text": " Join the wait list and be the first to know as soon as the Texkoop app goes live",
+  "f_name": "Name",
+  "email": "Email address"
 }

@@ -3,11 +3,11 @@ import React from "react";
 import { Fade } from "react-awesome-reveal";
 
 const AppWaiting = () => {
-  const { t } = useTranslation("home");
+  const { t } = useTranslation("common");
   return (
     <div className="w-full grid content-around ">
       <Fade delay={200} duration={500} damping={0.2} cascade>
-        <p className="superapp-text text-pri_dark  leading-tight">
+        <p className="superapp-text text-pri_dark font-[600]  leading-tight">
           {t("common:super_app_head")}
         </p>
       </Fade>

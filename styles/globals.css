@@ -204,7 +204,7 @@ input:focus {
   @apply w-full p-3 h-[30px] lg:h-[50px] md:w-[80%] mt-2 md:mt-3 rounded-none outline-none border-[#2C4E86] bg-transparent border;
 }
 .modal_button {
-  @apply border border-sec text-sec px-5 lg:px-20 mt-2 lg:py-4 p-text hover:border-pri active:border-pri hover:text-pri active:text-pri transition-all duration-300 font-medium;
+  @apply border border-sec text-sec px-5 lg:px-20 mt-2 py-1 lg:py-4 p-text hover:border-pri active:border-pri hover:text-pri active:text-pri transition-all duration-300 font-medium;
 }
 /*slider animation */
 
