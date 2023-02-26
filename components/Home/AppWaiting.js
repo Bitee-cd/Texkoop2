@@ -1,9 +1,29 @@
 import useTranslation from "next-translate/useTranslation";
 import React from "react";
 import { Fade } from "react-awesome-reveal";
+import postData from "../formHandlers/post";
 import { form2 } from "../../utils/data";
 
 const AppWaiting = () => {
+  const createData = async (form_values) => {
+    let url = `/api/forms/app-waitlist/`;
+    let response = await postData(url, form_values);
+    //it returns status of true if it was successfull and false if not successfull
+
+    if (response) {
+      // setSuccess(true);
+      console.log("sucess");
+    } else setError(true);
+  };
+
+  const submitHandler = (e) => {
+    e.preventDefault();
+    var formData = new FormData(e.target);
+
+    const form_values = Object.fromEntries(formData);
+
+    createData(form_values);
+  };
   const { select } = form2;
   const { t } = useTranslation("common");
   return (
@@ -14,7 +34,7 @@ const AppWaiting = () => {
         </p>
       </Fade>
       <p className="p-tiny-text  text-[#3B3C3C]"> {t("Modal_text")}</p>
-      <form>
+      <form onSubmit={submitHandler}>
         <div className="">
           <input
             required

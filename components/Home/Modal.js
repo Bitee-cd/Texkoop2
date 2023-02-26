@@ -1,7 +1,27 @@
 import useTranslation from "next-translate/useTranslation";
 import React from "react";
+import postData from "../formHandlers/post";
 
 const Modal = ({ modal, setModal }) => {
+  const createData = async (form_values) => {
+    let url = `/api/forms/app-waitlist/`;
+    let response = await postData(url, form_values);
+    //it returns status of true if it was successfull and false if not successfull
+
+    if (response) {
+      // setSuccess(true);
+      console.log("sucess");
+    } else setError(true);
+  };
+
+  const submitHandler = (e) => {
+    e.preventDefault();
+    var formData = new FormData(e.target);
+
+    const form_values = Object.fromEntries(formData);
+
+    createData(form_values);
+  };
   const { t } = useTranslation("common");
   return (
     <>
@@ -21,7 +41,7 @@ const Modal = ({ modal, setModal }) => {
                 {" "}
                 {t("Modal_text")}
               </p>
-              <form>
+              <form onSubmit={submitHandler}>
                 <div className="">
                   <input
                     required
