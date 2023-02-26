@@ -27,5 +27,9 @@
   "super_app_head": "UNE SUPER APP POUR LES LIVRAISONS RAPIDE ! ",
   "super_app_text": "Nous fournissons des services de livraison à la demande et sur mesure, par le biais de notre plateforme numérique transparente, conçue pour répondre aux besoins des utilisateurs d’une manière plus facile et transparente. ",
 
-  "buttona": "Démarrez"
+  "buttona": "Démarrez",
+  "Role": "Rôle",
+  "dropa": " Particulier",
+  "dropb": "Entreprises",
+  "dropc": "  Coursier"
 }

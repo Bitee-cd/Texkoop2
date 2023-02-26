@@ -34,5 +34,9 @@
   "Modal_headii": " The texkoop app ",
   "Modal_text": " Join the wait list and be the first to know as soon as the Texkoop app goes live",
   "f_name": "Name",
-  "email": "Email address"
+  "email": "Email address",
+  "Role": "Role",
+  "dropa": " Individual",
+  "dropb": "Business",
+  "dropc": "  Rider"
 }

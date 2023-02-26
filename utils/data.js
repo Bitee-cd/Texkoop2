@@ -770,5 +770,12 @@ export const blog = {
     },
   ],
 };
+export const form2 = {
+  select: [
+    { id: 1, name: "dropa" },
+    { id: 2, name: "dropb" },
+    { id: 3, name: "dropc" },
+  ],
+};
 export const remaining_time = 32488;
 export const API_URL = "https://truebackend.texkoop.com";

@@ -1,8 +1,10 @@
 import useTranslation from "next-translate/useTranslation";
 import React from "react";
 import { Fade } from "react-awesome-reveal";
+import { form2 } from "../../utils/data";
 
 const AppWaiting = () => {
+  const { select } = form2;
   const { t } = useTranslation("common");
   return (
     <div className="w-full grid content-around ">
@@ -31,9 +33,24 @@ const AppWaiting = () => {
             className="modal_input"
           />
         </div>
+        <div className="">
+          <select
+            required
+            defaultValue={t("Role")}
+            name="role"
+            className="mt-2 w-full px-3 h-[30px] lg:h-[50px] text-color outline-none  border-pri_dark bg-transparent border"
+          >
+            <option disabled>{t("Role")}</option>
+            {select.map((item) => (
+              <option key={item.name} value={t(item.name)}>
+                {t(item.name)}
+              </option>
+            ))}
+          </select>
+        </div>
         <button
           type={"submit"}
-          className="modal_button mt-2 lg:mt-5 lg:w-[300px] flex justify-center"
+          className="modal_button mt-2 lg:mt-5  flex justify-center"
         >
           {t("Modal_button")}
         </button>
