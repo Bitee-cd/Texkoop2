@@ -60,7 +60,9 @@ const AppWaiting = () => {
             name="role"
             className="mt-2 w-full px-3 h-[30px] lg:h-[50px] text-color outline-none  border-pri_dark bg-transparent border"
           >
-            <option disabled>{t("Role")}</option>
+            <option disabled className="placeholder">
+              {t("Role")}
+            </option>
             {select.map((item) => (
               <option key={item.name} value={t(item.name)}>
                 {t(item.name)}

@@ -4,9 +4,9 @@ import { useRouter, Router } from "next/router";
 import { useEffect, useState } from "react";
 import dynamic from "next/dynamic";
 import PreLoader from "../components/PreLoader";
-const AnimatedCursor = dynamic(() => import("react-animated-cursor"), {
-  ssr: false,
-});
+// const AnimatedCursor = dynamic(() => import("react-animated-cursor"), {
+//   ssr: false,
+// });
 
 function MyApp({ Component, pageProps }) {
   const router = useRouter();
@@ -39,7 +39,7 @@ function MyApp({ Component, pageProps }) {
     <>
       <AppContext>
         <div className="hidden lg:block">
-          <AnimatedCursor
+          {/* <AnimatedCursor
             color="221, 134, 38"
             outerAlpha={0.5}
             innerScale={0.7}
@@ -59,7 +59,7 @@ function MyApp({ Component, pageProps }) {
               "button",
               ".link",
             ]}
-          />
+          /> */}
         </div>
 
         {loading ? (

@@ -155,7 +155,9 @@ input::placeholder {
   color: rgba(30, 30, 30, 0.57);
   font-weight: 300;
 }
-
+.placeholder {
+  color: rgba(30, 30, 30, 0.57);
+}
 .input,
 textarea {
   -webkit-border-radius: 0;

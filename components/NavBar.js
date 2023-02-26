@@ -8,8 +8,9 @@ import LogoDark from "./Reusable/LogoDark";
 import { useAppContext } from "./AppContext";
 import LanguageMobile from "./Reusable/LanguageMobile";
 import useTranslation from "next-translate/useTranslation";
+import Language from "./Reusable/Language";
 
-const NavBar = ({ modal, bgNav, textNav, bgHamburger }) => {
+const NavBar = ({ bgNav, textNav, bgHamburger }) => {
   const [sticky, setSticky] = useState(false);
   const { logoDark, navOpen, setNavOpen } = useAppContext();
   const { t } = useTranslation("common");
@@ -26,9 +27,9 @@ const NavBar = ({ modal, bgNav, textNav, bgHamburger }) => {
 
   return (
     <div
-      className={`${sticky && "fixed"} ${
-        modal && "blur"
-      } w-full top-0 duration-300 transition-all ease-in z-10 min-w-screen overflow-x-hidden ${bgNav} ${textNav} `}
+      className={`${
+        sticky && "fixed"
+      }  w-full top-0 duration-300 transition-all ease-in z-10 min-w-screen overflow-x-hidden ${bgNav} ${textNav} `}
     >
       <nav className={`flex justify-between  screen-center py-5 items-center`}>
         <div className={`${navOpen && "blur"}`}>
@@ -38,7 +39,7 @@ const NavBar = ({ modal, bgNav, textNav, bgHamburger }) => {
           className={`${navOpen && "blur"} flex items-center pr-[5%] lg:hidden`}
         >
           <div className="flex gap-5 ">
-            <LanguageMobile />
+            <Language />
             <div
               onClick={() => {
                 setNavOpen(!navOpen);
@@ -53,7 +54,7 @@ const NavBar = ({ modal, bgNav, textNav, bgHamburger }) => {
           <Link href="/about">{t("Nav1")} </Link>
           <Link href="/services">{t("Nav2")} </Link>
           <Link href="/blog">{t("Nav4")} </Link>
-          <LanguageMobile />
+          <Language />
           <Link href="/say-hi">
             <button
               className={`navButton ${

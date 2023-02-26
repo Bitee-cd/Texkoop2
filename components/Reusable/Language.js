@@ -3,62 +3,64 @@ import { useRouter } from "next/router";
 import React, { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import styles from "../../styles/Home.module.css";
-
 const Language = () => {
   const [locale, setLocale] = useState(false);
-  const router = useRouter();
+  const [hovered, setHovered] = useState(false);
+  const { asPath } = useRouter();
+
+  const variants = {
+    hidden: { y: 10, opacity: 0 },
+    visible: { y: 0, opacity: 1 },
+    exit: { y: -10, opacity: 0 },
+    hover: { scale: 1.05 },
+  };
+
+  const transition = { duration: 0.5 };
+
+  const handleHover = () => {
+    if (!hovered) {
+      setHovered(true);
+      setLocale(!locale);
+    }
+  };
+
+  const handleMouseLeave = () => {
+    setHovered(false);
+  };
+
   return (
     <div className="relative">
-      {locale ? (
-        <AnimatePresence key={locale}>
-          <motion.div
-            initial={{ y: -10 }}
-            animate={{ y: 0 }}
-            exit={{ y: 10 }}
-            transition={{ duration: 0.3 }}
-            className={` cursor-pointer`}
-            onMouseOver={() => setLocale(!locale)}
-            onMouseOut={() => setLocale(locale)}
-          >
-            <Link href={`${router.asPath}`} locale="en-US">
-              <div className="flex gap-1">
-                <img
-                  src="https://flagcdn.com/gb.svg"
-                  alt="English"
-                  className="cursor-pointer"
-                  width="30"
-                />
-                EN
-              </div>
-            </Link>
-          </motion.div>
-        </AnimatePresence>
-      ) : (
-        <AnimatePresence key={locale}>
-          <motion.div
-            initial={{ y: -10 }}
-            animate={{ y: 0 }}
-            exit={{ y: 10 }}
-            transition={{ duration: 0.3 }}
-            className={` cursor-pointer`}
-            onMouseOver={() => setLocale(!locale)}
-            onMouseOut={() => setLocale(locale)}
-          >
-            <Link href={`${router.asPath}`} locale="fr">
-              <div className="flex gap-1">
-                <img
-                  alt="French"
-                  className="cursor-pointer"
-                  src="https://flagcdn.com/w40/za.png"
-                  srcset="https://flagcdn.com/w80/za.png 2x"
-                  width="40"
-                />
-                FR
-              </div>
-            </Link>
-          </motion.div>
-        </AnimatePresence>
-      )}
+      <AnimatePresence>
+        <motion.div
+          key={locale}
+          initial="hidden"
+          animate="visible"
+          exit="exit"
+          variants={variants}
+          transition={transition}
+          className="cursor-pointer"
+          onMouseEnter={handleHover}
+          onMouseLeave={handleMouseLeave}
+          onClick={() => setLocale(!locale)}
+          whileHover="hover"
+        >
+          <Link href={`${asPath}`} locale={locale ? "en-US" : "fr"}>
+            <div className="flex gap-1">
+              <img
+                src={
+                  locale
+                    ? "https://flagcdn.com/gb.svg"
+                    : "https://flagcdn.com/w40/fr.png"
+                }
+                alt={locale ? "English" : "French"}
+                className="cursor-pointer"
+                width="30"
+              />
+              {locale ? "EN" : "FR"}
+            </div>
+          </Link>
+        </motion.div>
+      </AnimatePresence>
     </div>
   );
 };

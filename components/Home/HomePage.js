@@ -5,9 +5,9 @@ import ThirdSection from "./ThirdSection";
 import Partners from "./Partners";
 import SuperApp from "./SuperApp";
 
-const HomePage = ({ modal }) => {
+const HomePage = () => {
   return (
-    <div className={`${modal && "blur"}`}>
+    <div>
       <FirstSection />
       <SecondSection />
       <ThirdSection />
