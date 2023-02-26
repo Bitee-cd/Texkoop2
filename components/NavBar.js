@@ -39,7 +39,7 @@ const NavBar = ({ bgNav, textNav, bgHamburger }) => {
           className={`${navOpen && "blur"} flex items-center pr-[5%] lg:hidden`}
         >
           <div className="flex gap-5 ">
-            <Language />
+            <LanguageMobile />
             <div
               onClick={() => {
                 setNavOpen(!navOpen);
