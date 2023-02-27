@@ -41,7 +41,6 @@ const Language = () => {
           className="cursor-pointer"
           onMouseEnter={handleHover}
           onMouseLeave={handleMouseLeave}
-          onClick={() => setLocale(!locale)}
           whileHover="hover"
         >
           <Link href={`${asPath}`} locale={locale ? "en-US" : "fr"}>
