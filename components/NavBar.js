@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Logo from "./Reusable/Logo";
 import Link from "next/link";
 import styles from "../styles/Home.module.css";
@@ -10,26 +10,21 @@ import LanguageMobile from "./Reusable/LanguageMobile";
 import useTranslation from "next-translate/useTranslation";
 import Language from "./Reusable/Language";
 
-const NavBar = ({ bgNav, textNav, bgHamburger }) => {
-  const [sticky, setSticky] = useState(false);
+const NavBar = ({ bgNav, textNav, bgHamburger, handleNavHeight }) => {
+  // const [sticky, setSticky] = useState(false);
   const { logoDark, navOpen, setNavOpen } = useAppContext();
   const { t } = useTranslation("common");
 
-  const toggleVisible = () => {
-    const scrolled = document.documentElement.scrollTop;
-    if (scrolled > 20) {
-      setSticky(true);
-    } else if (scrolled <= 500) {
-      setSticky(false);
-    }
-  };
-  window.addEventListener("scroll", toggleVisible);
+  useEffect(() => {
+    // Add padding to the top of the body element equal to the height of the navbar
+    const navBarHeight = document.querySelector("nav").offsetHeight;
+    // document.body.style.paddingTop = navBarHeight + "px";
+    handleNavHeight(navBarHeight);
+  }, [handleNavHeight]);
 
   return (
     <div
-      className={`${
-        sticky && "fixed"
-      }  w-full top-0 duration-300 transition-all ease-in z-10 min-w-screen overflow-x-hidden ${bgNav} ${textNav} `}
+      className={`${"fixed"}  w-full top-0 duration-300 transition-all ease-in z-10 min-w-screen overflow-x-hidden ${bgNav} ${textNav} `}
     >
       <nav className={`flex justify-between  screen-center py-5 items-center`}>
         <div className={`${navOpen && "blur"}`}>

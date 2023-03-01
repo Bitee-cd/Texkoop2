@@ -19,7 +19,7 @@ const Services = () => {
       bgHamburger="bg-pri_dark"
     >
       <div className={` relative bottom-0 `}>
-        <section className="w-[90%] max-w-[1440px] mx-auto lg:px-1 py-10  overflow-hidden ">
+        <section className="w-[90%] max-w-[1440px] mx-auto lg:px-1 pb-10  overflow-hidden ">
           <div
             className={`${styles.circle} hidden md:block ${styles.cornerRight}`}
           ></div>
