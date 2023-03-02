@@ -49,7 +49,7 @@ const NavBar = ({ bgNav, textNav, bgHamburger, handleNavHeight }) => {
           <Link href="/about">{t("Nav1")} </Link>
           <Link href="/services">{t("Nav2")} </Link>
           <Link href="/blog">{t("Nav4")} </Link>
-          <Language />
+          <LanguageMobile />
           <Link href="/say-hi">
             <button
               className={`navButton ${

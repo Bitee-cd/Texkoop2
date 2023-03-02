@@ -15,7 +15,7 @@ const SuperApp = (bgcolor) => {
     <section className={`${styles.shadowCard} ${bgcolor} `}>
       <div className="screen-center py-10 lg:py-20 md:flex">
         <div className="lg:w-[60%] flex justify-between">
-          <div className="w-[50%] grid content-around  lg:pb-10">
+          <div className="w-[60%] grid content-around  lg:pb-10">
             {/* <div>
               <Fade delay={200} duration={500} damping={0.2} cascade>
                 <p className="superapp-text text-pri_dark font-black leading-tight">
@@ -44,7 +44,7 @@ const SuperApp = (bgcolor) => {
             </div> */}
             <AppWaiting />
           </div>
-          <div className="w-[50%] mt-2">
+          <div className="w-[40%] mt-2">
             <Image
               src={mobile}
               alt="texkoop mobile phone"

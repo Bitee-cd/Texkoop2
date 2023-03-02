@@ -58,7 +58,7 @@ const AppWaiting = () => {
             required
             defaultValue={t("Role")}
             name="role"
-            className="mt-2 w-full px-3 h-[30px] lg:h-[50px] text-color outline-none  border-pri_dark bg-transparent border"
+            className="mt-2 w-full px-3 h-[30px] lg:h-[50px] text-color outline-none  border-[#3B3C3C] bg-transparent border-b"
           >
             <option disabled className="placeholder">
               {t("Role")}
