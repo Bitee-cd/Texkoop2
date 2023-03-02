@@ -26,7 +26,7 @@ const Layout = ({ modal, children, title, bgNav, textNav, bgHamburger }) => {
         <link rel="icon" href="/favicon.ico" sizes="any" />
         <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
       </Head>
-      <div style={{ paddingTop: nav }}>
+      <div style={{ paddingTop: nav - 8 }}>
         <NavBar
           bgNav={bgNav}
           textNav={textNav}
