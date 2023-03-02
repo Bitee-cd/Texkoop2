@@ -87,6 +87,9 @@ body {
 .blur-background {
   box-shadow: 0 0 5px 10px #2c4e86;
 }
+.blur-white {
+  box-shadow: 0 0 5px 10px #2c4e86;
+}
 .big-text {
   font-size: clamp(1.25rem, 4vw + 0.8rem, 5.938rem);
   font-weight: 900;
@@ -203,10 +206,10 @@ input:focus {
   box-shadow: 5px 5px 6px 0px rgba(0, 0, 0, 0.25);
 }
 .modal_input {
-  @apply w-full p-3 h-[30px] lg:h-[50px]  mt-2 md:mt-3 rounded-none outline-none border-[#3B3C3C] bg-transparent border-b;
+  @apply w-full text-[14px] lg:text-[20px] p-3 h-[30px] lg:h-[50px]  mt-2 md:mt-3 rounded-none outline-none border-[#3B3C3C] bg-transparent border-b;
 }
 .modal_button {
-  @apply border border-sec text-sec min-w-[150px] lg:w-[200px] mt-2 py-1 md:py-2 lg:py-4 p-text hover:border-pri active:border-pri hover:text-pri active:text-pri transition-all duration-300 font-medium;
+  @apply border border-sec text-sec min-w-[150px] lg:w-[200px] lg:text-[20px] mt-2 py-1 md:py-2 lg:py-4 p-text hover:border-pri active:border-pri hover:text-pri active:text-pri transition-all duration-300 font-medium;
 }
 /*slider animation */
 

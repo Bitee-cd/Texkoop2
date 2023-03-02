@@ -30,11 +30,11 @@ const AppWaiting = () => {
   return (
     <div className="w-full grid content-around ">
       <Fade delay={200} duration={500} damping={0.2} cascade>
-        <p className="superapp-text text-pri_dark font-[600]  leading-tight">
+        <p className="superapp-text text-pri_dark font-[700]  leading-tight">
           {t("common:super_app_head")}
         </p>
       </Fade>
-      <p className="p-tiny-text  text-[#3B3C3C]"> {t("Modal_text")}</p>
+      <p className="p-tiny-text  text-[#3B3C3C]">{t("Modal_text")}</p>
       <form onSubmit={submitHandler}>
         <div className="">
           <input
@@ -59,7 +59,7 @@ const AppWaiting = () => {
             required
             defaultValue={t("Role")}
             name="role"
-            className="mt-2 w-full px-3 h-[30px] lg:h-[50px] text-color outline-none  border-[#3B3C3C] bg-transparent border-b"
+            className="text-[14px] lg:text-[20px] mt-2 w-full px-3 h-[30px] lg:h-[50px] text-color outline-none  border-[#3B3C3C] bg-transparent border-b"
           >
             <option disabled className="placeholder">
               {t("Role")}
