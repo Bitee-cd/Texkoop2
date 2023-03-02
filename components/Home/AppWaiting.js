@@ -13,7 +13,8 @@ const AppWaiting = () => {
     if (response) {
       // setSuccess(true);
       console.log("sucess");
-    } else setError(true);
+    }
+    // else setError(true);
   };
 
   const submitHandler = (e) => {
