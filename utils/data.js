@@ -778,6 +778,6 @@ export const form2 = {
   ],
 };
 export const remaining_time = 32488;
-export const API_URL = "https://truebackend.texkoop.com";
+// export const API_URL = "https://truebackend.texkoop.com";
 
-// export const API_URL = "http://127.0.0.1:8000";
+export const API_URL = "http://127.0.0.1:8000";
